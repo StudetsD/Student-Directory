@@ -98,7 +98,7 @@ class ChoseGroupScreen extends StatelessWidget{
                             ),
                             DropdownButton<String>(
                               hint: const Text("        Группа"),
-                              items: <String>['МББ-201-О-01', 'МББ-101-О-01', 'МББ-001-О-01', 'МББ-901-О-01', 'МБС-201-О01'].map((String value) {
+                              items: <String>['МББ-201-О-01', 'МББ-101-О-01', 'МББ-001-О-01', 'МББ-901-О-01', 'МБС-201-О-01', 'МБС-201-О-02', 'МБС-101-О-01', 'МБС-101-О-02', 'МБС-001-О-01', 'МБС-001-О-02', 'МБС-901-О-01', 'МБС-901-О-02'].map((String value) {
                                 return DropdownMenuItem<String>(
                                   value: value,
                                   child: Text(value),
