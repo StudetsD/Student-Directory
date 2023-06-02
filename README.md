@@ -1,6 +1,6 @@
-# applicate
+# Student Directory
 
-A new Flutter project.
+This app for students of Faculty of Digital Technologies and Cybersecurity.
 
 ## Getting Started
 
