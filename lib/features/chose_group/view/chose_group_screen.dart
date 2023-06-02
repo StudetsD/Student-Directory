@@ -11,8 +11,7 @@ class ChoseGroupScreen extends StatelessWidget{
 
   @override
   Widget build(BuildContext context) {
-    List<String> _locations = ['Please choose a location', 'A', 'B', 'C', 'D']; // Option 1
-    String _selectedLocation = 'Please choose a location';
+    String valueChoose;
     return Scaffold(
       body: Container(
           height: double.infinity,
@@ -96,17 +95,31 @@ class ChoseGroupScreen extends StatelessWidget{
                                 ),
                               ),
                             ),
-                            DropdownButton<String>(
-                              hint: const Text("        Группа"),
-                              items: StringConstants.listOfGroups.map((String value) {
-                                return DropdownMenuItem<String>(
-                                  value: value,
-                                  child: Text(value),
-                                );
-                              }).toList(),
-                              onChanged: (_) {
-                                PortfolioPage();
-                              },
+                            Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Container(
+                                padding: const EdgeInsets.only(left: 16, right: 16),
+                                child: DropdownButton<String>(
+                                  hint: Text(
+                                    "  Группа",
+                                    style: AppStyle.txtRobotoRomanCondensedMedium15,
+                                  ),
+                                  icon: const Icon(Icons.arrow_drop_down),
+                                  iconSize: 30,
+                                  isExpanded: true,
+                                  //underline: SizedBox(),
+                                  //dropdownColor: Colors.transparent,
+                                  items: StringConstants.listOfGroups.map((String value) {
+                                    return DropdownMenuItem<String>(
+                                      value: value,
+                                      child: Text(value),
+                                    );
+                                  }).toList(),
+                                  onChanged: (_) {
+                                    PortfolioPage();
+                                  },
+                                ),
+                              ),
                             ),
                             /*CustomTextFormField(
                               focusNode: FocusNode(),
