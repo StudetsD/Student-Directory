@@ -11,29 +11,11 @@ class ScheduleWebPage extends StatelessWidget {
     String? num = StringConstants.listOfCodeGroups[group];
     return Scaffold(
       appBar: AppBar(
-        title: const Text('WebView'),
-        actions: [
-          IconButton(
-            icon: const Icon(Icons.arrow_back_ios),
-            onPressed: () async {},
-          ),
-          IconButton(
-            icon: const Icon(Icons.arrow_forward_ios),
-            onPressed: () async {},
-          ),
-          IconButton(
-            icon: const Icon(Icons.replay),
-            onPressed: () {},
-          ),
-        ],
+        toolbarHeight: 0,
       ),
       body: WebView(
         javascriptMode: JavascriptMode.unrestricted,
         initialUrl: 'https://eservice.omsu.ru/schedule/#/schedule/group/$num',//https://eservice.omsu.ru/schedule/#/schedule/group/2600
-      ),
-      floatingActionButton: FloatingActionButton(
-        child: const Icon(Icons.next_plan, size: 32),
-        onPressed: () async {},
       ),
     );
   }
