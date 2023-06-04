@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:outline_gradient_button/outline_gradient_button.dart';
 
 import '../../../core/app_export.dart';
 
@@ -8,7 +7,7 @@ class MenuPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context ) {
-    final group = (ModalRoute.of(context)?.settings.arguments ?? '') as String;
+    var group = (ModalRoute.of(context)?.settings.arguments ?? "") as String;
 
     return Scaffold(
       body: Center(
@@ -35,7 +34,7 @@ class MenuPage extends StatelessWidget {
                 width: double.maxFinite,
                 height: 50,
                 child: ElevatedButton(
-                  child: Text('Расписание'),
+                  child: const Text('Расписание'),
                   onPressed: () {
                     Navigator.pushNamed(context, '/schedule', arguments: group);
                   },

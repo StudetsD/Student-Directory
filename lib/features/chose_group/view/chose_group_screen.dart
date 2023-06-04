@@ -1,17 +1,12 @@
 import 'package:applicate/core/app_export.dart';
-import 'package:applicate/features/chose_group/chose_group.dart';
 import 'package:flutter/material.dart';
 import 'package:outline_gradient_button/outline_gradient_button.dart';
-import 'package:applicate/widgets/custom_text_form_field.dart';
 
 class ChoseGroupScreen extends StatelessWidget{
-  TextEditingController groupController = TextEditingController();
-  //const ChoseGroupScreen({super.key, required this.title});
-  //final String title;
+  const ChoseGroupScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    String valueChoose = '';
     return Scaffold(
       body: Container(
           height: double.infinity,
@@ -113,8 +108,8 @@ class ChoseGroupScreen extends StatelessWidget{
                                       child: Text(value),
                                     );
                                   }).toList(),
-                                  onChanged: (choose) {
-                                    Navigator.pushNamed(context, '/menu', arguments: choose);
+                                  onChanged: (chose) {
+                                    Navigator.pushNamed(context, '/menu', arguments: chose);
                                   },
                                 ),
                               ),
