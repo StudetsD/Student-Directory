@@ -9,7 +9,9 @@ class StudentDirectoryApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'StudentDirectory',
+      debugShowCheckedModeBanner: false,
       //theme: darkTheme,
+      initialRoute: '/',
       routes: routes,
     );
   }

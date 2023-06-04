@@ -11,7 +11,7 @@ class ChoseGroupScreen extends StatelessWidget{
 
   @override
   Widget build(BuildContext context) {
-    String valueChoose;
+    String valueChoose = '';
     return Scaffold(
       body: Container(
           height: double.infinity,
@@ -77,7 +77,7 @@ class ChoseGroupScreen extends StatelessWidget{
                           bottom: 55,
                         ),
                         decoration: AppDecoration.outline.copyWith(
-                          borderRadius: BorderRadiusStyle.roundedBorder50,
+                          borderRadius: BorderRadiusStyle.roundedBorder40,
                         ),
                         child: Column(
                           mainAxisSize: MainAxisSize.min,
@@ -107,16 +107,23 @@ class ChoseGroupScreen extends StatelessWidget{
                                   icon: const Icon(Icons.arrow_drop_down),
                                   iconSize: 30,
                                   isExpanded: true,
-                                  //underline: SizedBox(),
-                                  //dropdownColor: Colors.transparent,
                                   items: StringConstants.listOfGroups.map((String value) {
                                     return DropdownMenuItem<String>(
                                       value: value,
                                       child: Text(value),
                                     );
                                   }).toList(),
-                                  onChanged: (_) {
-                                    PortfolioPage();
+                                  onChanged: (choose) {
+                                    Navigator.pushNamed(context, '/menu', arguments: choose);
+                                    /*Navigator.push(
+                                        context, 
+                                        MaterialPageRoute(
+                                            builder: (context) {
+                                              return MenuPage(valueChoose);
+                                            }
+                                        )
+                                    );*/
+                                    //MenuPage(valueChoose);
                                   },
                                 ),
                               ),
