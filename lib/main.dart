@@ -3,5 +3,5 @@ import 'student_directory.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
-  runApp(StudentDirectoryApp());
+  runApp(const StudentDirectoryApp());
 }
