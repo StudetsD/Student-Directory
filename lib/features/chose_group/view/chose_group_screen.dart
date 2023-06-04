@@ -115,15 +115,6 @@ class ChoseGroupScreen extends StatelessWidget{
                                   }).toList(),
                                   onChanged: (choose) {
                                     Navigator.pushNamed(context, '/menu', arguments: choose);
-                                    /*Navigator.push(
-                                        context, 
-                                        MaterialPageRoute(
-                                            builder: (context) {
-                                              return MenuPage(valueChoose);
-                                            }
-                                        )
-                                    );*/
-                                    //MenuPage(valueChoose);
                                   },
                                 ),
                               ),
