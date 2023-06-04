@@ -35,9 +35,9 @@ class MenuPage extends StatelessWidget {
                 width: double.maxFinite,
                 height: 50,
                 child: ElevatedButton(
-                  child: Text('Расписание ${group.toString()}'),
+                  child: Text('Расписание'),
                   onPressed: () {
-                    //j
+                    Navigator.pushNamed(context, '/schedule', arguments: group);
                   },
                 ),
               ),
