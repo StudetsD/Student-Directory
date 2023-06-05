@@ -114,15 +114,6 @@ class ChoseGroupScreen extends StatelessWidget{
                                 ),
                               ),
                             ),
-                            /*CustomTextFormField(
-                              focusNode: FocusNode(),
-                              controller: groupController,
-                              hintText: " Группа",
-                              margin: getMargin(
-                                top: 20,
-                              ),
-                              textInputAction: TextInputAction.done,
-                            ),*/
                             Padding(
                               padding: getPadding(
                                 top: 16,

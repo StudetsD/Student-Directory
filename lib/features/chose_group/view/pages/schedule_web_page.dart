@@ -15,7 +15,7 @@ class ScheduleWebPage extends StatelessWidget {
       ),
       body: WebView(
         javascriptMode: JavascriptMode.unrestricted,
-        initialUrl: 'https://eservice.omsu.ru/schedule/#/schedule/group/$num',//https://eservice.omsu.ru/schedule/#/schedule/group/2600
+        initialUrl: 'https://eservice.omsu.ru/schedule/#/schedule/group/$num',
       ),
     );
   }

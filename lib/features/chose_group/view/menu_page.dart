@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import '../../../core/app_export.dart';
 
 class MenuPage extends StatelessWidget {
@@ -46,7 +45,7 @@ class MenuPage extends StatelessWidget {
                 child: ElevatedButton(
                   child: const Text('Список предметов'),
                   onPressed: () {
-                    //Navigator.pop(context);
+                    Navigator.pushNamed(context, '/lessons');
                   },
                 ),
               ),
@@ -56,7 +55,7 @@ class MenuPage extends StatelessWidget {
                 child: ElevatedButton(
                   child: const Text('Список группы'),
                   onPressed: () {
-                    //Navigator.pop(context);
+                    Navigator.pushNamed(context, '/students');
                   },
                 ),
               ),
@@ -66,7 +65,7 @@ class MenuPage extends StatelessWidget {
                 child: ElevatedButton(
                   child: const Text('Список преподавателей'),
                   onPressed: () {
-                    //Navigator.pop(context);
+                    Navigator.pushNamed(context, '/teachers');
                   },
                 ),
               ),
