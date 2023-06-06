@@ -79,6 +79,7 @@ class ChoseGroupScreen extends StatelessWidget{
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Container(
+                              margin: const EdgeInsets.only(bottom: 20),
                               child: Text(
                                 "Добро\nпожаловать",
                                 //maxLines: null,
@@ -90,7 +91,22 @@ class ChoseGroupScreen extends StatelessWidget{
                                 ),
                               ),
                             ),
-                            Padding(
+                            MaterialButton(
+                              height: 50,
+                              padding: getPadding(left: 30, right: 30),
+                              minWidth: double.infinity,
+                              color: Colors.white.withOpacity(0.5),
+                              shape: const RoundedRectangleBorder(
+                                borderRadius: BorderRadius.all(Radius.circular(50))
+                              ),
+                              child: const Text(
+                                "Начать",
+                                style: TextStyle(color: Colors.blueGrey,),
+                              ),
+                              onPressed: () {  },
+
+                            ),
+                            /*Padding(
                               padding: const EdgeInsets.all(8.0),
                               child: Container(
                                 padding: const EdgeInsets.only(left: 16, right: 16),
@@ -124,7 +140,7 @@ class ChoseGroupScreen extends StatelessWidget{
                                 textAlign: TextAlign.left,
                                 style: AppStyle.txtRobotoRomanCondensedMedium15,
                               ),
-                            ),
+                            ),*/
                           ],
                         ),
                       ),
