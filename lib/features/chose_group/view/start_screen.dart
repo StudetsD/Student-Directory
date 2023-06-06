@@ -1,9 +1,10 @@
 import 'package:applicate/core/app_export.dart';
 import 'package:flutter/material.dart';
 import 'package:outline_gradient_button/outline_gradient_button.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
-class ChoseGroupScreen extends StatelessWidget{
-  const ChoseGroupScreen({super.key});
+class StartScreen extends StatelessWidget{
+  const StartScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -103,8 +104,17 @@ class ChoseGroupScreen extends StatelessWidget{
                                 "Начать",
                                 style: TextStyle(color: Colors.blueGrey,),
                               ),
-                              onPressed: () {  },
-
+                              onPressed: () {
+                                Navigator.pushNamed(context, '/chose');
+                                /*var group = _getGroup();
+                                print(group);
+                                if (group == "none"){
+                                  Navigator.pushNamed(context, '/chose');
+                                }
+                                else{
+                                  Navigator.pushNamed(context, '/menu', arguments: group.toString());
+                                }*/
+                              },
                             ),
                             /*Padding(
                               padding: const EdgeInsets.all(8.0),
@@ -154,3 +164,8 @@ class ChoseGroupScreen extends StatelessWidget{
     );
   }
 }
+
+/*Future<String> _getGroup() async {
+  var prefs = await SharedPreferences.getInstance();
+  return prefs.getString("group").toString();
+}*/
