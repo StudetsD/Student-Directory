@@ -39,6 +39,16 @@ class ColorConstant {
 
   static Color blueLight = fromHex('93B1C7FF');
 
+  static Color blueFon = fromHex('#0d205e');
+
+  static Color colorText = fromHex('#378eca');
+
+  Color d = Colors.white70;
+
+  static Color dropListText = fromHex('2C3B95FF');
+
+  static Color borderColor = fromHex('22F9F9');
+
   static Color fromHex(String hexString) {
     final buffer = StringBuffer();
     if (hexString.length == 6 || hexString.length == 7) buffer.write('ff');

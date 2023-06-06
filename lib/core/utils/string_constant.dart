@@ -1,39 +1,52 @@
 class StringConstants {
-  static List<String> listOfGroups = [
-    'ММБ-201-О-04',
-    'ММБ-202-О-04',
-    'ММБ-203-О-04',
-    'МББ-201-О-01',
-    'МБС-201-О-01',
-    'МБС-202-О-01',
-    'МИБ-201-О-01',
-    'МПБ-201-О-01',
-    'ММБ-102-О-03',
-    'ММБ-103-О-03',
-    'ММБ-104-О-03',
-    'МББ-101-О-01',
-    'МБС-101-О-01',
-    'МБС-102-О-01',
-    'МКБ-101-О-01',
-    'МИБ-101-О-01',
-    'МПБ-101-О-01',
-    'ММБ-002-О-01',
-    'ММБ-003-О-02',
-    'ММБ-004-О-02',
-    'МББ-001-О-01',
-    'МБС-001-О-01',
-    'МБС-002-О-01',
-    'МКБ-001-О-01',
-    'МИБ-001-О-01',
-    'МПБ-001-О-01',
-    'ММБ-902-О-03',
-    'МББ-901-О-01',
-    'МБС-901-О-01',
-    'МКБ-901-О-01',
-    'МИБ-901-О-01',
-    'МПБ-901-О-01',
-    'МБС-801-О-01',
-    'МИМ-201-О-01',
+  static List<Group> listOfGroups = [
+    //Group(name: '----------1 КУРС----------', type: "divider"),
+    Group(name: 'ММБ-201-О-04', type: "group"),
+    Group(name: 'ММБ-202-О-04', type: "group"),
+    Group(name: 'ММБ-203-О-04', type: "group"),
+    Group(name: 'МББ-201-О-01', type: "group"),
+    Group(name: 'МБС-201-О-01', type: "group"),
+    Group(name: 'МБС-202-О-01', type: "group"),
+    Group(name: 'МИБ-201-О-01', type: "group"),
+    Group(name: 'МПБ-201-О-01', type: "group"),
+
+    //Group(name: '----------2 КУРС----------', type: "divider"),
+    Group(name: 'ММБ-102-О-03', type: "group"),
+    Group(name: 'ММБ-103-О-03', type: "group"),
+    Group(name: 'ММБ-104-О-03', type: "group"),
+    Group(name: 'МББ-101-О-01', type: "group"),
+    Group(name: 'МБС-101-О-01', type: "group"),
+    Group(name: 'МБС-102-О-01', type: "group"),
+    Group(name: 'МКБ-101-О-01', type: "group"),
+    Group(name: 'МИБ-101-О-01', type: "group"),
+    Group(name: 'МПБ-101-О-01', type: "group"),
+
+    //Group(name: '----------3 КУРС----------', type: "divider"),
+    Group(name: 'ММБ-002-О-01', type: "group"),
+    Group(name: 'ММБ-003-О-02', type: "group"),
+    Group(name: 'ММБ-004-О-02', type: "group"),
+    Group(name: 'МББ-001-О-01', type: "group"),
+    Group(name: 'МБС-001-О-01', type: "group"),
+    Group(name: 'МБС-002-О-01', type: "group"),
+    Group(name: 'МКБ-001-О-01', type: "group"),
+    Group(name: 'МИБ-001-О-01', type: "group"),
+    Group(name: 'МПБ-001-О-01', type: "group"),
+
+    //Group(name: '----------4 КУРС----------', type: "divider"),
+    Group(name: 'ММБ-902-О-03', type: "group"),
+    Group(name: 'ММБ-903-О-03', type: "group"),
+    Group(name: 'ММБ-904-О-03', type: "group"),
+    Group(name: 'МББ-901-О-01', type: "group"),
+    Group(name: 'МБС-901-О-01', type: "group"),
+    Group(name: 'МКБ-901-О-01', type: "group"),
+    Group(name: 'МИБ-901-О-01', type: "group"),
+    Group(name: 'МПБ-901-О-01', type: "group"),
+
+    //Group(name: '----------5 КУРС----------', type: "divider"),
+    Group(name: 'МБС-801-О-01', type: "group"),
+
+    //Group(name: '--------Магистратура------', type: "divider"),
+    Group(name: 'МИМ-201-О-01', type: "group"),
   ];
 
   static Map<String, String> listOfCodeGroups = {
@@ -74,4 +87,11 @@ class StringConstants {
     'МКБ-001-О-01': "2645",
     'МКБ-901-О-01': "2681",
   };
+}
+
+class Group {
+  String name;
+  String type;
+
+  Group({required this.name, required this.type});
 }

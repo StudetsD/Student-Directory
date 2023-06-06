@@ -12,7 +12,7 @@ class AppStyle {
   );
 
   static TextStyle txtRobotoRomanCondensedMedium15 = TextStyle(
-    color: ColorConstant.gray80099,
+    color: Colors.indigo,
     fontSize: getFontSize(
       15,
     ),
