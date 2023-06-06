@@ -24,10 +24,15 @@ dev_dependencies:
   flutter_lints: ^2.0.0
 
 flutter:
-
   uses-material-design: true
   assets:
     - assets/images/img_onboarding.png
+
+  fonts:
+    - family: RobotoBold
+      fonts:
+        - asset: assets/fonts/RobotoRomanBold.ttf
+          weight: 900
 
 
   # To add custom fonts to your application, add a fonts section here,
