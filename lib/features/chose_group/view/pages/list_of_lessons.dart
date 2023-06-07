@@ -1,4 +1,3 @@
-import 'dart:ui' as ui;
 import 'package:flutter/material.dart';
 import 'package:applicate/core/app_export.dart';
 
@@ -8,25 +7,37 @@ class ListOfLessons extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      fit: StackFit.expand,
-      children: <Widget>[
-        Container(
-          height: double.infinity,
-          width: double.infinity,
-          color: ColorConstant.blueFon,
+    return Scaffold(
+      backgroundColor: ColorConstant.blueFon,
+      body: Material(
+        color: Colors.white.withOpacity(0.4),
+        child: Column(
+          children: [
+            Container(
+              alignment: Alignment.topLeft,
+              margin: const EdgeInsets.only(top: 60, left: 28),
+              child: Text(
+                "Предметы",
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  color: ColorConstant.colorText,
+                  fontSize: 25,
+                  fontFamily: 'RobotoBold',
+                  fontWeight: FontWeight.w900,
+                  shadows: const [
+                    Shadow(
+                      blurRadius: 3.0,
+                      color: Colors.black26,
+                      offset: Offset(0, 5),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            Container()
+          ],
         ),
-        BackdropFilter(
-          filter: ui.ImageFilter.blur(
-            sigmaX: 8.0,
-            sigmaY: 8.0,
-          ),
-          child: Container(
-            color: Colors.transparent,
-              child: Text("Список предметов")
-          ),
-        ),
-      ],
+      ),
     );
       /*SafeArea(
       child: Scaffold(

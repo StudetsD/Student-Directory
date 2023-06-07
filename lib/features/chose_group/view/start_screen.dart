@@ -116,41 +116,6 @@ class StartScreen extends StatelessWidget{
                                 }*/
                               },
                             ),
-                            /*Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: Container(
-                                padding: const EdgeInsets.only(left: 16, right: 16),
-                                child: DropdownButton<String>(
-                                  hint: Text(
-                                    "  Группа",
-                                    style: AppStyle.txtRobotoRomanCondensedMedium15,
-                                  ),
-                                  icon: const Icon(Icons.arrow_drop_down),
-                                  iconSize: 30,
-                                  isExpanded: true,
-                                  items: StringConstants.listOfGroups.map((String value) {
-                                    return DropdownMenuItem<String>(
-                                      value: value,
-                                      child: Text(value),
-                                    );
-                                  }).toList(),
-                                  onChanged: (chose) {
-                                    Navigator.pushNamed(context, '/menu', arguments: chose);
-                                  },
-                                ),
-                              ),
-                            ),
-                            Padding(
-                              padding: getPadding(
-                                top: 16,
-                              ),
-                              child: Text(
-                                "Выбери группу",
-                                overflow: TextOverflow.ellipsis,
-                                textAlign: TextAlign.left,
-                                style: AppStyle.txtRobotoRomanCondensedMedium15,
-                              ),
-                            ),*/
                           ],
                         ),
                       ),

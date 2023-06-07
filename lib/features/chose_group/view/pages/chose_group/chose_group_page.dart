@@ -5,7 +5,6 @@ import '../../../../../core/app_export.dart';
 class ChoseGroupScreen extends StatelessWidget{
   const ChoseGroupScreen({super.key});
 
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -88,6 +87,26 @@ class ChoseGroupScreen extends StatelessWidget{
                 ),
               ),
             ),
+            const Spacer(),
+            Container(
+              //alignment: Alignment.bottomCenter,
+              width: double.maxFinite,
+              height: 50,
+              margin: const EdgeInsets.only(bottom: 80, right: 16, left: 16),
+              child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.white.withOpacity(0.5),
+                  shape: StadiumBorder(),
+                ),
+                onPressed: (){
+                  Navigator.pushNamed(context, '/');
+                },
+                child: Text(
+                  "Назад",
+                  style: AppStyle.txtRobotoRomanCondensedMedium15
+                ),
+              ),
+            )
           ],
         ),
       )
