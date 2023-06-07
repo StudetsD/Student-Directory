@@ -1,5 +1,7 @@
+import 'package:applicate/features/chose_group/widgets/button.dart';
 import 'package:flutter/material.dart';
-import 'package:shared_preferences/shared_preferences.dart';
+import 'package:flutter_svg/svg.dart';
+//import 'package:shared_preferences/shared_preferences.dart';
 import '../../../../../core/app_export.dart';
 
 class MenuPage extends StatelessWidget {
@@ -26,62 +28,85 @@ class MenuPage extends StatelessWidget {
                     fontSize: 25,
                     fontFamily: 'RobotoBold',
                     fontWeight: FontWeight.w900,
+                    shadows: const [
+                      Shadow(
+                        blurRadius: 3.0,
+                        color: Colors.black26,
+                        offset: Offset(0, 5),
+                      ),
+                    ],
                   ),
                 ),
             ),
-            Center(
+            Container(
+              margin: const EdgeInsets.only(top: 120),
+              height: 441,
+              width: 335,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(50),
+                gradient: LinearGradient(
+                  colors: [ColorConstant.firstGradInMenu, ColorConstant.secondGradInMenu],
+                ),
+              ),
               child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
+                //mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Container(
-                    width: double.maxFinite,
-                    height: 50,
-                    child: ElevatedButton(
-                      child: const Text('Расписание'),
-                      onPressed: () {
-                        Navigator.pushNamed(context, '/schedule', arguments: group);
-                      },
-                    ),
+                  CustomButton(
+                    name: "Расписание",
+                    group: group,
+                    asset: "assets/images/img_bag.svg",
+                    way: '/schedule',
+                    marginTop: 50,
+                  ),
+                  CustomButton(
+                    name: "Список предметов",
+                    group: group,
+                    asset: "assets/images/img_location.svg",
+                    way: '/lessons',
+                    marginTop: 20,
+                  ),
+                  CustomButton(
+                    name: "Список преподавателей",
+                    group: group,
+                    asset: "assets/images/img_mail.svg",
+                    way: '/teachers',
+                    marginTop: 20,
+                  ),
+                  CustomButton(
+                    name: "Список группы",
+                    group: group,
+                    asset: "assets/images/img_man.svg",
+                    way: '/students',
+                    marginTop: 20,
                   ),
                   Container(
                     width: double.maxFinite,
+                    margin: EdgeInsets.only(left: 10, right: 10, top: 20),
                     height: 50,
                     child: ElevatedButton(
-                      child: const Text('Список предметов'),
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.white.withOpacity(0.5),
+                        shape: StadiumBorder(),
+                      ),
                       onPressed: () {
-                        Navigator.pushNamed(context, '/lessons');
+                        Navigator.pushNamed(context, '/chose', arguments: group);
                       },
-                    ),
-                  ),
-                  Container(
-                    width: double.maxFinite,
-                    height: 50,
-                    child: ElevatedButton(
-                      child: const Text('Список группы'),
-                      onPressed: () {
-                        Navigator.pushNamed(context, '/students');
-                      },
-                    ),
-                  ),
-                  Container(
-                    width: double.maxFinite,
-                    height: 50,
-                    child: ElevatedButton(
-                      child: const Text('Список преподавателей'),
-                      onPressed: () {
-                        Navigator.pushNamed(context, '/teachers');
-                      },
-                    ),
-                  ),
-                  Container(
-                    width: double.maxFinite,
-                    height: 50,
-                    child: ElevatedButton(
-                      child: const Text('Вернуться к выбору группы'),
-                      onPressed: () {
-                        //_removeGroup();
-                        Navigator.pushNamed(context, '/chose');
-                      },
+                      child: Row(
+                          children:[
+                            IconButton(
+                              onPressed: () {},
+                              icon: const Icon(Icons.arrow_back_ios, color: Colors.indigo,)
+                            ),
+                            const Text(
+                              'Вернуться к выбору группы',
+                              style: TextStyle(
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.w300,
+                                  color: Colors.indigo
+                              ),
+                            ),
+                          ]
+                      ),
                     ),
                   ),
                 ],
@@ -90,63 +115,6 @@ class MenuPage extends StatelessWidget {
           ],
         ),
         ),
-        /*child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-
-            Container(
-              width: double.maxFinite,
-              height: 50,
-              child: ElevatedButton(
-                child: const Text('Расписание'),
-                onPressed: () {
-                  Navigator.pushNamed(context, '/schedule', arguments: group);
-                },
-              ),
-            ),
-            Container(
-              width: double.maxFinite,
-              height: 50,
-              child: ElevatedButton(
-                child: const Text('Список предметов'),
-                onPressed: () {
-                  Navigator.pushNamed(context, '/lessons');
-                },
-              ),
-            ),
-            Container(
-              width: double.maxFinite,
-              height: 50,
-              child: ElevatedButton(
-                child: const Text('Список группы'),
-                onPressed: () {
-                  Navigator.pushNamed(context, '/students');
-                },
-              ),
-            ),
-            Container(
-              width: double.maxFinite,
-              height: 50,
-              child: ElevatedButton(
-                child: const Text('Список преподавателей'),
-                onPressed: () {
-                  Navigator.pushNamed(context, '/teachers');
-                },
-              ),
-            ),
-            Container(
-              width: double.maxFinite,
-              height: 50,
-              child: ElevatedButton(
-                child: const Text('Вернуться к выбору группы'),
-                onPressed: () {
-                  //_removeGroup();
-                  Navigator.pushNamed(context, '/chose');
-                },
-              ),
-            ),
-          ],
-        ),*/
     );
   }
 }

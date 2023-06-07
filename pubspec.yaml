@@ -16,6 +16,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   webview_flutter: ^2.0.14
   shared_preferences: ^2.1.1
+  flutter_svg: ^2.0.6
 
 dev_dependencies:
   flutter_test:
@@ -27,6 +28,10 @@ flutter:
   uses-material-design: true
   assets:
     - assets/images/img_onboarding.png
+    - assets/images/img_bag.svg
+    - assets/images/img_location.svg
+    - assets/images/img_mail.svg
+    - assets/images/img_man.svg
 
   fonts:
     - family: RobotoBold

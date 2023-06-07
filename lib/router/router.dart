@@ -6,6 +6,6 @@ final routes = {
   '/menu': (context) => const MenuPage(),
   '/schedule': (context) => const ScheduleWebPage(),
   '/lessons': (context) => const ListOfLessons(),
-  '/students': (context) => const ListOfGroup(),
   '/teachers': (context) => const ListOfTeachers(),
+  '/students': (context) => const ListOfGroup(),
 };

@@ -42,7 +42,13 @@ class ChoseGroupScreen extends StatelessWidget{
                   decoration: BoxDecoration(
                     color: Colors.white70,
                     borderRadius: BorderRadius.circular(20),
-                    border: Border.all(color: ColorConstant.borderColor)
+                    border: Border.all(
+                      color: ColorConstant.borderColor,
+                      //заготовка для градиентной границы
+                      /*LinearGradient(
+                        colors: [ColorConstant.firstBorderGrad, ColorConstant.secondBorderGrad],
+                      )*/
+                    )
                   ),
                   child: ButtonTheme(
                     alignedDropdown: true,
@@ -87,7 +93,6 @@ class ChoseGroupScreen extends StatelessWidget{
       )
     );
   }
-
 }
 
 /*Future<void> _setGroup(String group) async {

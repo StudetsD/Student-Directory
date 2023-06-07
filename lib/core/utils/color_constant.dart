@@ -43,11 +43,17 @@ class ColorConstant {
 
   static Color colorText = fromHex('#378eca');
 
-  Color d = Colors.white70;
-
   static Color dropListText = fromHex('2C3B95FF');
 
   static Color borderColor = fromHex('22F9F9');
+
+  static Color firstGradInMenu = fromHex('0A2A99');
+
+  static Color secondGradInMenu = fromHex('AEECF0');
+
+  static Color firstBorderGrad = fromHex('22F9F9');
+
+  static Color secondBorderGrad = fromHex('0A2A99');
 
   static Color fromHex(String hexString) {
     final buffer = StringBuffer();
