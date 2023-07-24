@@ -32,6 +32,8 @@ flutter:
     - assets/images/img_location.svg
     - assets/images/img_mail.svg
     - assets/images/img_man.svg
+    - assets/images/Double_arrow.svg
+    - assets/images/Man.svg
 
   fonts:
     - family: RobotoBold

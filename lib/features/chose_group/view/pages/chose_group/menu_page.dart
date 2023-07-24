@@ -1,5 +1,6 @@
 import 'package:applicate/widgets/button.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 //import 'package:shared_preferences/shared_preferences.dart';
 import '../../../../../core/app_export.dart';
 
@@ -83,7 +84,7 @@ class MenuPage extends StatelessWidget {
                         CustomButton(
                           name: "Список группы",
                           group: group,
-                          asset: "assets/images/img_man.svg",
+                          asset: "assets/images/Man.svg",
                           way: '/students',
                           marginTop: 20,
                         ),
@@ -103,7 +104,10 @@ class MenuPage extends StatelessWidget {
                                 children:[
                                   IconButton(
                                     onPressed: () {},
-                                    icon: const Icon(Icons.arrow_back_ios, color: Colors.indigo,)
+                                    icon: SvgPicture.asset(
+                                      "assets/images/Double_arrow.svg",
+                                      color: Colors.indigo,
+                                    )
                                   ),
                                   const Text(
                                     'Вернуться к выбору группы',
