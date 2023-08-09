@@ -1,4 +1,5 @@
 class ListOfItems {
+
   static List listOfItemsOfMMB20X = [
     Items(name: "Алгебра и геометрия", semestr: ["1", "2"], groups: ["ММБ-201-О-04", "ММБ-202-О-04", "ММБ-203-О-04"], mark: "Экзамен"),
     Items(name: "Анализ статистических данных", semestr: ["6"], groups: ["ММБ-201-О-04", "ММБ-202-О-04", "ММБ-203-О-04"], mark: "Зачёт"),
@@ -1801,6 +1802,8 @@ class ListOfItems {
     Items(name: "Учебная практика: технологическая (проектно-технологическая) практика", semestr: ["2"], groups: ["МИМ-101-О-01", "МИМ-201-О-01"], mark: "Дифференцированный зачёт"),
   ];
 
+  //Item a = Item(name:'g', picture: 'g.png');
+  //var d = a.name;
 //Group s = Group(name: 'f', listOfItems: []);
 //var d = s.name;
 }
@@ -1817,5 +1820,15 @@ class Items {
     required this.semestr,
     required this.groups,
     required this.mark,
+  });
+}
+
+class Item {
+  String name;
+  String picture;
+
+  Item({
+    required this.name,
+    required this.picture,
   });
 }

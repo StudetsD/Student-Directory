@@ -21,8 +21,41 @@ class Card_ extends StatelessWidget{
           colors: [ColorConstant.firstGradInMenu, ColorConstant.secondGradInMenu],
         ),
       ),
-      child: Center(
-          child: Text(item.name, textAlign: TextAlign.center,)
+      child: MaterialButton(
+        child: Row(
+          children: [
+            Container(
+              height: 78,
+              width: 78,
+              margin: const EdgeInsets.only(right: 10),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(50),
+                border: Border.all(color: Colors.white, width: 2),
+                image: DecorationImage(
+                  image: AssetImage("assets/img_for_items/${StringConstants.listOfItems[item.name]!}"),
+                    fit: BoxFit.cover,
+                )
+              ),
+            ),
+            Flexible(
+              child: Text(
+                item.name,
+                textAlign: TextAlign.left,
+                style: const TextStyle(
+                  color: Colors.white,
+                  shadows: [
+                    Shadow(
+                      blurRadius: 3.0,
+                      color: Colors.black26,
+                      offset: Offset(0, 5),
+                    ),
+                  ]
+                ),
+              ),
+            ),
+          ],
+        ),
+        onPressed: () {  },
       ),
     );
   }
