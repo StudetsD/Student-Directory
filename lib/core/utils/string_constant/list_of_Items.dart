@@ -1,6 +1,8 @@
+import 'package:applicate/core/app_export.dart';
+
 class ListOfItems {
 
-  static List listOfItemsOfMMB20X = [
+  static List<Items> listOfItemsOfMMB20X = [
     Items(name: "Алгебра и геометрия", semestr: ["1", "2"], groups: ["ММБ-201-О-04", "ММБ-202-О-04", "ММБ-203-О-04"], mark: "Экзамен"),
     Items(name: "Анализ статистических данных", semestr: ["6"], groups: ["ММБ-201-О-04", "ММБ-202-О-04", "ММБ-203-О-04"], mark: "Зачёт"),
     Items(name: "Базы данных", semestr: ["5"], groups: ["ММБ-201-О-04", "ММБ-202-О-04", "ММБ-203-О-04"], mark: "Экзамен"),
@@ -57,7 +59,7 @@ class ListOfItems {
     Items(name: "SMM-продвижение", semestr: ["8"], groups: ["ММБ-201-О-04", "ММБ-202-О-04", "ММБ-203-О-04"], mark: "Зачёт"),
   ];
 
-  static List listOfItemsOfMMB10X = [
+  static List<Items> listOfItemsOfMMB10X = [
     Items(name: "Алгебра и геометрия", semestr: ["1", "2"], groups: ["ММБ-101-О-03", "ММБ-102-О-03", "ММБ-103-О-03"], mark: "Зачёт Экзамен"),
     Items(name: "Анализ статистических данных", semestr: ["8"], groups: ["ММБ-101-О-03", "ММБ-102-О-03", "ММБ-103-О-03"], mark: "Зачёт"),
     Items(name: "Базы данных", semestr: ["7"], groups: ["ММБ-101-О-03", "ММБ-102-О-03", "ММБ-103-О-03"], mark: "Экзамен"),
@@ -113,7 +115,7 @@ class ListOfItems {
     Items(name: "SMM-продвижение", semestr: ["8"], groups: ["ММБ-101-О-03", "ММБ-102-О-03", "ММБ-103-О-03"], mark: "Зачёт"),
   ];
 
-  static List listOfItemsOfMMB002 = [
+  static List<Items> listOfItemsOfMMB002 = [
     Items(name: "Алгебра и геометрия", semestr: ["1", "2"], groups: ["ММБ-002-О-01"], mark: "Зачёт Экзамен"),
     Items(name: "Анализ статистических данных", semestr: ["8"], groups: ["ММБ-002-О-01"], mark: "Зачёт"),
     Items(name: "Базы данных", semestr: ["7"], groups: ["ММБ-002-О-01"], mark: "Экзамен"),
@@ -167,7 +169,7 @@ class ListOfItems {
     Items(name: "SMM-продвижение", semestr: ["8"], groups: ["ММБ-002-О-01"], mark: "Зачёт"),
   ];
 
-  static List listOfItemsOfMMB0034 = [
+  static List<Items> listOfItemsOfMMB0034 = [
     Items(name: "Алгебра и геометрия", semestr: ["1", "2"], groups: ["ММБ-003-О-02", "ММБ-004-О-02"], mark: "Зачёт Экзамен"),
     Items(name: "Анализ статистических данных", semestr: ["8"], groups: ["ММБ-003-О-02", "ММБ-004-О-02"], mark: "Зачёт"),
     Items(name: "Базы данных", semestr: ["5"], groups: ["ММБ-003-О-02", "ММБ-004-О-02"], mark: "Экзамен"),
@@ -221,7 +223,7 @@ class ListOfItems {
     Items(name: "	Web-программирование", semestr: ["7", "8"], groups: ["ММБ-003-О-02", "ММБ-004-О-02"], mark: "Экзамен"),
   ];
 
-  static List listOfItemsOfMMB90X = [
+  static List<Items> listOfItemsOfMMB90X = [
     Items(name: "Алгебра и геометрия", semestr: ["1", "2"], groups: ["ММБ-902-О-03"], mark: "Зачёт Экзамен"),
     Items(name: "Анализ статистических данных", semestr: ["8"], groups: ["ММБ-902-О-03"], mark: "Зачёт"),
     Items(name: "Базы данных", semestr: ["7"], groups: ["ММБ-902-О-03"], mark: "Экзамен"),
@@ -272,7 +274,7 @@ class ListOfItems {
     Items(name: "Языки и методы программирования", semestr: ["3", "4"], groups: ["ММБ-902-О-03"], mark: "Зачёт (3), Экзамен (4)"),
   ];
 
-  static List listOfItemsOfMFS301 = [
+  static List<Items> listOfItemsOfMFS301 = [
     Items(name: "Алгебра и геометрия", semestr: ["1", "2"], groups: ["МФС-301-О-01"], mark: "Экзамен"),
     Items(name: "Анализ статистических данных", semestr: ["8"], groups: ["МФС-301-О-01"], mark: "Зачёт"),
     Items(name: "Безопасность жизнедеятельности", semestr: ["3"], groups: ["МФС-301-О-01"], mark: "Зачёт"),
@@ -332,7 +334,7 @@ class ListOfItems {
     Items(name: "SMM-продвижение", semestr: ["8"], groups: ["МФС-301-О-01"], mark: "Зачёт"),
   ];
 
-  static List listOfItemsOfMFS101 = [
+  static List<Items> listOfItemsOfMFS101 = [
     Items(name: "Алгебра и геометрия", semestr: ["1", "2"], groups: ["МФС-101-О-01"], mark: "Зачёт Экзамен"),
     Items(name: "Алгебра и теория чисел", semestr: ["4"], groups: ["МФС-101-О-01"], mark: "	Дифференцированный зачёт"),
     Items(name: "Анализ статистических данных", semestr: ["8"], groups: ["МФС-101-О-01"], mark: "Зачёт"),
@@ -391,7 +393,7 @@ class ListOfItems {
     Items(name: "SMM-продвижение", semestr: ["8"], groups: ["МФС-101-О-01"], mark: "Зачёт"),
   ];
 
-  static List listOfItemsOfMFS001 = [
+  static List<Items> listOfItemsOfMFS001 = [
     Items(name: "Алгебра и геометрия", semestr: ["1", "2"], groups: ["МФС-001-О-01"], mark: "Зачёт Экзамен"),
     Items(name: "Алгебра и теория чисел", semestr: ["4"], groups: ["МФС-001-О-01"], mark: "	Дифференцированный зачёт"),
     Items(name: "Анализ статистических данных", semestr: ["7"], groups: ["МФС-001-О-01"], mark: "Зачёт"),
@@ -452,7 +454,7 @@ class ListOfItems {
     Items(name: "SMM-продвижение", semestr: ["8"], groups: ["МФС-001-О-01"], mark: "Зачёт"),
   ];
 
-  static List listOfItemsOfMFS901 = [
+  static List<Items> listOfItemsOfMFS901 = [
     Items(name: "Алгебра и геометрия", semestr: ["1", "2"], groups: ["МФС-901-О-01"], mark: "Зачёт Экзамен"),
     Items(name: "Алгебра и теория чисел", semestr: ["4"], groups: ["МФС-901-О-01"], mark: "	Дифференцированный зачёт"),
     Items(name: "Анализ статистических данных", semestr: ["8"], groups: ["МФС-901-О-01"], mark: "Зачёт"),
@@ -515,7 +517,7 @@ class ListOfItems {
     Items(name: "SMM-продвижение", semestr: ["9"], groups: ["МФС-901-О-01"], mark: "Зачёт"),
   ];
 
-  static List listOfItemsOfMKB101 = [
+  static List<Items> listOfItemsOfMKB101 = [
     Items(name: "Алгебра", semestr: ["1", "2", "3"], groups: ["МКБ-101-О-01"], mark: "Экзамен"),
     Items(name: "Аналитическая геометрия", semestr: ["1"], groups: ["МКБ-101-О-01"], mark: "Экзамен"),
     Items(name: "Биоинформатика", semestr: ["8"], groups: ["МКБ-101-О-01"], mark: "Зачёт"),
@@ -572,7 +574,7 @@ class ListOfItems {
     Items(name: "Языки программирования", semestr: ["1", "2", "3"], groups: ["МКБ-101-О-01"], mark: "Зачёт"),
   ];
 
-  static List listOfItemsOfMKB001 = [
+  static List<Items> listOfItemsOfMKB001 = [
     Items(name: "Алгебра", semestr: ["1", "2", "3"], groups: ["МКБ-001-О-01"], mark: "Экзамен"),
     Items(name: "Базы данных", semestr: ["5"], groups: ["МКБ-001-О-01"], mark: "Экзамен"),
     Items(name: "Биоинформатика", semestr: ["8"], groups: ["МКБ-001-О-01"], mark: "Зачёт"),
@@ -627,7 +629,7 @@ class ListOfItems {
     Items(name: "Языки программирования", semestr: ["1", "2", "3"], groups: ["МКБ-001-О-01"], mark: "Зачёт (1, 2), Дифференцированный зачёт (3)"),
   ];
 
-  static List listOfItemsOfMKB901 = [
+  static List<Items> listOfItemsOfMKB901 = [
     Items(name: "Алгебра", semestr: ["1", "2", "3"], groups: ["МКБ-901-О-01"], mark: "Экзамен"),
     Items(name: "Базы данных", semestr: ["5"], groups: ["МКБ-901-О-01"], mark: "Экзамен"),
     Items(name: "Биоинформатика", semestr: ["8"], groups: ["МКБ-901-О-01"], mark: "Зачёт"),
@@ -682,7 +684,7 @@ class ListOfItems {
     Items(name: "Языки программирования", semestr: ["2", "3", "4"], groups: ["МКБ-901-О-01"], mark: "Зачёт (2, 3), Экзамен (4)"),
   ];
 
-  static List listOfItemsOfMIB201 = [
+  static List<Items> listOfItemsOfMIB201 = [
     Items(name: "Администрирование сетевых операционных систем", semestr: ["5"], groups: ["МИБ-201-О-01"], mark: "Экзамен"),
     Items(name: "Алгебра", semestr: ["1", "2"], groups: ["МИБ-201-О-01"], mark: "Экзамен"),
     Items(name: "Алгоритмизация и программирование", semestr: ["2", "3"], groups: ["МИБ-201-О-01"], mark: "Зачёт (2), Экзамен (3)"),
@@ -744,7 +746,7 @@ class ListOfItems {
     Items(name: "SMM-продвижение", semestr: ["8"], groups: ["МИБ-201-О-01"], mark: "Зачёт"),
   ];
 
-  static List listOfItemsOfMIB101 = [
+  static List<Items> listOfItemsOfMIB101 = [
     Items(name: "Администрирование сетевых операционных систем", semestr: ["5"], groups: ["МИБ-101-О-01"], mark: "Экзамен"),
     Items(name: "Алгебра", semestr: ["1", "2"], groups: ["МИБ-101-О-01"], mark: "Экзамен"),
     Items(name: "Алгоритмизация и программирование", semestr: ["3", "4"], groups: ["МИБ-101-О-01"], mark: "Зачёт (3), Экзамен (4)"),
@@ -804,7 +806,7 @@ class ListOfItems {
     Items(name: "Электротехника", semestr: ["5"], groups: ["МИБ-101-О-01"], mark: "Экзамен"),
   ];
 
-  static List listOfItemsOfMIB001 = [
+  static List<Items> listOfItemsOfMIB001 = [
     Items(name: "Администрирование сетевых операционных систем", semestr: ["5"], groups: ["МИБ-001-О-01"], mark: "Экзамен"),
     Items(name: "Алгебра", semestr: ["1", "2"], groups: ["МИБ-001-О-01"], mark: "Экзамен"),
     Items(name: "Алгоритмизация и программирование", semestr: ["3", "4"], groups: ["МИБ-001-О-01"], mark: "Зачёт (3), Экзамен (4)"),
@@ -863,7 +865,7 @@ class ListOfItems {
     Items(name: "SMM-продвижение", semestr: ["8"], groups: ["МИБ-001-О-01"], mark: "Зачёт"),
   ];
 
-  static List listOfItemsOfMIB901 = [
+  static List<Items> listOfItemsOfMIB901 = [
     Items(name: "Администрирование сетевых операционных систем", semestr: ["5"], groups: ["МИБ-901-О-01"], mark: "Экзамен"),
     Items(name: "Алгебра", semestr: ["1", "2"], groups: ["МИБ-901-О-01"], mark: "Экзамен"),
     Items(name: "Алгоритмизация и программирование", semestr: ["3", "4"], groups: ["МИБ-901-О-01"], mark: "Зачёт (3), Экзамен (4)"),
@@ -917,7 +919,7 @@ class ListOfItems {
     Items(name: "Электротехника", semestr: ["4"], groups: ["МИБ-901-О-01"], mark: "Дифференцированный зачёт"),
   ];
 
-  static List listOfItemsOfMPB201 = [
+  static List<Items> listOfItemsOfMPB201 = [
     Items(name: "Администрирование сетевых операционных систем", semestr: ["5"], groups: ["МПБ-201-О-01"], mark: "Экзамен"),
     Items(name: "Алгебра", semestr: ["1", "2"], groups: ["МПБ-201-О-01"], mark: "Экзамен"),
     Items(name: "Алгоритмизация и программирование", semestr: ["3", "4"], groups: ["МПБ-201-О-01"], mark: "Зачёт (3), Экзамен (4)"),
@@ -979,7 +981,7 @@ class ListOfItems {
     Items(name: "SMM-продвижение", semestr: ["8"], groups: ["МПБ-201-О-01"], mark: "Зачёт"),
   ];
 
-  static List listOfItemsOfMPB101 = [
+  static List<Items> listOfItemsOfMPB101 = [
     Items(name: "Администрирование сетевых операционных систем", semestr: ["5"], groups: ["МПБ-101-О-01"], mark: "Экзамен"),
     Items(name: "Алгебра", semestr: ["1", "2"], groups: ["МПБ-101-О-01"], mark: "Экзамен"),
     Items(name: "Алгоритмизация и программирование", semestr: ["3", "4"], groups: ["МПБ-101-О-01"], mark: "Зачёт (3), Экзамен (4)"),
@@ -1034,7 +1036,7 @@ class ListOfItems {
     Items(name: "Экономика фирмы", semestr: ["8"], groups: ["МПБ-101-О-01"], mark: "Зачёт"),
   ];
 
-  static List listOfItemsOfMPB001 = [
+  static List<Items> listOfItemsOfMPB001 = [
     Items(name: "Администрирование сетевых операционных систем", semestr: ["5"], groups: ["МПБ-001-О-01"], mark: "Экзамен"),
     Items(name: "Алгебра", semestr: ["1", "2"], groups: ["МПБ-001-О-01"], mark: "Экзамен"),
     Items(name: "Алгоритмизация и программирование", semestr: ["3", "4"], groups: ["МПБ-001-О-01"], mark: "Зачёт (3), Экзамен (4)"),
@@ -1084,7 +1086,7 @@ class ListOfItems {
     Items(name: "Экономика фирмы", semestr: ["8"], groups: ["МПБ-001-О-01"], mark: "Зачёт"),
   ];
 
-  static List listOfItemsOfMPB901 = [
+  static List<Items> listOfItemsOfMPB901 = [
     Items(name: "Администрирование сетевых операционных систем", semestr: ["5"], groups: ["МПБ-901-О-01"], mark: "Экзамен"),
     Items(name: "Алгебра", semestr: ["1", "2"], groups: ["МПБ-901-О-01"], mark: "Экзамен"),
     Items(name: "Алгоритмизация и программирование", semestr: ["3", "4"], groups: ["МПБ-901-О-01"], mark: "Зачёт (3), Экзамен (4)"),
@@ -1135,7 +1137,7 @@ class ListOfItems {
     Items(name: "Экономика фирмы", semestr: ["8"], groups: ["МПБ-901-О-01"], mark: "Зачёт"),
   ];
 
-  static List listOfItemsOfMBB201 = [
+  static List<Items> listOfItemsOfMBB201 = [
     Items(name: "Алгебра", semestr: ["1", "2", "3"], groups: ["МББ-201-О-01"], mark: "Экзамен"),
     Items(name: "Алгоритмы кодировки и сжатия", semestr: ["7"], groups: ["МББ-201-О-01"], mark: "Дифференцированный зачёт"),
     Items(name: "Анализ уязвимостей программного обеспечения", semestr: ["8"], groups: ["МББ-201-О-01"], mark: "Дифференцированный зачёт"),
@@ -1207,7 +1209,7 @@ class ListOfItems {
     Items(name: "SMM-продвижение", semestr: ["8"], groups: ["МББ-201-О-01"], mark: "Зачёт"),
   ];
 
-  static List listOfItemsOfMBB101 = [
+  static List<Items> listOfItemsOfMBB101 = [
     Items(name: "Алгебра", semestr: ["1", "2", "3"], groups: ["МББ-101-О-01"], mark: "Экзамен"),
     Items(name: "Алгоритмы кодировки и сжатия", semestr: ["7"], groups: ["МББ-101-О-01"], mark: "Дифференцированный зачёт"),
     Items(name: "Анализ уязвимостей программного обеспечения", semestr: ["7"], groups: ["МББ-101-О-01"], mark: "Дифференцированный зачёт"),
@@ -1278,7 +1280,7 @@ class ListOfItems {
     Items(name: "SMM-продвижение", semestr: ["8"], groups: ["МББ-101-О-01"], mark: "Зачёт"),
   ];
 
-  static List listOfItemsOfMBB001 = [
+  static List<Items> listOfItemsOfMBB001 = [
     Items(name: "Алгебра", semestr: ["1", "2", "3"], groups: ["МББ-001-О-01"], mark: "Экзамен"),
     Items(name: "Анализ уязвимостей программного обеспечения / Безопасность программного кода", semestr: ["7"], groups: ["МББ-001-О-01"], mark: "Зачёт"),
     Items(name: "Аппаратные средства вычислительной техники", semestr: ["2"], groups: ["МББ-001-О-01"], mark: "Экзамен"),
@@ -1342,7 +1344,7 @@ class ListOfItems {
     Items(name: "Языки программирования", semestr: ["1", "2", "3"], groups: ["МББ-001-О-01"], mark: "Зачёт (1, 2), Дифференцированный зачёт (3)"),
   ];
 
-  static List listOfItemsOfMBB901 = [
+  static List<Items> listOfItemsOfMBB901 = [
     Items(name: "Алгебра", semestr: ["1", "2", "3"], groups: ["МББ-001-О-01"], mark: "Экзамен"),
     Items(name: "Анализ уязвимостей программного обеспечения / Безопасность программного кода", semestr: ["7"], groups: ["МББ-001-О-01"], mark: "Зачёт"),
     Items(name: "Аппаратные средства вычислительной техники", semestr: ["2"], groups: ["МББ-001-О-01"], mark: "Экзамен"),
@@ -1406,7 +1408,7 @@ class ListOfItems {
     Items(name: "Языки программирования", semestr: ["1", "2", "3"], groups: ["МББ-001-О-01"], mark: "Зачёт (1, 2), Дифференцированный зачёт (3)"),
   ];
 
-  static List listOfItemsOfMBS20X = [
+  static List<Items> listOfItemsOfMBS20X = [
     Items(name: "Алгебра", semestr: ["1", "2", "3"], groups: ["МБС-201-О-01", "МБС-202-О-01"], mark: "Экзамен"),
     Items(name: "Алгоритмы кодировки и сжатия", semestr: ["7"], groups: ["МБС-201-О-01", "МБС-202-О-01"], mark: "Дифференцированный зачёт"),
     Items(name: "Анализ уязвимостей компьютерных сетей", semestr: ["9"], groups: ["МБС-201-О-01", "МБС-202-О-01"], mark: "Дифференцированный зачёт"),
@@ -1494,7 +1496,7 @@ class ListOfItems {
     Items(name: "SMM-продвижение", semestr: ["8"], groups: ["МБС-201-О-01", "МБС-202-О-01"], mark: "Зачёт"),
   ];
 
-  static List listOfItemsOfMBS10X = [
+  static List<Items> listOfItemsOfMBS10X = [
     Items(name: "Алгебра", semestr: ["1", "2", "3"], groups: ["МБС-101-О-01", "МБС-102-О-01"], mark: "Экзамен"),
     Items(name: "Алгоритмы кодировки и сжатия", semestr: ["9"], groups: ["МБС-101-О-01", "МБС-102-О-01"], mark: "Экзамен"),
     Items(name: "Анализ уязвимостей компьютерных сетей", semestr: ["10"], groups: ["МБС-101-О-01", "МБС-102-О-01"], mark: "Дифференцированный зачёт"),
@@ -1578,7 +1580,7 @@ class ListOfItems {
     Items(name: "Языки программирования", semestr: ["1", "2", "3"], groups: ["МБС-101-О-01", "МБС-102-О-01"], mark: "Зачёт (1, 2), Дифференцированный зачёт (3)"),
   ];
 
-  static List listOfItemsOfMBS00X = [
+  static List<Items> listOfItemsOfMBS00X = [
     Items(name: "Алгебра", semestr: ["1", "2", "3"], groups: ["МБС-001-О-01", "МБС-002-О-01"], mark: "Экзамен"),
     Items(name: "Алгоритмы кодировки и сжатия", semestr: ["9"], groups: ["МБС-001-О-01", "МБС-002-О-01"], mark: "Экзамен"),
     Items(name: "Анализ уязвимостей компьютерных сетей", semestr: ["10"], groups: ["МБС-001-О-01", "МБС-002-О-01"], mark: "Дифференцированный зачёт"),
@@ -1645,7 +1647,7 @@ class ListOfItems {
     Items(name: "Языки программирования", semestr: ["1", "2", "3"], groups: ["МБС-001-О-01", "МБС-002-О-01"], mark: "Зачёт (1, 2), Дифференцированный зачёт (3)"),
   ];
 
-  static List listOfItemsOfMBS901 = [
+  static List<Items> listOfItemsOfMBS901 = [
     Items(name: "Алгебра", semestr: ["1", "2", "3"], groups: ["МБС-901-О-01"], mark: "Экзамен"),
     Items(name: "Алгоритмы кодировки и сжатия", semestr: ["9"], groups: ["МБС-901-О-01"], mark: "Экзамен"),
     Items(name: "Анализ уязвимостей компьютерных сетей", semestr: ["10"], groups: ["МБС-901-О-01"], mark: "Дифференцированный зачёт"),
@@ -1713,7 +1715,7 @@ class ListOfItems {
     Items(name: "Языки программирования", semestr: ["2", "3", "4"], groups: ["МБС-901-О-01"], mark: "Зачёт (2, 3), Экзамен (4)"),
   ];
 
-  static List listOfItemsOfMBS801 = [
+  static List<Items> listOfItemsOfMBS801 = [
     Items(name: "Алгебра", semestr: ["1", "2", "3"], groups: ["МБС-801-О-01"], mark: "Экзамен"),
     Items(name: "Алгоритмы кодировки и сжатия", semestr: ["9"], groups: ["МБС-801-О-01"], mark: "Экзамен"),
     Items(name: "Анализ уязвимостей компьютерных сетей", semestr: ["10"], groups: ["МБС-801-О-01"], mark: "Дифференцированный зачёт"),
@@ -1781,7 +1783,7 @@ class ListOfItems {
     Items(name: "Языки программирования", semestr: ["2", "3", "4"], groups: ["МБС-801-О-01"], mark: "Зачёт (2, 3), Экзамен (4)"),
   ];
 
-  static List listOfItemsOfMIM = [
+  static List<Items> listOfItemsOfMIM = [
     Items(name: "Алгоритмы анализа данных и машинное обучение / Веб-программирование", semestr: ["3"], groups: ["МИМ-101-О-01", "МИМ-201-О-01"], mark: "Дифференцированный зачёт"),
     Items(name: "Алгоритмы анализа изображений", semestr: ["2"], groups: ["МИМ-101-О-01", "МИМ-201-О-01"], mark: "Дифференцированный зачёт"),
     Items(name: "Алгоритмы спектрального анализа данных / Защита сетевого периметра", semestr: ["3"], groups: ["МИМ-101-О-01", "МИМ-201-О-01"], mark: "Зачёт"),
@@ -1802,7 +1804,7 @@ class ListOfItems {
     Items(name: "Учебная практика: технологическая (проектно-технологическая) практика", semestr: ["2"], groups: ["МИМ-101-О-01", "МИМ-201-О-01"], mark: "Дифференцированный зачёт"),
   ];
 
-  //Item a = Item(name:'g', picture: 'g.png');
+//Item a = Item(name:'g', picture: 'g.png');
   //var d = a.name;
 //Group s = Group(name: 'f', listOfItems: []);
 //var d = s.name;

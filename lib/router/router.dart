@@ -5,7 +5,7 @@ final routes = {
   '/chose': (context) => const ChoseGroupScreen(),
   '/menu': (context) => const MenuPage(),
   '/schedule': (context) => const ScheduleWebPage(),
-  '/lessons': (context) => const ListOfLessons(),
+  '/lessons': (context) => const StartList(),
   '/teachers': (context) => const ListOfTeachers(),
   '/students': (context) => const ListOfGroup(),
 };

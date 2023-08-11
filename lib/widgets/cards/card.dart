@@ -14,7 +14,7 @@ class Card_ extends StatelessWidget{
     return Container(
       width: double.maxFinite,
       height: 100,
-      margin: const EdgeInsets.only(left: 20, right: 20, top: 20),
+      margin: const EdgeInsets.only(left: 10, right: 10, top: 20),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(50),
         gradient: LinearGradient(
@@ -39,7 +39,7 @@ class Card_ extends StatelessWidget{
             ),
             Flexible(
               child: Text(
-                item.name,
+                ReductionName(item.name),
                 textAlign: TextAlign.left,
                 style: const TextStyle(
                   color: Colors.white,
@@ -60,4 +60,12 @@ class Card_ extends StatelessWidget{
     );
   }
 
+  String ReductionName(String name) {
+    if (StringConstants.listOfReductionItems[name] == null) {
+      return name;
+    }
+    else {
+      return StringConstants.listOfReductionItems[name]!;
+    }
+  }
 }

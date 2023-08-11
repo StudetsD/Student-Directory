@@ -39,9 +39,9 @@ class AppDecoration {
 }
 
 class BorderRadiusStyle {
-  static BorderRadius roundedBorder40 = BorderRadius.circular(
+  static BorderRadius roundedBorder50 = BorderRadius.circular(
     getHorizontalSize(
-      40,
+      50,
     ),
   );
 }
