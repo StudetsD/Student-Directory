@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:applicate/core/app_export.dart';
-import 'package:applicate/widgets/cards/card.dart';
+import 'package:applicate/widgets/cards/card_of_item.dart';
 
 class StartList extends StatelessWidget {
   const StartList({super.key});
@@ -110,7 +110,7 @@ class _ListOfLessonsState extends State<ListOfLessons> {
                     ),
                   ),
                 ),
-                for(var i = 0; i < _filteredLessons.length; i++) Card_(item: _filteredLessons[i]),
+                for(var i = 0; i < _filteredLessons.length; i++) CardOfItem(item: _filteredLessons[i]),
               ],
             ),
           ),

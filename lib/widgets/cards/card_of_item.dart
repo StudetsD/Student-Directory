@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 import '../../core/app_export.dart';
 
-class Card_ extends StatelessWidget{
-  Card_ ({
+class CardOfItem extends StatelessWidget{
+  CardOfItem ({
     super.key,
     required this.item,
 });

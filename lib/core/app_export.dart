@@ -3,6 +3,7 @@ export 'package:applicate/core/utils/color_constant.dart';
 export 'package:applicate/core/utils/size_utils.dart';
 export 'package:applicate/core/utils/string_constant/string_constant.dart';
 export 'package:applicate/core/utils/string_constant/list_of_Items.dart';
+export 'package:applicate/core/utils/string_constant/list_of_teach.dart';
 export 'package:applicate/theme/app_decoration.dart';
 export 'package:applicate/theme/app_style.dart';
 /*export 'package:applicate/widgets/custom_image_view.dart';
