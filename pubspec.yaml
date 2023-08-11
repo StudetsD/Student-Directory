@@ -36,6 +36,9 @@ flutter:
     - assets/images/Man.svg
     - assets/img_for_items/
     - assets/img_for_teachers/
+    - assets/temp/Department_of_Computer_Mathematics_and_Software/
+    - assets/temp/Department_of_Computer_Technologies_and_Networks/
+    - assets/temp/Department_of_Fundamental_and_Applied_Mathematics/
 
 
   fonts:
