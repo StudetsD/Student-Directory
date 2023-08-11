@@ -31,7 +31,6 @@ class CustomButton extends StatelessWidget {
         ),
         onPressed: () {
           Navigator.pushNamed(context, way, arguments: group);
-
         },
         child: Row(
             children:[
