@@ -1,5 +1,6 @@
 import 'package:applicate/core/app_export.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:outline_gradient_button/outline_gradient_button.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -8,6 +9,10 @@ class StartScreen extends StatelessWidget{
 
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.portraitUp,
+      DeviceOrientation.portraitDown,
+    ]);
     return Scaffold(
       body: Container(
           height: double.infinity,
@@ -30,13 +35,8 @@ class StartScreen extends StatelessWidget{
                       right: 1,
                     ),
                     child: OutlineGradientButton(
-                      padding: EdgeInsets.only(
-                        left: getHorizontalSize(1,),
-                        top: getVerticalSize(1,),
-                        right: getHorizontalSize(1,),
-                        bottom: getVerticalSize(1,),
-                      ),
-                      strokeWidth: getHorizontalSize(1,),
+                      padding: const EdgeInsets.all(1),
+                      strokeWidth: getHorizontalSize(1),
                       gradient: LinearGradient(
                         begin: const Alignment(
                           0.12,
@@ -52,18 +52,10 @@ class StartScreen extends StatelessWidget{
                         ],
                       ),
                       corners: const Corners(
-                        topLeft: Radius.circular(
-                          50,
-                        ),
-                        topRight: Radius.circular(
-                          50,
-                        ),
-                        bottomLeft: Radius.circular(
-                          50,
-                        ),
-                        bottomRight: Radius.circular(
-                          50,
-                        ),
+                        topLeft: Radius.circular(50),
+                        topRight: Radius.circular(50),
+                        bottomLeft: Radius.circular(50),
+                        bottomRight: Radius.circular(50),
                       ),
                       child: Container(
                         padding: getPadding(
@@ -73,7 +65,7 @@ class StartScreen extends StatelessWidget{
                           bottom: 55,
                         ),
                         decoration: AppDecoration.outline.copyWith(
-                          borderRadius: BorderRadiusStyle.roundedBorder40,
+                          borderRadius: BorderRadiusStyle.roundedBorder50,
                         ),
                         child: Column(
                           mainAxisSize: MainAxisSize.min,

@@ -10,7 +10,6 @@ class MenuPage extends StatelessWidget {
   @override
   Widget build(BuildContext context ) {
     var group = (ModalRoute.of(context)?.settings.arguments ?? "") as String;
-
     return Scaffold(
       backgroundColor: ColorConstant.blueFon,
       body: Container(
@@ -90,7 +89,7 @@ class MenuPage extends StatelessWidget {
                         ),
                         Container(
                           width: double.maxFinite,
-                          margin: EdgeInsets.only(left: 10, right: 10, top: 20),
+                          margin: const EdgeInsets.only(left: 10, right: 10, top: 20),
                           height: 50,
                           child: ElevatedButton(
                             style: ElevatedButton.styleFrom(
