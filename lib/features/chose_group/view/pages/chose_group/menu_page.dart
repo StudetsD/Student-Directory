@@ -1,7 +1,6 @@
 import 'package:applicate/widgets/button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-//import 'package:shared_preferences/shared_preferences.dart';
 import '../../../../../core/app_export.dart';
 
 class MenuPage extends StatelessWidget {
@@ -43,6 +42,26 @@ class MenuPage extends StatelessWidget {
                       ],
                     ),
                   ),
+              ),
+              Container(
+                alignment: Alignment.topCenter,
+                margin: const EdgeInsets.only(top: 10),
+                child: Text(
+                    "Ваша группа: $group",
+                  style: TextStyle(
+                    color: ColorConstant.colorText,
+                    fontSize: 20,
+                    fontFamily: 'RobotoBold',
+                    fontWeight: FontWeight.w700,
+                    shadows: const [
+                      Shadow(
+                        blurRadius: 3.0,
+                        color: Colors.black26,
+                        offset: Offset(0, 5),
+                      ),
+                    ],
+                  ),
+                ),
               ),
               Expanded(
                 child: Center(
@@ -139,8 +158,3 @@ class MenuPage extends StatelessWidget {
     );
   }
 }
-
-/*Future<void> _removeGroup() async {
-  var prefs = await SharedPreferences.getInstance();
-  prefs.setString("group", "none");
-}*/
