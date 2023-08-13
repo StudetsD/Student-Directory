@@ -1,9 +1,22 @@
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import '../../../../../core/app_export.dart';
-//import 'package:shared_preferences/shared_preferences.dart';
 
-class ChoseGroupScreen extends StatelessWidget{
+class ChoseGroupScreen extends StatefulWidget{
   const ChoseGroupScreen({super.key});
+
+
+  @override
+  State<ChoseGroupScreen> createState() => _ChoseGroupScreenState();
+}
+
+class _ChoseGroupScreenState extends State<ChoseGroupScreen> {
+  static const tempGroup = 'group';
+
+  Future _setGroup(String group) async {
+    var prefs = await SharedPreferences.getInstance();
+    prefs.setString(tempGroup, group);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -78,8 +91,8 @@ class ChoseGroupScreen extends StatelessWidget{
                               ),*/
                         );
                       }).toList(),
-                      onChanged: (chose) {
-                        //_setGroup(chose.toString());
+                      onChanged: (chose) async {
+                        await _setGroup(chose!);
                         Navigator.pushNamed(context, '/menu', arguments: chose);
                       },
                     ),
@@ -113,22 +126,10 @@ class ChoseGroupScreen extends StatelessWidget{
     );
   }
 }
-
-/*Future<void> _setGroup(String group) async {
-  var prefs = await SharedPreferences.getInstance();
-  prefs.setString("group", group);
-}*/
-
-
 //класс разделителя
 /*class DropdownMenuItemSeparator<T> extends DropdownMenuItem<T> {
   DropdownMenuItemSeparator(String course) : super(
     enabled: false,     // As of Flutter 2.5.
     child: Text(course), // Trick the assertion.
   );
-
-  @override
-  Widget build(BuildContext context) {
-    return Divider(thickness: 3);
-  }
 }*/
