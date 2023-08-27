@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 import '../../../../widgets/cards/card_of_param_item.dart';
+import '../view.dart';
 
 
 class PageOfItem extends StatelessWidget {
@@ -67,12 +68,48 @@ class PageOfItem extends StatelessWidget {
                       ),
                     )
                 ),
-                CardOfParamItem(text: 'Преподаватель: \nФамилия Имя Отчество', icon: "assets/icons/teacher.svg", isButton: true,),
-                CardOfParamItem(text: 'Вид аттестации: ${item.mark}', icon: "assets/icons/type_of_attestation.svg", isButton: false,),
-                CardOfParamItem(text: 'Длительность: ${FormMessage(item.semestr)}', icon: "assets/icons/calendar.svg", isButton: false,),
-                CardOfParamItem(text: 'Полезные материалы', icon: "assets/icons/semester.svg", isButton: true,),//на иконке заглушка
-
-
+                CardOfParamItem(text: 'Преподаватель: \nФамилия Имя Отчество', icon: "assets/icons/teacher.svg",),
+                CardOfParamItem(text: 'Вид аттестации: ${item.mark}', icon: "assets/icons/type_of_attestation.svg",),
+                CardOfParamItem(text: 'Длительность: ${FormMessage(item.semestr)}', icon: "assets/icons/calendar.svg",),
+                Container(
+                    width: double.infinity,
+                    height: 75,
+                    margin: const EdgeInsets.only(left: 20, right: 20, bottom: 30),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(20),
+                      gradient: LinearGradient(
+                        colors: [ColorConstant.firstGradInMenu, ColorConstant.secondGradInMenu],
+                      ),
+                    ),
+                    child: MaterialButton(
+                      child: Row(
+                        children: [
+                          Container(
+                            margin: const EdgeInsets.only(right: 5),
+                            child: IconButton(
+                                onPressed: () {
+                                  Navigator.pushNamed(context, '/disk', arguments: StringConstants.listOfUrl[item.name]);
+                                },
+                                icon: SvgPicture.asset(
+                                  "assets/icons/semester.svg",
+                                )
+                            ),
+                          ),
+                          const Text(
+                            "Полезные материалы",
+                            style: TextStyle(
+                              fontFamily: 'RobotoBold',
+                              fontSize: 17,
+                              color: Colors.white,
+                            ),
+                          )
+                        ],
+                      ),
+                      onPressed: () {
+                        Navigator.pushNamed(context, '/disk', arguments: StringConstants.listOfUrl[item.name]);
+                      },
+                    ),
+                )
               ],
             ),
           ),

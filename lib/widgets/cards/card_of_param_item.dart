@@ -9,11 +9,9 @@ class CardOfParamItem extends StatelessWidget {
     super.key,
     required this.text,
     required this.icon,
-    required this.isButton
   });
   String text;
   String icon;
-  bool isButton;
 
   @override
   Widget build(BuildContext context) {
@@ -25,35 +23,28 @@ class CardOfParamItem extends StatelessWidget {
           borderRadius: BorderRadius.circular(20),
           color: Colors.white60.withOpacity(0.5),
         ),
-        child: MaterialButton(
-          child: Row(
-            children: [
-              Container(
-                margin: const EdgeInsets.only(right: 5),
-                child: IconButton(
-                    onPressed: () {},
-                    icon: SvgPicture.asset(
-                      icon,
-                    )
+        child: Row(
+          children: [
+            Container(
+              margin: const EdgeInsets.only(right: 5),
+              child: IconButton(
+                  onPressed: () {},
+                  icon: SvgPicture.asset(
+                    icon,
+                  )
+              ),
+            ),
+            Flexible(
+              child: Text(
+                text,
+                style: const TextStyle(
+                  fontFamily: 'RobotoBold',
+                  fontSize: 17,
+                  color: Colors.white,
                 ),
               ),
-              Container(
-                child: Text(
-                  text,
-                  style: const TextStyle(
-                    fontFamily: 'RobotoBold',
-                    fontSize: 17,
-                    color: Colors.white,
-                  ),
-                ),
-              )
-            ],
-          ),
-          onPressed: () {
-            if (isButton) {
-              //
-            }
-          },
+            )
+          ],
         )
     );
   }

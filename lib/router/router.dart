@@ -10,4 +10,5 @@ final routes = {
   '/students': (context) => const ListOfGroup(),
   '/item': (context) => const PageOfItem(),
   '/teacher': (context) => const PageOfTeacher(),
+  '/disk': (context) => const PageGoogleDrive(),
 };
