@@ -24,24 +24,37 @@ class MenuPage extends StatelessWidget {
             children: [
               Container(
                 alignment: Alignment.topLeft,
-                margin: const EdgeInsets.only(top: 60, left: 28),
-                child: Text(
-                    "Меню",
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      color: ColorConstant.colorText,
-                      fontSize: 25,
-                      fontFamily: 'RobotoBold',
-                      fontWeight: FontWeight.w900,
-                      shadows: const [
-                        Shadow(
-                          blurRadius: 3.0,
-                          color: Colors.black26,
-                          offset: Offset(0, 5),
-                        ),
-                      ],
+                margin: const EdgeInsets.only(top: 60),
+                child: Row(
+                  children: [
+                    IconButton(
+                      icon: const Icon(
+                        Icons.arrow_back,
+                        color: Colors.white54,
+                      ),
+                      onPressed: () {
+                        Navigator.pushNamed(context, '/');
+                      },
                     ),
-                  ),
+                    Text(
+                        "Меню",
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          color: ColorConstant.colorText,
+                          fontSize: 25,
+                          fontFamily: 'RobotoBold',
+                          fontWeight: FontWeight.w900,
+                          shadows: const [
+                            Shadow(
+                              blurRadius: 3.0,
+                              color: Colors.black26,
+                              offset: Offset(0, 5),
+                            ),
+                          ],
+                        ),
+                      ),
+                  ],
+                ),
               ),
               Expanded(
                 child: Center(
