@@ -55,7 +55,9 @@ class CardOfItem extends StatelessWidget{
             ),
           ],
         ),
-        onPressed: () {  },
+        onPressed: () {
+          Navigator.pushNamed(context, '/item', arguments: item);
+        },
       ),
     );
   }

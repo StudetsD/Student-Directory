@@ -6,8 +6,10 @@ class CardOfTeacher extends StatelessWidget{
   CardOfTeacher ({
     super.key,
     required this.teacher,
+    required this.group,
   });
   var teacher;
+  String group;
 
   @override
   Widget build(BuildContext context) {
@@ -55,17 +57,10 @@ class CardOfTeacher extends StatelessWidget{
             ),
           ],
         ),
-        onPressed: () {  },
+        onPressed: () {
+          Navigator.pushNamed(context, '/teacher', arguments: [teacher, group]);
+        },
       ),
     );
   }
-
-  /*String ReductionName(String name) {
-    if (StringConstants.listOfReductionItems[name] == null) {
-      return name;
-    }
-    else {
-      return StringConstants.listOfReductionItems[name]!;
-    }
-  }*/
 }

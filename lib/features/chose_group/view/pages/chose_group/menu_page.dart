@@ -43,26 +43,6 @@ class MenuPage extends StatelessWidget {
                     ),
                   ),
               ),
-              Container(
-                alignment: Alignment.topCenter,
-                margin: const EdgeInsets.only(top: 10),
-                child: Text(
-                    "Ваша группа: $group",
-                  style: TextStyle(
-                    color: ColorConstant.colorText,
-                    fontSize: 20,
-                    fontFamily: 'RobotoBold',
-                    fontWeight: FontWeight.w700,
-                    shadows: const [
-                      Shadow(
-                        blurRadius: 3.0,
-                        color: Colors.black26,
-                        offset: Offset(0, 5),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
               Expanded(
                 child: Center(
                   child: Container(
@@ -70,20 +50,41 @@ class MenuPage extends StatelessWidget {
                     height: 441,
                     width: 335,
                     decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(50),
+                      borderRadius: BorderRadius.circular(15),
                       gradient: LinearGradient(
                         colors: [ColorConstant.firstGradInMenu, ColorConstant.secondGradInMenu],
                       ),
                     ),
                     child: Column(
+
                       //mainAxisAlignment: MainAxisAlignment.center,
                       children: [
+                        Container(
+                          margin: const EdgeInsets.only(top: 20, left: 18),
+                          alignment: Alignment.bottomLeft,
+                          child: Text(
+                            group,
+                            style: const TextStyle(
+                              color: Colors.white70,
+                              fontSize: 18,
+                              fontFamily: 'RobotoBold',
+                              fontWeight: FontWeight.w700,
+                              shadows: [
+                                Shadow(
+                                  blurRadius: 3.0,
+                                  color: Colors.black26,
+                                  offset: Offset(0, 5),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
                         CustomButton(
                           name: "Расписание",
                           group: group,
                           asset: "assets/images/img_bag.svg",
                           way: '/schedule',
-                          marginTop: 50,
+                          marginTop: 20,
                         ),
                         CustomButton(
                           name: "Список предметов",

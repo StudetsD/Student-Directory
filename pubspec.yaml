@@ -36,6 +36,9 @@ flutter:
     - assets/images/Man.svg
     - assets/img_for_items/
     - assets/img_for_teachers/
+    - assets/icons/
+    - assets/icons/type_of_attestation.svg
+    - assets/icons/calendar.svg
 
 
   fonts:

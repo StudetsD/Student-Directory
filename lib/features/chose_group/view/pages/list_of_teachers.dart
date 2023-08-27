@@ -98,7 +98,7 @@ class _ListOfTeachersState extends State<ListOfTeachers> {
                     ),
                   ),
                 ),
-                for(var i = 0; i < _filteredTeachers.length; i++) CardOfTeacher(teacher: _filteredTeachers[i],),
+                for(var i = 0; i < _filteredTeachers.length; i++) CardOfTeacher(teacher: _filteredTeachers[i], group: group,),
               ],
             ),
           ),

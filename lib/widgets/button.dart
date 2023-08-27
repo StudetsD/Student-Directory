@@ -27,7 +27,7 @@ class CustomButton extends StatelessWidget {
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
           backgroundColor: Colors.white.withOpacity(0.5),
-          shape: StadiumBorder(),
+          shape: const StadiumBorder(),
         ),
         onPressed: () {
           Navigator.pushNamed(context, way, arguments: group);

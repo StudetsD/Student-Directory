@@ -8,4 +8,6 @@ final routes = {
   '/lessons': (context) => const StartList(),
   '/teachers': (context) => const ListOfTeachers(),
   '/students': (context) => const ListOfGroup(),
+  '/item': (context) => const PageOfItem(),
+  '/teacher': (context) => const PageOfTeacher(),
 };
