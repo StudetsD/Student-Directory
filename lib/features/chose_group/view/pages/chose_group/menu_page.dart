@@ -69,7 +69,6 @@ class MenuPage extends StatelessWidget {
                       ),
                     ),
                     child: Column(
-
                       //mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Container(

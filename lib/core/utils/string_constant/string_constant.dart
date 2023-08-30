@@ -130,7 +130,6 @@ class StringConstants {
     'ММБ-202-О-04': ListOfItems.listOfItemsOfMMB20X,
     'ММБ-203-О-04': ListOfItems.listOfItemsOfMMB20X,
     'МПБ-201-О-01': ListOfItems.listOfItemsOfMPB201,
-    'МИМ-201-О-01': ListOfItems.listOfItemsOfMIM,
     'МММ-201-О-01': ListOfItems.listOfItemsOfMFS301,
 
     //               --- 3 КУРС ---
@@ -159,6 +158,63 @@ class StringConstants {
     'МБС-901-О-01': ListOfItems.listOfItemsOfMBS901,
     'МБС-801-О-01': ListOfItems.listOfItemsOfMBS801,
     'МФС-901-О-01': ListOfItems.listOfItemsOfMFS901,
+
+    //          --- МАГИСТРАТУРА ---
+    'МИМ-201-О-01': ListOfItems.listOfItemsOfMIM,
+  };
+
+  static Map<String, List<String>> listOfStudentsGroups = {
+    //                --- 1 КУРС ---
+    'МБС-301-О-01': ListOfStudents.listOfStudentsOfMBS301,
+    'МБС-302-О-01': ListOfStudents.listOfStudentsOfMBS302,
+    'МИБ-301-О-02': ListOfStudents.listOfStudentsOfMIB301,
+    'ММБ-301-О-04': ListOfStudents.listOfStudentsOfMMB301,
+    'ММБ-302-О-04': ListOfStudents.listOfStudentsOfMMB302,
+    'ММБ-303-О-04': ListOfStudents.listOfStudentsOfMMB303,
+    'МПБ-301-О-01': ListOfStudents.listOfStudentsOfMPB301,
+    'МФС-301-О-02': ListOfStudents.listOfStudentsOfMFS301,
+    'МММ-301-О-06': ListOfStudents.listOfStudentsOfMMM301,
+
+    //                --- 2 КУРС ---
+    'МББ-201-О-01': ListOfStudents.listOfStudentsOfMBB201,
+    'МБС-201-О-01': ListOfStudents.listOfStudentsOfMBS201,
+    'МБС-202-О-01': ListOfStudents.listOfStudentsOfMBS202,
+    'МИБ-201-О-01': ListOfStudents.listOfStudentsOfMIB201,
+    'ММБ-201-О-04': ListOfStudents.listOfStudentsOfMMB201,
+    'ММБ-202-О-04': ListOfStudents.listOfStudentsOfMMB202,
+    'ММБ-203-О-04': ListOfStudents.listOfStudentsOfMMB203,
+    'МПБ-201-О-01': ListOfStudents.listOfStudentsOfMPB201,
+    'МММ-201-О-01': ListOfStudents.listOfStudentsOfMMM201,
+
+    //                --- 3 КУРС ---
+    'МББ-101-О-01': ListOfStudents.listOfStudentsOfMBB101,
+    'МБС-101-О-01': ListOfStudents.listOfStudentsOfMBS101,
+    'МКБ-101-О-01': ListOfStudents.listOfStudentsOfMKB101,
+    'МИБ-101-О-01': ListOfStudents.listOfStudentsOfMIB101,
+    'ММБ-102-О-01': ListOfStudents.listOfStudentsOfMMB102,
+    'ММБ-103-О-02': ListOfStudents.listOfStudentsOfMMB103,
+    'ММБ-104-О-02': ListOfStudents.listOfStudentsOfMMB104,
+    'МПБ-101-О-01': ListOfStudents.listOfStudentsOfMPB101,
+    'МФС-101-О-01': ListOfStudents.listOfStudentsOfMFS101,
+
+    //                --- 4 КУРС ---
+    'МББ-001-О-01': ListOfStudents.listOfStudentsOfMBB001,
+    'МБС-001-О-01': ListOfStudents.listOfStudentsOfMBS001,
+    'МИБ-001-О-01': ListOfStudents.listOfStudentsOfMIB001,
+    'МКБ-001-О-01': ListOfStudents.listOfStudentsOfMKB001,
+    'ММБ-002-О-01': ListOfStudents.listOfStudentsOfMMB002,
+    'ММБ-003-О-01': ListOfStudents.listOfStudentsOfMMB003,
+    'ММБ-004-О-02': ListOfStudents.listOfStudentsOfMMB004,
+    'МПБ-001-О-01': ListOfStudents.listOfStudentsOfMPB001,
+    'МФС-001-О-01': ListOfStudents.listOfStudentsOfMFS001,
+
+    //                --- 5 КУРС ---
+    'МБС-901-О-01': ListOfStudents.listOfStudentsOfMBS901,
+    'МБС-801-О-01': ListOfStudents.listOfStudentsOfMBS801,
+    'МФС-901-О-01': ListOfStudents.listOfStudentsOfMFS901,
+
+    //             --- МАГИСТРАТУРА ---
+    'МИМ-201-О-01': ListOfStudents.listOfStudentsOfMIM201,
   };
 
   static Map<String, String> listOfItems = {
