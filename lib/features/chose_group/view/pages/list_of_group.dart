@@ -9,7 +9,6 @@ class ListOfGroup extends StatelessWidget {
   Widget build(BuildContext context) {
     var group = (ModalRoute.of(context)?.settings.arguments ?? "") as String;
     var list = StringConstants.listOfStudentsGroups[group];
-    int tempNum = 1;
     return Scaffold(
       backgroundColor: ColorConstant.blueFon,
       body: Material(
