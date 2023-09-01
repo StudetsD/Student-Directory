@@ -10,40 +10,49 @@ class MenuPage extends StatelessWidget {
   Widget build(BuildContext context ) {
     var group = (ModalRoute.of(context)?.settings.arguments ?? "") as String;
     return Scaffold(
-      backgroundColor: ColorConstant.blueFon,
-      body: Container(
-        //можно будет поставить на задний фон градиент
-        /*decoration: BoxDecoration(
-          gradient: LinearGradient(
-            colors: [ColorConstant.firstGradInMenu, ColorConstant.secondGradInMenu],
+      body: Column(
+        children: [
+          Container(
+            alignment: Alignment.topLeft,
+            margin: const EdgeInsets.only(top: 40),
+            child: Row(
+              children: [
+                IconButton(
+                  icon: AppIconStyle.iconTopBack,
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/');
+                  },
+                ),
+                Text(
+                    "Меню",
+                    textAlign: TextAlign.center,
+                    style: AppStyle.textTopStyle,
+                  ),
+              ],
+            ),
           ),
-        ),*/
-        child: Material(
-          color: Colors.white.withOpacity(0.4),
-          child: Column(
-            children: [
-              Container(
-                alignment: Alignment.topLeft,
-                margin: const EdgeInsets.only(top: 60),
-                child: Row(
+          Expanded(
+            child: Center(
+              child: Container(
+                height: 390,
+                width: double.infinity,
+                margin: const EdgeInsets.only(left: 5, right: 5),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(15),
+                  color: ColorConstant.menuBackgroundColor,
+                ),
+                child: Column(
                   children: [
-                    IconButton(
-                      icon: const Icon(
-                        Icons.arrow_back,
-                        color: Colors.white54,
-                      ),
-                      onPressed: () {
-                        Navigator.pushNamed(context, '/');
-                      },
-                    ),
-                    Text(
-                        "Меню",
-                        textAlign: TextAlign.center,
+                    Container(
+                      margin: const EdgeInsets.only(top: 15, left: 30),
+                      alignment: Alignment.bottomLeft,
+                      child: Text(
+                        group,
                         style: TextStyle(
-                          color: ColorConstant.colorText,
-                          fontSize: 25,
+                          color: ColorConstant.startScreenTextColor,
+                          fontSize: 20,
                           fontFamily: 'RobotoBold',
-                          fontWeight: FontWeight.w900,
+                          fontWeight: FontWeight.w700,
                           shadows: const [
                             Shadow(
                               blurRadius: 3.0,
@@ -53,120 +62,43 @@ class MenuPage extends StatelessWidget {
                           ],
                         ),
                       ),
+                    ),
+                    CustomButton(
+                      name: "Расписание",
+                      group: group,
+                      asset: "assets/images/img_bag.svg",
+                      way: '/schedule',
+                    ),
+                    CustomButton(
+                      name: "Список предметов",
+                      group: group,
+                      asset: "assets/images/img_location.svg",
+                      way: '/lessons',
+                    ),
+                    CustomButton(
+                      name: "Список преподавателей",
+                      group: group,
+                      asset: "assets/images/img_mail.svg",
+                      way: '/teachers',
+                    ),
+                    CustomButton(
+                      name: "Список группы",
+                      group: group,
+                      asset: "assets/images/Man.svg",
+                      way: '/students',
+                    ),
+                    CustomButton(
+                      name: "Вернуться к выбору группы",
+                      group: group,
+                      asset: "assets/icons/back.svg",
+                      way: '/chose',
+                    ),
                   ],
                 ),
               ),
-              Expanded(
-                child: Center(
-                  child: Container(
-                    //margin: const EdgeInsets.only(top: 120),
-                    height: 441,
-                    width: 335,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(15),
-                      gradient: LinearGradient(
-                        colors: [ColorConstant.firstGradInMenu, ColorConstant.secondGradInMenu],
-                      ),
-                    ),
-                    child: Column(
-                      //mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Container(
-                          margin: const EdgeInsets.only(top: 20, left: 18),
-                          alignment: Alignment.bottomLeft,
-                          child: Text(
-                            group,
-                            style: const TextStyle(
-                              color: Colors.white70,
-                              fontSize: 18,
-                              fontFamily: 'RobotoBold',
-                              fontWeight: FontWeight.w700,
-                              shadows: [
-                                Shadow(
-                                  blurRadius: 3.0,
-                                  color: Colors.black26,
-                                  offset: Offset(0, 5),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                        CustomButton(
-                          name: "Расписание",
-                          group: group,
-                          asset: "assets/images/img_bag.svg",
-                          way: '/schedule',
-                          marginTop: 20,
-                        ),
-                        CustomButton(
-                          name: "Список предметов",
-                          group: group,
-                          asset: "assets/images/img_location.svg",
-                          way: '/lessons',
-                          marginTop: 20,
-                        ),
-                        CustomButton(
-                          name: "Список преподавателей",
-                          group: group,
-                          asset: "assets/images/img_mail.svg",
-                          way: '/teachers',
-                          marginTop: 20,
-                        ),
-                        CustomButton(
-                          name: "Список группы",
-                          group: group,
-                          asset: "assets/images/Man.svg",
-                          way: '/students',
-                          marginTop: 20,
-                        ),
-                        Container(
-                          width: double.maxFinite,
-                          margin: const EdgeInsets.only(left: 10, right: 10, top: 20),
-                          height: 50,
-                          child: ElevatedButton(
-                            style: ElevatedButton.styleFrom(
-                              backgroundColor: Colors.white.withOpacity(0.5),
-                              shape: StadiumBorder(),
-                            ),
-                            onPressed: () {
-                              Navigator.pushNamed(context, '/chose', arguments: group);
-                            },
-                            child: Row(
-                                children:[
-                                  IconButton(
-                                    onPressed: () {},
-                                    icon: SvgPicture.asset(
-                                      "assets/images/Double_arrow.svg",
-                                      color: Colors.indigo,
-                                    )
-                                  ),
-                                  const Text(
-                                    'Вернуться к выбору группы',
-                                    style: TextStyle(
-                                      fontSize: 16,
-                                      fontWeight: FontWeight.w300,
-                                      color: Colors.indigo,
-                                      shadows: [
-                                        Shadow(
-                                          blurRadius: 10.0,
-                                          color: Colors.black26,
-                                          offset: Offset(0, 5),
-                                        ),
-                                      ],
-                                    ),
-                                  ),
-                                ]
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-              ),
-            ],
+            ),
           ),
-          ),
+        ],
       ),
     );
   }

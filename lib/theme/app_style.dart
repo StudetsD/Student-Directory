@@ -2,6 +2,20 @@ import 'package:flutter/material.dart';
 import 'package:applicate/core/app_export.dart';
 
 class AppStyle {
+  static TextStyle textTopStyle = TextStyle (
+    color: ColorConstant.startScreenTextColor,
+    fontSize: 28,
+    fontFamily: 'RobotoBlack',
+    fontWeight: FontWeight.w900,
+    shadows: const [
+      Shadow(
+        blurRadius: 3.0,
+        color: Colors.black26,
+        offset: Offset(0, 5),
+      ),
+    ],
+  );
+
   static TextStyle txtRobotoRomanBold34 = TextStyle(
     color: ColorConstant.black900,
     fontSize: getFontSize(
@@ -11,12 +25,10 @@ class AppStyle {
     fontWeight: FontWeight.w700,
   );
 
-  static TextStyle txtRobotoRomanCondensedMedium15 = TextStyle(
-    color: Colors.indigo,
-    fontSize: getFontSize(
-      15,
-    ),
-    fontFamily: 'Roboto',
+  static TextStyle txtRobotoRomanCondensedMedium17 = TextStyle(
+    color: ColorConstant.chosePageTextColor,
+    fontSize: 17,
+    fontFamily: 'RobotoBlack',
     fontWeight: FontWeight.w500,
   );
 

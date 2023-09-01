@@ -28,12 +28,16 @@ flutter:
   uses-material-design: true
   assets:
     - assets/images/img_onboarding.png
+    - assets/images/menu_fon.png
     - assets/images/img_bag.svg
     - assets/images/img_location.svg
     - assets/images/img_mail.svg
     - assets/images/img_man.svg
     - assets/images/Double_arrow.svg
     - assets/images/Man.svg
+    - assets/icons/back.svg
+    - assets/icons/back_top.svg
+    - assets/icons/download.svg
     - assets/img_for_items/
     - assets/img_for_teachers/
     - assets/icons/

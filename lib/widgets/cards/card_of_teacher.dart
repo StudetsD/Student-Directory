@@ -16,12 +16,10 @@ class CardOfTeacher extends StatelessWidget{
     return Container(
       width: double.maxFinite,
       height: 100,
-      margin: const EdgeInsets.only(left: 10, right: 10, top: 20),
+      margin: const EdgeInsets.only(left: 20, right: 20, top: 15),
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(50),
-        gradient: LinearGradient(
-          colors: [ColorConstant.firstGradInMenu, ColorConstant.secondGradInMenu],
-        ),
+        borderRadius: BorderRadius.circular(15),
+        color: ColorConstant.menuBackgroundColor,
       ),
       child: MaterialButton(
         child: Row(
@@ -32,7 +30,7 @@ class CardOfTeacher extends StatelessWidget{
               margin: const EdgeInsets.only(right: 10),
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(50),
-                  border: Border.all(color: Colors.white, width: 2),
+                  border: Border.all(color: Colors.white70, width: 2),
                   image: DecorationImage(
                     image: AssetImage("assets/img_for_teachers/${teacher.img}"),
                     fit: BoxFit.cover,
@@ -43,9 +41,9 @@ class CardOfTeacher extends StatelessWidget{
               child: Text(
                 teacher.name,
                 textAlign: TextAlign.left,
-                style: const TextStyle(
-                    color: Colors.white,
-                    shadows: [
+                style: TextStyle(
+                    color: ColorConstant.startScreenTextColor,
+                    shadows: const [
                       Shadow(
                         blurRadius: 3.0,
                         color: Colors.black26,

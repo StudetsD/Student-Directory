@@ -7,6 +7,7 @@ export 'package:applicate/core/utils/string_constant/list_of_teach.dart';
 export 'package:applicate/core/utils/string_constant/list_of_students.dart';
 export 'package:applicate/theme/app_decoration.dart';
 export 'package:applicate/theme/app_style.dart';
+export 'package:applicate/theme/app_icon_style.dart';
 /*export 'package:applicate/widgets/custom_image_view.dart';
 export 'package:applicate/routes/app_routes.dart';
 export 'package:applicate/core/utils/date_time_utils.dart';*/

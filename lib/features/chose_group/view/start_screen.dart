@@ -41,7 +41,7 @@ class _StartScreenState extends State<StartScreen> {
         width: double.infinity,
         decoration: const BoxDecoration(
           image: DecorationImage(
-            image: AssetImage("assets/images/img_onboarding.png"),
+            image: AssetImage("assets/images/menu_fon.png"),
             fit: BoxFit.cover
           ),
         ),
@@ -49,71 +49,52 @@ class _StartScreenState extends State<StartScreen> {
           child: Container(
             width: double.maxFinite,
             height: 270,
-            margin: const EdgeInsets.only(right: 5, left: 5),
+            margin: const EdgeInsets.only(right: 20, left: 20),
             decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(50),
-              gradient: LinearGradient(
-                begin: const Alignment(
-                  0.12,
-                  0.07,
-                ),
-                end: const Alignment(
-                  0.95,
-                  1,
-                ),
-                colors: [
-                  ColorConstant.whiteA70099,
-                  ColorConstant.black900,
-                ],
-              ),
+              borderRadius: BorderRadius.circular(15),
+              color: ColorConstant.startScreenFon,
             ),
-            child: Container(
-              margin: const EdgeInsets.all(1),
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(50),
-                color: Colors.white.withOpacity(0.3),
-              ),
-              child: Column(
-                mainAxisSize: MainAxisSize.min,
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Container(
-                    margin: const EdgeInsets.only(bottom: 20),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Container(
+                  margin: const EdgeInsets.only(bottom: 20),
+                  child: Text(
+                    "Добро\nпожаловать",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontSize: 32,
+                      fontFamily: 'RobotoBold',
+                      fontWeight: FontWeight.w700,
+                      color: ColorConstant.startScreenTextColor,
+                    ),
+                  ),
+                ),
+                Container(
+                  margin: const EdgeInsets.only(left: 58, right: 58),
+                  child: MaterialButton(
+                    height: 50,
+                    minWidth: double.infinity,
+                    color: ColorConstant.startScreenButtonFon,
+                    shape: const RoundedRectangleBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(5))
+                    ),
                     child: Text(
-                      "Добро\nпожаловать",
-                      textAlign: TextAlign.center,
-                      style: AppStyle.txtRobotoRomanBold34.copyWith(
-                        letterSpacing: getHorizontalSize(
-                          0.37,
-                        ),
-                      ),
+                      "Начать",
+                      style: TextStyle(color: ColorConstant.startScreenButtonTextColor),
                     ),
+                    onPressed: () {
+                      if (_group == ""){
+                        Navigator.pushNamed(context, '/chose');
+                      }
+                      else {
+                        Navigator.pushNamed(context, '/menu', arguments: _group);
+                      }
+                    },
                   ),
-                  Container(
-                    margin: const EdgeInsets.only(left: 58, right: 58),
-                    child: MaterialButton(
-                      height: 50,
-                      minWidth: double.infinity,
-                      color: Colors.white.withOpacity(0.5),
-                      shape: const RoundedRectangleBorder(
-                        borderRadius: BorderRadius.all(Radius.circular(50))
-                      ),
-                      child: const Text(
-                        "Начать",
-                        style: TextStyle(color: Colors.blueGrey,),
-                      ),
-                      onPressed: () {
-                        if (_group == ""){
-                          Navigator.pushNamed(context, '/chose');
-                        }
-                        else {
-                          Navigator.pushNamed(context, '/menu', arguments: _group);
-                        }
-                      },
-                    ),
-                  ),
-                ],
-              ),
+                ),
+              ],
             ),
           ),
         ),

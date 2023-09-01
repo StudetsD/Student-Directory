@@ -1,3 +1,4 @@
+import 'package:applicate/core/app_export.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -9,45 +10,42 @@ class CustomButton extends StatelessWidget {
     required this.group,
     required this.asset,
     required this.way,
-    required this.marginTop,
   });
 
   final String name;
   final String group;
   final String asset;
   final String way;
-  final double marginTop;
 
   @override
   Widget build(BuildContext context) {
     return Container(
       width: double.maxFinite,
-      margin: EdgeInsets.only(left: 10, right: 10, top: marginTop),
+      margin: const EdgeInsets.only(left: 18, right: 18, top: 15),
       height: 50,
-      child: ElevatedButton(
-        style: ElevatedButton.styleFrom(
-          backgroundColor: Colors.white.withOpacity(0.5),
-          shape: const StadiumBorder(),
-        ),
-        onPressed: () {
-          Navigator.pushNamed(context, way, arguments: group);
-        },
+      decoration: BoxDecoration(
+        color: ColorConstant.startScreenButtonFon,
+        borderRadius: BorderRadius.circular(5),
+      ),
+      child: MaterialButton(
         child: Row(
             children:[
               IconButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushNamed(context, way, arguments: group);
+                },
                 icon: SvgPicture.asset(
                   asset,
-                  color: Colors.indigo,
+                  color: ColorConstant.startScreenTextColor,
                 ),
               ),
               Text(
                 name,
-                style: const TextStyle(
+                style: TextStyle(
                   fontSize: 16,
                   fontWeight: FontWeight.w300,
-                  color: Colors.indigo,
-                  shadows: [
+                  color: ColorConstant.startScreenTextColor,
+                  shadows: const [
                     Shadow(
                       blurRadius: 10.0,
                       color: Colors.black26,
@@ -58,6 +56,9 @@ class CustomButton extends StatelessWidget {
               ),
             ]
         ),
+        onPressed: () {
+          Navigator.pushNamed(context, way, arguments: group);
+        },
       ),
     );
   }

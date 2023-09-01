@@ -13,105 +13,57 @@ class PageOfItem extends StatelessWidget {
   Widget build(BuildContext context) {
     var item = (ModalRoute.of(context)?.settings.arguments ?? "") as Items;
     return Scaffold(
-      backgroundColor: ColorConstant.blueFon,
-      body: Material(
-        color: Colors.white.withOpacity(0.4),
-        child: SizedBox(
-          height: double.infinity,
-          child: SingleChildScrollView(
-            child: Column(
-              children: [
-                Container(
-                  alignment: Alignment.topLeft,
-                  margin: const EdgeInsets.only(top: 60, bottom: 20),
-                  child: Row(
-                    children: [
-                      IconButton(
-                        icon: const Icon(
-                          Icons.arrow_back,
-                          color: Colors.white54,
-                        ),
-                        onPressed: () {
-                          Navigator.pushNamed(context, '/lessons', arguments: item.groups[0]);
-                        },
-                      ),
-                      Text(
-                        "Предмет",
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          color: ColorConstant.colorText,
-                          fontSize: 25,
-                          fontFamily: 'RobotoBold',
-                          fontWeight: FontWeight.w900,
-                          shadows: const [
-                            Shadow(
-                              blurRadius: 3.0,
-                              color: Colors.black26,
-                              offset: Offset(0, 5),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                Container(
-                    margin: const EdgeInsets.only(left: 30, bottom: 30),
-                    alignment: Alignment.centerLeft,
-                    child: Text(
-                      ReductionName(item.name),
-                      style: const TextStyle(
-                        fontSize: 35,
-                        color: Colors.white,
-                        fontFamily: 'RobotoBold',
-                        fontWeight: FontWeight.w700,
-                      ),
-                    )
-                ),
-                CardOfParamItem(text: 'Преподаватель: \nФамилия Имя Отчество', icon: "assets/icons/teacher.svg",),
-                CardOfParamItem(text: 'Вид аттестации: ${item.mark}', icon: "assets/icons/type_of_attestation.svg",),
-                CardOfParamItem(text: 'Длительность: ${FormMessage(item.semestr)}', icon: "assets/icons/calendar.svg",),
-                Container(
-                    width: double.infinity,
-                    height: 75,
-                    margin: const EdgeInsets.only(left: 20, right: 20, bottom: 30),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(20),
-                      gradient: LinearGradient(
-                        colors: [ColorConstant.firstGradInMenu, ColorConstant.secondGradInMenu],
-                      ),
-                    ),
-                    child: MaterialButton(
-                      child: Row(
-                        children: [
-                          Container(
-                            margin: const EdgeInsets.only(right: 5),
-                            child: IconButton(
-                                onPressed: () {
-                                  Navigator.pushNamed(context, '/disk', arguments: StringConstants.listOfUrl[item.name]);
-                                },
-                                icon: SvgPicture.asset(
-                                  "assets/icons/semester.svg",
-                                )
-                            ),
-                          ),
-                          const Text(
-                            "Полезные материалы",
-                            style: TextStyle(
-                              fontFamily: 'RobotoBold',
-                              fontSize: 17,
-                              color: Colors.white,
-                            ),
-                          )
-                        ],
-                      ),
+      body: SizedBox(
+        height: double.infinity,
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              Container(
+                alignment: Alignment.topLeft,
+                margin: const EdgeInsets.only(top: 40, bottom: 30),
+                child: Row(
+                  children: [
+                    IconButton(
+                      icon:AppIconStyle.iconTopBack,
                       onPressed: () {
-                        Navigator.pushNamed(context, '/disk', arguments: StringConstants.listOfUrl[item.name]);
+                        Navigator.pushNamed(context, '/lessons', arguments: item.groups[0]);
                       },
                     ),
+                    Text(
+                      "Предмет",
+                      textAlign: TextAlign.center,
+                      style: AppStyle.textTopStyle,
+                    ),
+                  ],
+                ),
+              ),
+              Container(
+                height: 70,
+                width: double.infinity,
+                margin: const EdgeInsets.only(left: 20, right: 20, bottom: 20),
+                decoration: BoxDecoration(
+                  color: ColorConstant.menuBackgroundColor,
+                  borderRadius: BorderRadius.circular(15),
+                ),
+                alignment: Alignment.centerLeft,
+                child: Container(
+                  margin: const EdgeInsets.only(left: 30),
+                  child: Text(
+                    ReductionName(item.name),
+                    style: TextStyle(
+                      fontSize: 30,
+                      color: ColorConstant.startScreenTextColor,
+                      fontFamily: 'RobotoBold',
+                      fontWeight: FontWeight.w700,
+                    ),
+                  ),
                 )
-              ],
-            ),
+              ),
+              CardOfParamItem(text: 'Преподаватель: \nФамилия Имя Отчество', icon: "assets/icons/teacher.svg", isButton: false, item: item,),
+              CardOfParamItem(text: 'Вид аттестации: ${item.mark}', icon: "assets/icons/type_of_attestation.svg", isButton: false, item: item,),
+              CardOfParamItem(text: 'Длительность: ${FormMessage(item.semestr)}', icon: "assets/icons/calendar.svg", isButton: false, item: item,),
+              CardOfParamItem(text: 'Ссылка на материалы', icon: "assets/icons/download.svg", isButton: true, item: item,),
+            ],
           ),
         ),
       ),

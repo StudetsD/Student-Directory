@@ -52,67 +52,53 @@ class _ListOfLessonsState extends State<ListOfLessons> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: ColorConstant.blueFon,
-      body: Material(
-        color: Colors.white.withOpacity(0.4),
-        child: SizedBox(
-          height: double.infinity,
-          child: SingleChildScrollView(
-            keyboardDismissBehavior: ScrollViewKeyboardDismissBehavior.onDrag,
-            child: Column(
-              children: <Widget>[
-                Container(
-                  alignment: Alignment.topLeft,
-                  margin: const EdgeInsets.only(top: 60, bottom: 20),
-                  child: Row(
-                    children: [
-                      IconButton(
-                        icon: const Icon(
-                          Icons.arrow_back,
-                          color: Colors.white54,
-                        ),
-                        onPressed: () {
-                          Navigator.pushNamed(context, '/menu', arguments: widget.group);
-                        },
-                      ),
-                      Text(
-                        "Предметы",
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          color: ColorConstant.colorText,
-                          fontSize: 25,
-                          fontFamily: 'RobotoBold',
-                          fontWeight: FontWeight.w900,
-                          shadows: const [
-                            Shadow(
-                              blurRadius: 3.0,
-                              color: Colors.black26,
-                              offset: Offset(0, 5),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(left: 10, right: 10),
-                  child: TextField(
-                    controller: _searchController,
-                    decoration: InputDecoration(
-                      suffixIcon: const Icon(Icons.search_rounded,),
-                      filled: true,
-                      fillColor: Colors.white70.withAlpha(100),
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(50),
-                      ),
-                      hintText: "Search",
+      body: SizedBox(
+        height: double.infinity,
+        child: SingleChildScrollView(
+          keyboardDismissBehavior: ScrollViewKeyboardDismissBehavior.onDrag,
+          child: Column(
+            children: <Widget>[
+              Container(
+                alignment: Alignment.topLeft,
+                margin: const EdgeInsets.only(top: 40, bottom: 10),
+                child: Row(
+                  children: [
+                    IconButton(
+                      icon: AppIconStyle.iconTopBack,
+                      onPressed: () {
+                        Navigator.pushNamed(context, '/menu', arguments: widget.group);
+                      },
                     ),
+                    Text(
+                      "Предметы",
+                      textAlign: TextAlign.center,
+                      style: AppStyle.textTopStyle,
+                    ),
+                  ],
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 10, right: 10, bottom: 5),
+                child: TextField(
+                  style: TextStyle(color: ColorConstant.chosePageTextColor),
+                  controller: _searchController,
+                  decoration: InputDecoration(
+                    suffixIcon: Icon(
+                      Icons.search_rounded,
+                      color: ColorConstant.chosePageTextColor,
+                    ),
+                    filled: true,
+                    fillColor: ColorConstant.chosePageFon,
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(5),
+                    ),
+                    hintText: " Поиск",
+                    hintStyle: AppStyle.txtRobotoRomanCondensedMedium17,
                   ),
                 ),
-                for(var i = 0; i < _filteredLessons.length; i++) CardOfItem(item: _filteredLessons[i]),
-              ],
-            ),
+              ),
+              for(var i = 0; i < _filteredLessons.length; i++) CardOfItem(item: _filteredLessons[i]),
+            ],
           ),
         ),
       ),

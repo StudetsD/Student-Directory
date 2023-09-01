@@ -10,99 +10,163 @@ class PageOfTeacher extends StatelessWidget {
     var teacher = list[0] as Teachers;
     var group = list[1];
     return Scaffold(
-      backgroundColor: ColorConstant.blueFon,
-      body: Material(
-        color: Colors.white.withOpacity(0.4),
-        child: Column(
-          children: [
-            Container(
-              alignment: Alignment.topLeft,
-              margin: const EdgeInsets.only(top: 60, bottom: 24),
-              child: Row(
-                children: [
-                  IconButton(
-                    icon: const Icon(
-                      Icons.arrow_back,
-                      color: Colors.white54,
+      body: SizedBox(
+        height: double.infinity,
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              Container(
+                alignment: Alignment.topLeft,
+                margin: const EdgeInsets.only(top: 40, bottom: 24),
+                child: Row(
+                  children: [
+                    IconButton(
+                      icon: AppIconStyle.iconTopBack,
+                      onPressed: () {
+                        Navigator.pushNamed(context, '/teachers', arguments: group);
+                      },
                     ),
-                    onPressed: () {
-                      Navigator.pushNamed(context, '/teachers', arguments: group);
-                    },
-                  ),
-                  Text(
-                    "Преподаватель",
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      color: ColorConstant.colorText,
-                      fontSize: 25,
-                      fontFamily: 'RobotoBold',
-                      fontWeight: FontWeight.w900,
-                      shadows: const [
-                        Shadow(
-                          blurRadius: 3.0,
-                          color: Colors.black26,
-                          offset: Offset(0, 5),
-                        ),
-                      ],
+                    Text(
+                      "Преподаватель",
+                      textAlign: TextAlign.center,
+                      style: AppStyle.textTopStyle,
                     ),
-                  ),
-                ],
-              ),
-            ),
-            Container(
-              height: 140,
-              width: double.infinity,
-              margin: const EdgeInsets.only(left: 20, right: 20),
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(15),
-                gradient: LinearGradient(
-                  colors: [ColorConstant.firstGradInMenu, ColorConstant.secondGradInMenu],
+                  ],
                 ),
               ),
-              child: Row(
-                children: [
-                  Container(
-                    height: 80,
-                    width: 80,
-                    margin: const EdgeInsets.only(left: 10, right: 10),
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(50),
-                        border: Border.all(color: Colors.white, width: 2),
-                        image: DecorationImage(
-                          image: AssetImage("assets/img_for_teachers/${teacher.img}"),
-                          fit: BoxFit.cover,
-                        )
-                    ),
-                  ),
-                  Flexible(
-                    child: Text (
-                      teacher.name,
-                      style: const TextStyle(
-                        fontSize: 16,
-                        fontFamily: 'RobotoRegular',
-                        shadows: [
-                          Shadow(
-                            //blurRadius: 3.0,
-                            color: Colors.white,
-                            offset: Offset(0, -3),
-                          ),
-                        ],
-                        color: Colors.transparent,
-                        decoration: TextDecoration.underline,
-                        decorationColor: Colors.white,
-                        decorationThickness: 1,
+              Container(
+                height: 140,
+                width: double.infinity,
+                margin: const EdgeInsets.only(left: 15, right: 15),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(15),
+                  color: ColorConstant.menuBackgroundColor,
+                ),
+                child: Row(
+                  children: [
+                    Container(
+                      height: 80,
+                      width: 80,
+                      margin: const EdgeInsets.only(left: 24, right: 10),
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(50),
+                          border: Border.all(color: Colors.white70, width: 2),
+                          image: DecorationImage(
+                            image: AssetImage("assets/img_for_teachers/${teacher.img}"),
+                            fit: BoxFit.cover,
+                          )
                       ),
                     ),
-                  )
-                ],
+                    Flexible(
+                      child: Text (
+                        teacher.name,
+                        style: TextStyle(
+                          fontSize: 20,
+                          fontFamily: 'RobotoRegular',
+                          color: ColorConstant.startScreenTextColor,
+                        ),
+                      ),
+                    )
+                  ],
+                ),
               ),
-            ),
-            Container(
-              //
-            ),
-          ],
+              Container(
+                margin: const EdgeInsets.only(top: 30, left: 25, right: 25),
+                child: Expanded(
+                  child: Column(
+                    children: [
+                      Align(
+                        alignment: Alignment.topLeft,
+                        child: Text (
+                          "Контактная информация",
+                          style: TextStyle(
+                            fontSize: 20,
+                            fontFamily: 'RobotoRegular',
+                            color: ColorConstant.startScreenTextColor,
+                          ),
+                        ),
+                      ),
+                      Divider(
+                        color: ColorConstant.startScreenTextColor,
+                        thickness: 1,
+                      ),
+                      Container(
+                        margin: const EdgeInsets.only(left: 10),
+                        child: Align(
+                          alignment: Alignment.topLeft,
+                          child: Text (
+                            teacher.mail,
+                            style: TextStyle(
+                              fontSize: 17,
+                              fontFamily: 'RobotoRegular',
+                              color: ColorConstant.startScreenTextColor,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              Container(
+                margin: const EdgeInsets.only(top: 30, left: 25, right: 25),
+                child: Expanded(
+                  child: Column(
+                    children: [
+                      Align(
+                        alignment: Alignment.topLeft,
+                        child: Text(
+                          "Дисциплины",
+                          style: TextStyle(
+                            fontSize: 20,
+                            fontFamily: 'RobotoRegular',
+                            color: ColorConstant.startScreenTextColor,
+                          ),
+                        )
+                      ),
+                      Divider(
+                        color: ColorConstant.startScreenTextColor,
+                        thickness: 1,
+                      ),
+                      for (var i = 0; i < teacher.items.length; i++) TextItem(title: teacher.items[i], index: i + 1,),
+                    ],
+                  ),
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );
   }
+}
+
+class TextItem extends StatelessWidget {
+  TextItem({
+    super.key,
+    required this.title,
+    required this.index,
+  });
+
+  String title;
+  int index;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      margin: const EdgeInsets.only(left: 10),
+      child: Align(
+        alignment: Alignment.topLeft,
+        child: Text (
+          "$index. $title",
+          style: TextStyle(
+            fontSize: 17,
+            fontFamily: 'RobotoRegular',
+            color: ColorConstant.startScreenTextColor,
+          ),
+        ),
+      ),
+    );
+  }
+
 }

@@ -61,7 +61,7 @@ class ListOfTeach {
     Teachers(name: "Опарина Татьяна Михайловна", img: 'oparina.jpg', items: ["Коммутация и маршрутизация"], department: "Кафедра компьютерных технологий и сетей", mail: "oparina2007@yandex.ru"),
     Teachers(name: "Паничкин Алексей Васильевич", img: 'panichkin.jpg', items: ["Методы вычислений"], department: "Кафедра компьютерных технологий и сетей", mail: "panich@ofim.oscsbras.ru"),
     //Пичуев Константин Дмитриевич    pi4uev98@gmail.com
-    Teachers(name: "Погромская (возможно не препод)", img: 'pogromskaya.jpg', items: ["Техническая защита информации"], department: "Кафедра Информационной безопасности", mail: ""),
+    //Teachers(name: "Погромская (возможно не препод)", img: 'pogromskaya.jpg', items: ["Техническая защита информации"], department: "Кафедра Информационной безопасности", mail: ""),
     Teachers(name: "Пролубников Александр Вячеславович", img: 'prolubnikov.png', items: ["Информационная безопасность"], department: "Кафедра компьютерной математики и программного обеспечения", mail: "a.v.prolubnikov@mail.ru"),
     //Teachers(name: "Романьков Виталий Анатольевич", img: 'romankov.png', items: [""], department: "Кафедра компьютерной математики и программного обеспечения", mail: "romankovva@omsu.ru"),//возможно не препод
     Teachers(name: "Романова Анна Анатольевна", img: 'romanova.png', items: ["Математическое моделирование в экономике"], department: "Кафедра фундаментальной и прикладной математики", mail: "romanovaaa@omsu.ru"),
