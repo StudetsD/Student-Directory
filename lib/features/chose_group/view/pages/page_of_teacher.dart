@@ -70,6 +70,7 @@ class PageOfTeacher extends StatelessWidget {
                   ],
                 ),
               ),
+              TeacherParam(text: "Контактная информация", information: teacher.mail,),
               Container(
                 margin: const EdgeInsets.only(top: 30, left: 25, right: 25),
                 child: Expanded(
@@ -78,7 +79,7 @@ class PageOfTeacher extends StatelessWidget {
                       Align(
                         alignment: Alignment.topLeft,
                         child: Text (
-                          "Контактная информация",
+                          "Кафедра",
                           style: TextStyle(
                             fontSize: 20,
                             fontFamily: 'RobotoRegular',
@@ -95,7 +96,7 @@ class PageOfTeacher extends StatelessWidget {
                         child: Align(
                           alignment: Alignment.topLeft,
                           child: Text (
-                            teacher.mail,
+                            teacher.department,
                             style: TextStyle(
                               fontSize: 17,
                               fontFamily: 'RobotoRegular',
@@ -139,6 +140,60 @@ class PageOfTeacher extends StatelessWidget {
       ),
     );
   }
+}
+
+class TeacherParam extends StatelessWidget {
+  TeacherParam({
+    super.key,
+    required this.text,
+    required this.information,
+  });
+  String text;
+  String information;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      margin: const EdgeInsets.only(top: 30, left: 25, right: 25),
+      child: Expanded(
+        child: Column(
+          children: [
+            Align(
+              alignment: Alignment.topLeft,
+              child: Text (
+                text,
+                style: TextStyle(
+                  fontSize: 20,
+                  fontFamily: 'RobotoRegular',
+                  color: ColorConstant.startScreenTextColor,
+                ),
+              ),
+            ),
+            Divider(
+              color: ColorConstant.startScreenTextColor,
+              thickness: 1,
+            ),
+            Container(
+              margin: const EdgeInsets.only(left: 10),
+              child: Align(
+                alignment: Alignment.topLeft,
+                child: SelectableText (
+                  information,
+                  style: TextStyle(
+                    fontSize: 17,
+                    fontFamily: 'RobotoRegular',
+                    color: ColorConstant.startScreenTextColor,
+                    decoration: TextDecoration.underline,
+                  ),
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
 }
 
 class TextItem extends StatelessWidget {
