@@ -41,7 +41,7 @@ class ListOfTeach {
     //Teachers(name: "Кабанов Александр Николаевич", img: 'kabanov.jpg', items: [""], department: "Кафедра компьютерных технологий и сетей", mail: "kabanovan@omsu.ru"),//уже не ведёт
     Teachers(name: "Кайгородцева Наталья Викторовна", img: 'kaygorodtseva.jpg', items: ["Начертательная геометрия и инженерная графика"], department: "Кафедра компьютерных технологий и сетей", mail: ""),
     Teachers(name: "Карелина Раиса Олеговна", img: 'karelina.png', items: ["Алгебра и геометрия"], department: "Кафедра фундаментальной и прикладной математики", mail: "karelinaro@omsu.ru"),
-    Teachers(name: "Костюшина Елена Анатольевна", img: 'kostyushina.jpg', items: ["Системы управления базами данных"], department: "Кафедра компьютерных технологий и сетей", mail: "kostiushinaea@omsu.ru"),
+    Teachers(name: "Костюшина Елена Анатольевна", img: 'kostyushina.jpg', items: ["Системы управления базами данных"], department: "Кафедра компьютерных технологий и сетей", mail: "kea.omsu@gmail.com"),
     //Костеннов Тимофей Владиславович   timofey.kostennov@gmail.com
     Teachers(name: "Красникова Анастасия Валерьевна", img: 'krasnikova.jpg', items: ["Системы управления базами данных"], department: "Кафедра компьютерных технологий и сетей", mail: "krasnikovaanv@gmail.com"),
     //krasnikovaanv@gmail.com

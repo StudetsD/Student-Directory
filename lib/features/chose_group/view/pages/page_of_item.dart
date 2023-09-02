@@ -95,8 +95,8 @@ class PageOfItem extends StatelessWidget {
     int countOfLongWords = 0;
     for (var word in words) {
       if (word.length >= 4) {
-        countOfLongWords += 1;
-        LongWords.add(word);
+        word.toString().split("-").forEach((element) {LongWords.add(element);});
+        countOfLongWords += word.toString().split("-").length;
       }
     }
     if (countOfLongWords > 2) {
