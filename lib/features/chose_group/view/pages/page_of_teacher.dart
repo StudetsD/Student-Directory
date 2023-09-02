@@ -45,9 +45,9 @@ class PageOfTeacher extends StatelessWidget {
                 child: Row(
                   children: [
                     Container(
-                      height: 80,
-                      width: 80,
-                      margin: const EdgeInsets.only(left: 24, right: 10),
+                      height: 100,
+                      width: 100,
+                      margin: const EdgeInsets.only(left: 10, right: 10),
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(50),
                           border: Border.all(color: Colors.white70, width: 2),
