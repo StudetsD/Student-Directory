@@ -1,9 +1,7 @@
 import 'package:applicate/core/app_export.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 
 import '../../../../widgets/cards/card_of_param_item.dart';
-import '../view.dart';
 
 
 class PageOfItem extends StatelessWidget {
@@ -20,7 +18,7 @@ class PageOfItem extends StatelessWidget {
             children: [
               Container(
                 alignment: Alignment.topLeft,
-                margin: const EdgeInsets.only(top: 40, bottom: 30),
+                margin: const EdgeInsets.only(top: 40, bottom: 15),
                 child: Row(
                   children: [
                     IconButton(
@@ -38,25 +36,28 @@ class PageOfItem extends StatelessWidget {
                 ),
               ),
               Container(
-                height: 70,
+                height: 100,
                 width: double.infinity,
                 margin: const EdgeInsets.only(left: 20, right: 20, bottom: 20),
                 decoration: BoxDecoration(
                   color: ColorConstant.menuBackgroundColor,
                   borderRadius: BorderRadius.circular(15),
                 ),
-                alignment: Alignment.centerLeft,
-                child: Container(
-                  margin: const EdgeInsets.only(left: 30),
-                  child: Text(
-                    ReductionName(item.name),
-                    style: TextStyle(
-                      fontSize: 30,
-                      color: ColorConstant.startScreenTextColor,
-                      fontFamily: 'RobotoBold',
-                      fontWeight: FontWeight.w700,
+                child: MaterialButton(
+                  child: Container(
+                    alignment: Alignment.centerLeft,
+                    margin: const EdgeInsets.only(left: 30),
+                    child: Text(
+                      ReductionName(item.name),
+                      style: TextStyle(
+                        fontSize: 30,
+                        color: ColorConstant.startScreenTextColor,
+                        fontFamily: 'RobotoBold',
+                        fontWeight: FontWeight.w700,
+                      ),
                     ),
                   ),
+                  onPressed: ()  => _showToast(context, item.name),
                 )
               ),
               CardOfParamItem(text: 'Преподаватель: \nФамилия Имя Отчество', icon: "assets/icons/teacher.svg", isButton: false, item: item,),
@@ -70,13 +71,56 @@ class PageOfItem extends StatelessWidget {
     );
   }
 
+  void _showToast(BuildContext context, String fullName) {
+    final scaffold = ScaffoldMessenger.of(context);
+    scaffold.showSnackBar(
+      SnackBar(
+        content: Text(
+          "$fullName\n\n(Чтобы убрать, смахните сообщение вниз)",
+          style: TextStyle(
+            color: ColorConstant.startScreenTextColor,
+            fontFamily: 'RobotoNormal',
+          ),
+        ),
+        behavior: SnackBarBehavior.floating,
+        margin: const EdgeInsets.only(bottom: 50, left: 20, right: 20),
+      ),
+    );
+  }
+
   String ReductionName(String name) {
-    if (StringConstants.listOfReductionItemsForItemPage[name] == null) {
-      return name;
+    List words =  name.split(" ");
+    List LongWords = [];
+    String finalTitle = "";
+    int countOfLongWords = 0;
+    for (var word in words) {
+      if (word.length >= 4) {
+        countOfLongWords += 1;
+        LongWords.add(word);
+      }
+    }
+    if (countOfLongWords > 2) {
+      for (var word in LongWords) {
+        int i = 0;
+        String subStartSym = "";
+        String subEndSym = "";
+        if (word.toString().contains('(')){
+          subStartSym = "(";
+          i += 1;
+        }
+        if (word.toString().contains(')')){
+          subEndSym = ")";
+        }
+        finalTitle += subStartSym + word[i].toString().toUpperCase() + subEndSym;
+        if (finalTitle.length >= 6) {
+          break;
+        }
+      }
     }
     else {
-      return StringConstants.listOfReductionItemsForItemPage[name]!;
+      finalTitle = name;
     }
+    return finalTitle;
   }
 
   String FormMessage(List semestr) {
