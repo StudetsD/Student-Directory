@@ -1,4 +1,3 @@
-import 'package:applicate/core/app_export.dart';
 import 'package:flutter/material.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
@@ -7,7 +6,7 @@ class PageGoogleDrive extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final url = (ModalRoute.of(context)?.settings.arguments ?? '') as String;
+    final String url = (ModalRoute.of(context)?.settings.arguments ?? '') as String;
     return Scaffold(
       appBar: AppBar(
         toolbarHeight: 0,

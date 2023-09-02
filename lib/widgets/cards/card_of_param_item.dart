@@ -4,17 +4,17 @@ import '../../core/app_export.dart';
 
 
 class CardOfParamItem extends StatelessWidget {
-  CardOfParamItem({
+  const CardOfParamItem({
     super.key,
     required this.text,
     required this.icon,
     required this.isButton,
     required this.item,
   });
-  String text;
-  String icon;
-  bool isButton;
-  Items item;
+  final String text;
+  final String icon;
+  final bool isButton;
+  final Items item;
 
   @override
   Widget build(BuildContext context) {

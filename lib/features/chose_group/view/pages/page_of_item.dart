@@ -46,7 +46,7 @@ class PageOfItem extends StatelessWidget {
                 child: MaterialButton(
                   child: Container(
                     alignment: Alignment.centerLeft,
-                    margin: const EdgeInsets.only(left: 30),
+                    margin: const EdgeInsets.only(left: 10),
                     child: Text(
                       ReductionName(item.name),
                       style: TextStyle(

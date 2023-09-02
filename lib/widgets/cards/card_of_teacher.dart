@@ -3,13 +3,13 @@ import 'package:flutter/material.dart';
 import '../../core/app_export.dart';
 
 class CardOfTeacher extends StatelessWidget{
-  CardOfTeacher ({
+  const CardOfTeacher ({
     super.key,
     required this.teacher,
     required this.group,
   });
-  var teacher;
-  String group;
+  final Teachers teacher;
+  final String group;
 
   @override
   Widget build(BuildContext context) {

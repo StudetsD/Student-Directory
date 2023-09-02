@@ -14,7 +14,7 @@ class PageOfTeacher extends StatelessWidget {
         height: double.infinity,
         child: SingleChildScrollView(
           child: Column(
-            children: [
+            children: <Widget>[
               Container(
                 alignment: Alignment.topLeft,
                 margin: const EdgeInsets.only(top: 40, bottom: 24),
@@ -43,7 +43,7 @@ class PageOfTeacher extends StatelessWidget {
                   color: ColorConstant.menuBackgroundColor,
                 ),
                 child: Row(
-                  children: [
+                  children: <Widget>[
                     Container(
                       height: 100,
                       width: 100,
@@ -70,68 +70,100 @@ class PageOfTeacher extends StatelessWidget {
                   ],
                 ),
               ),
-              TeacherParam(text: "Контактная информация", information: teacher.mail,),
               Container(
                 margin: const EdgeInsets.only(top: 30, left: 25, right: 25),
-                child: Expanded(
-                  child: Column(
-                    children: [
-                      Align(
+                child: Column(
+                  children: <Widget>[
+                    Align(
+                      alignment: Alignment.topLeft,
+                      child: Text (
+                        "Контактная информация",
+                        style: TextStyle(
+                          fontSize: 20,
+                          fontFamily: 'RobotoRegular',
+                          color: ColorConstant.startScreenTextColor,
+                        ),
+                      ),
+                    ),
+                    Divider(
+                      color: ColorConstant.startScreenTextColor,
+                      thickness: 1,
+                    ),
+                    Container(
+                      margin: const EdgeInsets.only(left: 10),
+                      child: Align(
                         alignment: Alignment.topLeft,
-                        child: Text (
-                          "Кафедра",
+                        child: SelectableText (
+                          teacher.mail,
                           style: TextStyle(
-                            fontSize: 20,
+                            fontSize: 17,
                             fontFamily: 'RobotoRegular',
                             color: ColorConstant.startScreenTextColor,
+                            decoration: TextDecoration.underline,
                           ),
                         ),
                       ),
-                      Divider(
-                        color: ColorConstant.startScreenTextColor,
-                        thickness: 1,
-                      ),
-                      Container(
-                        margin: const EdgeInsets.only(left: 10),
-                        child: Align(
-                          alignment: Alignment.topLeft,
-                          child: Text (
-                            teacher.department,
-                            style: TextStyle(
-                              fontSize: 17,
-                              fontFamily: 'RobotoRegular',
-                              color: ColorConstant.startScreenTextColor,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
+                    ),
+                  ],
                 ),
               ),
               Container(
                 margin: const EdgeInsets.only(top: 30, left: 25, right: 25),
-                child: Expanded(
-                  child: Column(
-                    children: [
-                      Align(
+                child: Column(
+                  children: <Widget>[
+                    Align(
+                      alignment: Alignment.topLeft,
+                      child: Text (
+                        "Кафедра",
+                        style: TextStyle(
+                          fontSize: 20,
+                          fontFamily: 'RobotoRegular',
+                          color: ColorConstant.startScreenTextColor,
+                        ),
+                      ),
+                    ),
+                    Divider(
+                      color: ColorConstant.startScreenTextColor,
+                      thickness: 1,
+                    ),
+                    Container(
+                      margin: const EdgeInsets.only(left: 10),
+                      child: Align(
                         alignment: Alignment.topLeft,
-                        child: Text(
-                          "Дисциплины",
+                        child: Text (
+                          teacher.department,
                           style: TextStyle(
-                            fontSize: 20,
+                            fontSize: 17,
                             fontFamily: 'RobotoRegular',
                             color: ColorConstant.startScreenTextColor,
                           ),
-                        )
+                        ),
                       ),
-                      Divider(
-                        color: ColorConstant.startScreenTextColor,
-                        thickness: 1,
-                      ),
-                      for (var i = 0; i < teacher.items.length; i++) TextItem(title: teacher.items[i], index: i + 1,),
-                    ],
-                  ),
+                    ),
+                  ],
+                ),
+              ),
+              Container(
+                margin: const EdgeInsets.only(top: 30, left: 25, right: 25),
+                child: Column(
+                  children: <Widget>[
+                    Align(
+                      alignment: Alignment.topLeft,
+                      child: Text(
+                        "Дисциплины",
+                        style: TextStyle(
+                          fontSize: 20,
+                          fontFamily: 'RobotoRegular',
+                          color: ColorConstant.startScreenTextColor,
+                        ),
+                      )
+                    ),
+                    Divider(
+                      color: ColorConstant.startScreenTextColor,
+                      thickness: 1,
+                    ),
+                    for (var i = 0; i < teacher.items.length; i++) TextItem(title: teacher.items[i], index: i + 1,),
+                  ],
                 ),
               ),
             ],
@@ -142,69 +174,15 @@ class PageOfTeacher extends StatelessWidget {
   }
 }
 
-class TeacherParam extends StatelessWidget {
-  TeacherParam({
-    super.key,
-    required this.text,
-    required this.information,
-  });
-  String text;
-  String information;
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      margin: const EdgeInsets.only(top: 30, left: 25, right: 25),
-      child: Expanded(
-        child: Column(
-          children: [
-            Align(
-              alignment: Alignment.topLeft,
-              child: Text (
-                text,
-                style: TextStyle(
-                  fontSize: 20,
-                  fontFamily: 'RobotoRegular',
-                  color: ColorConstant.startScreenTextColor,
-                ),
-              ),
-            ),
-            Divider(
-              color: ColorConstant.startScreenTextColor,
-              thickness: 1,
-            ),
-            Container(
-              margin: const EdgeInsets.only(left: 10),
-              child: Align(
-                alignment: Alignment.topLeft,
-                child: SelectableText (
-                  information,
-                  style: TextStyle(
-                    fontSize: 17,
-                    fontFamily: 'RobotoRegular',
-                    color: ColorConstant.startScreenTextColor,
-                    decoration: TextDecoration.underline,
-                  ),
-                ),
-              ),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-
-}
-
 class TextItem extends StatelessWidget {
-  TextItem({
+  const TextItem({
     super.key,
     required this.title,
     required this.index,
   });
 
-  String title;
-  int index;
+  final String title;
+  final int index;
 
   @override
   Widget build(BuildContext context) {

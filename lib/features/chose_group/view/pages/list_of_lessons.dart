@@ -15,7 +15,7 @@ class StartList extends StatelessWidget {
 
 class ListOfLessons extends StatefulWidget {
 
-  ListOfLessons({super.key, required this.items, required this.group});
+  const ListOfLessons({super.key, required this.items, required this.group});
   final List<Items> items;
   final String group;
 

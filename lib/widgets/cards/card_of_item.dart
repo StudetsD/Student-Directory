@@ -3,11 +3,11 @@ import 'package:flutter/material.dart';
 import '../../core/app_export.dart';
 
 class CardOfItem extends StatelessWidget{
-  CardOfItem ({
+  const CardOfItem ({
     super.key,
     required this.item,
 });
-  var item;
+  final Items item;
 
   @override
   Widget build(BuildContext context) {
