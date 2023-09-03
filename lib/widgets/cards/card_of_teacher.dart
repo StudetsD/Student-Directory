@@ -16,7 +16,7 @@ class CardOfTeacher extends StatelessWidget{
     return Container(
       width: double.maxFinite,
       height: 100,
-      margin: const EdgeInsets.only(left: 20, right: 20, top: 15),
+      margin: const EdgeInsets.only(left: 20, right: 20, bottom: 15),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(15),
         color: ColorConstant.menuBackgroundColor,

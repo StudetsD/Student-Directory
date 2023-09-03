@@ -42,52 +42,56 @@ class _ListOfTeachersState extends State<ListOfTeachers> {
     return Scaffold(
       body: SizedBox(
         height: double.infinity,
-        child: SingleChildScrollView(
-          keyboardDismissBehavior: ScrollViewKeyboardDismissBehavior.onDrag,
-          child: Column(
-            children: <Widget>[
-              Container(
-                alignment: Alignment.topLeft,
-                margin: const EdgeInsets.only(top: 40, bottom: 10),
-                child: Row(
-                  children: [
-                    IconButton(
-                      icon: AppIconStyle.iconTopBack,
-                      onPressed: () {
-                        Navigator.pushNamed(context, '/menu', arguments: group);
-                      },
-                    ),
-                    Text(
-                      "Преподаватели",
-                      textAlign: TextAlign.center,
-                      style: AppStyle.textTopStyle
-                    ),
-                  ],
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(left: 10, right: 10, bottom: 5),
-                child: TextField(
-                  style: TextStyle(color: ColorConstant.chosePageTextColor),
-                  controller: _searchController,
-                  decoration: InputDecoration(
-                    suffixIcon: Icon(
-                      Icons.search_rounded,
-                      color: ColorConstant.chosePageTextColor,
-                    ),
-                    filled: true,
-                    fillColor: ColorConstant.chosePageFon,
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(5),
-                    ),
-                    hintText: " Поиск",
-                    hintStyle: AppStyle.txtRobotoRomanCondensedMedium17,
+        child: Column(
+          children: <Widget>[
+            Container(
+              alignment: Alignment.topLeft,
+              margin: const EdgeInsets.only(top: 40, bottom: 10),
+              child: Row(
+                children: [
+                  IconButton(
+                    icon: AppIconStyle.iconTopBack,
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/menu', arguments: group);
+                    },
                   ),
+                  Text(
+                    "Преподаватели",
+                    textAlign: TextAlign.center,
+                    style: AppStyle.textTopStyle
+                  ),
+                ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(left: 10, right: 10),
+              child: TextField(
+                style: TextStyle(color: ColorConstant.chosePageTextColor),
+                controller: _searchController,
+                decoration: InputDecoration(
+                  suffixIcon: Icon(
+                    Icons.search_rounded,
+                    color: ColorConstant.chosePageTextColor,
+                  ),
+                  filled: true,
+                  fillColor: ColorConstant.chosePageFon,
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(5),
+                  ),
+                  hintText: " Поиск",
+                  hintStyle: AppStyle.txtRobotoRomanCondensedMedium17,
                 ),
               ),
-              for(var i = 0; i < _filteredTeachers.length; i++) CardOfTeacher(teacher: _filteredTeachers[i], group: group,),
-            ],
-          ),
+            ),
+            Expanded(
+              child: ListView(
+                keyboardDismissBehavior: ScrollViewKeyboardDismissBehavior.onDrag,
+                children: <Widget>[
+                  for(var i = 0; i < _filteredTeachers.length; i++) CardOfTeacher(teacher: _filteredTeachers[i], group: group,),
+                ],
+              ),
+            )
+          ],
         ),
       ),
     );

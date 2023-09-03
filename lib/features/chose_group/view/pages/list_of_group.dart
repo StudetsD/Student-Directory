@@ -12,51 +12,55 @@ class ListOfGroup extends StatelessWidget {
     return Scaffold(
       body: SizedBox(
         height: double.infinity,
-        child: SingleChildScrollView(
-          child: Column(
-            children: [
-              Container(
-                alignment: Alignment.topLeft,
-                margin: const EdgeInsets.only(top: 40),
-                child: Row(
-                  children: [
-                    IconButton(
-                      icon: AppIconStyle.iconTopBack,
-                      onPressed: () {
-                        Navigator.pushNamed(context, '/menu', arguments: group);
-                      },
-                    ),
-                    Text(
-                      "Студенты",
-                      textAlign: TextAlign.center,
-                      style: AppStyle.textTopStyle,
-                    ),
-                  ],
-                ),
+        child: Column(
+          children: [
+            Container(
+              alignment: Alignment.topLeft,
+              margin: const EdgeInsets.only(top: 40),
+              child: Row(
+                children: [
+                  IconButton(
+                    icon: AppIconStyle.iconTopBack,
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/menu', arguments: group);
+                    },
+                  ),
+                  Text(
+                    "Студенты",
+                    textAlign: TextAlign.center,
+                    style: AppStyle.textTopStyle,
+                  ),
+                ],
               ),
-              Container(
-                margin: const EdgeInsets.only(left: 10, right: 10, bottom: 50),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: <Widget>[
-                    for (var i = 0; i < list!.length; i++)
-                      Container(
-                        alignment: Alignment.centerLeft,
-                        margin: EdgeInsets.only (top: textMarginTop(list[i]), left: textMarginLeft(list[i])),
-                        child: Text(
-                          list[i],
-                          style: TextStyle(
-                            color: ColorConstant.startScreenTextColor,
-                            fontSize: fontSize(list[i]),
-                            fontWeight: fontWeight(list[i]),
-                          ),
-                        )
-                      ),
-                  ],
-                )
-              )
-            ],
-          ),
+            ),
+            Expanded(
+              child: ListView(
+                children: <Widget>[
+                  Container(
+                      margin: const EdgeInsets.only(left: 10, right: 10, bottom: 50),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: <Widget>[
+                          for (var i = 0; i < list!.length; i++)
+                            Container(
+                                alignment: Alignment.centerLeft,
+                                margin: EdgeInsets.only (top: textMarginTop(list[i]), left: textMarginLeft(list[i])),
+                                child: Text(
+                                  list[i],
+                                  style: TextStyle(
+                                    color: ColorConstant.startScreenTextColor,
+                                    fontSize: fontSize(list[i]),
+                                    fontWeight: fontWeight(list[i]),
+                                  ),
+                                )
+                            ),
+                        ],
+                      )
+                  )
+                ],
+              ),
+            ),
+          ],
         ),
       ),
     );
@@ -91,7 +95,12 @@ class ListOfGroup extends StatelessWidget {
 
   double textMarginTop (String text) {
     if (text.contains("Подгруппа")) {
-      return 20;
+      if (text.contains("1")) {
+        return 0;
+      }
+      else {
+        return 20;
+      }
     }
     else {
       return 5;
