@@ -1,6 +1,5 @@
 import 'package:applicate/widgets/button.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import '../../../../../core/app_export.dart';
 
 class MenuPage extends StatelessWidget {
@@ -53,13 +52,6 @@ class MenuPage extends StatelessWidget {
                           fontSize: 20,
                           fontFamily: 'RobotoBold',
                           fontWeight: FontWeight.w700,
-                          shadows: const [
-                            Shadow(
-                              blurRadius: 3.0,
-                              color: Colors.black26,
-                              offset: Offset(0, 5),
-                            ),
-                          ],
                         ),
                       ),
                     ),

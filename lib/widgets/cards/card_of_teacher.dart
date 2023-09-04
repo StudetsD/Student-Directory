@@ -42,14 +42,7 @@ class CardOfTeacher extends StatelessWidget{
                 teacher.name,
                 textAlign: TextAlign.left,
                 style: TextStyle(
-                    color: ColorConstant.startScreenTextColor,
-                    shadows: const [
-                      Shadow(
-                        blurRadius: 3.0,
-                        color: Colors.black26,
-                        offset: Offset(0, 5),
-                      ),
-                    ]
+                  color: ColorConstant.startScreenTextColor,
                 ),
               ),
             ),

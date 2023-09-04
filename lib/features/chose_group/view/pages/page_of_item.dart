@@ -93,6 +93,9 @@ class PageOfItem extends StatelessWidget {
     List LongWords = [];
     String finalTitle = "";
     int countOfLongWords = 0;
+    if (name == "Безопасность жизнедеятельности") {
+      return "БЖД";
+    }
     for (var word in words) {
       if (word.length >= 4) {
         word.toString().split("-").forEach((element) {LongWords.add(element);});

@@ -7,13 +7,6 @@ class AppStyle {
     fontSize: 28,
     fontFamily: 'RobotoBlack',
     fontWeight: FontWeight.w900,
-    shadows: const [
-      Shadow(
-        blurRadius: 3.0,
-        color: Colors.black26,
-        offset: Offset(0, 5),
-      ),
-    ],
   );
 
   static TextStyle txtRobotoRomanBold34 = TextStyle(
