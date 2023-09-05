@@ -52,7 +52,7 @@ class _ListOfTeachersState extends State<ListOfTeachers> {
                   IconButton(
                     icon: AppIconStyle.iconTopBack,
                     onPressed: () {
-                      Navigator.pushNamed(context, '/menu', arguments: group);
+                      Navigator.pop(context);
                     },
                   ),
                   Text(
@@ -87,7 +87,7 @@ class _ListOfTeachersState extends State<ListOfTeachers> {
               child: ListView(
                 keyboardDismissBehavior: ScrollViewKeyboardDismissBehavior.onDrag,
                 children: <Widget>[
-                  for(var i = 0; i < _filteredTeachers.length; i++) CardOfTeacher(teacher: _filteredTeachers[i], group: group,),
+                  for(var i = 0; i < _filteredTeachers.length; i++) CardOfTeacher(teacher: _filteredTeachers[i]),
                 ],
               ),
             )

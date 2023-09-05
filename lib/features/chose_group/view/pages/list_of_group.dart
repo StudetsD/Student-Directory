@@ -22,7 +22,7 @@ class ListOfGroup extends StatelessWidget {
                   IconButton(
                     icon: AppIconStyle.iconTopBack,
                     onPressed: () {
-                      Navigator.pushNamed(context, '/menu', arguments: group);
+                      Navigator.pop(context);
                     },
                   ),
                   Text(

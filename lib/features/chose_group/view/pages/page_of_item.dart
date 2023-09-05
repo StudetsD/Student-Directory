@@ -4,9 +4,14 @@ import 'package:flutter/material.dart';
 import '../../../../widgets/cards/card_of_param_item.dart';
 
 
-class PageOfItem extends StatelessWidget {
+class PageOfItem extends StatefulWidget {
   const PageOfItem({super.key});
 
+  @override
+  State<PageOfItem> createState() => _PageOfItemState();
+}
+
+class _PageOfItemState extends State<PageOfItem> {
   @override
   Widget build(BuildContext context) {
     var item = (ModalRoute.of(context)?.settings.arguments ?? "") as Items;
@@ -24,7 +29,7 @@ class PageOfItem extends StatelessWidget {
                     IconButton(
                       icon:AppIconStyle.iconTopBack,
                       onPressed: () {
-                        Navigator.pushNamed(context, '/lessons', arguments: item.groups[0]);
+                        Navigator.pop(context);
                       },
                     ),
                     Text(

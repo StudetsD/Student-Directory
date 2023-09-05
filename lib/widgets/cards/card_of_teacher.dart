@@ -6,10 +6,8 @@ class CardOfTeacher extends StatelessWidget{
   const CardOfTeacher ({
     super.key,
     required this.teacher,
-    required this.group,
   });
   final Teachers teacher;
-  final String group;
 
   @override
   Widget build(BuildContext context) {
@@ -49,7 +47,7 @@ class CardOfTeacher extends StatelessWidget{
           ],
         ),
         onPressed: () {
-          Navigator.pushNamed(context, '/teacher', arguments: [teacher, group]);
+          Navigator.pushNamed(context, '/teacher', arguments: teacher);
         },
       ),
     );

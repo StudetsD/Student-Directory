@@ -6,9 +6,7 @@ class PageOfTeacher extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var list = (ModalRoute.of(context)?.settings.arguments ?? "") as List;
-    var teacher = list[0] as Teachers;
-    var group = list[1];
+    var teacher = (ModalRoute.of(context)?.settings.arguments ?? "") as Teachers;
     return Scaffold(
       body: SizedBox(
         height: double.infinity,
@@ -22,7 +20,7 @@ class PageOfTeacher extends StatelessWidget {
                   IconButton(
                     icon: AppIconStyle.iconTopBack,
                     onPressed: () {
-                      Navigator.pushNamed(context, '/teachers', arguments: group);
+                      Navigator.pop(context);
                     },
                   ),
                   Text(

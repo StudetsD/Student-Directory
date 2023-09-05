@@ -64,7 +64,7 @@ class _ListOfLessonsState extends State<ListOfLessons> {
                   IconButton(
                     icon: AppIconStyle.iconTopBack,
                     onPressed: () {
-                      Navigator.pushNamed(context, '/menu', arguments: widget.group);
+                      Navigator.pop(context);
                     },
                   ),
                   Text(
