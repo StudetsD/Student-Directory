@@ -1,19 +1,25 @@
 import 'package:flutter/material.dart';
-import 'package:webview_flutter/webview_flutter.dart';
+import 'package:flutter_webview_plugin/flutter_webview_plugin.dart';
 
-class PageGoogleDrive extends StatelessWidget {
+class PageGoogleDrive extends StatefulWidget {
   const PageGoogleDrive({super.key});
+
+  @override
+  State<PageGoogleDrive> createState() => _PageGoogleDriveState();
+}
+
+class _PageGoogleDriveState extends State<PageGoogleDrive> {
 
   @override
   Widget build(BuildContext context) {
     final String url = (ModalRoute.of(context)?.settings.arguments ?? '') as String;
     return Scaffold(
-      appBar: AppBar(
-        toolbarHeight: 0,
-      ),
-      body: WebView(
-        javascriptMode: JavascriptMode.unrestricted,
-        initialUrl: 'https://drive.google.com/drive/folders/$url',
+      body:  WebviewScaffold(
+        primary: false,
+        url: "https://drive.google.com/drive/folders/$url",
+        appBar: AppBar(
+          toolbarHeight: 0,
+        ),
       ),
     );
   }
