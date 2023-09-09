@@ -45,13 +45,6 @@ class CustomButton extends StatelessWidget {
                   fontSize: 16,
                   fontWeight: FontWeight.w300,
                   color: ColorConstant.startScreenTextColor,
-                  shadows: const [
-                    Shadow(
-                      blurRadius: 10.0,
-                      color: Colors.black26,
-                      offset: Offset(0, 5),
-                    ),
-                  ],
                 ),
               ),
             ]
