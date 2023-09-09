@@ -20,7 +20,7 @@ class _ListOfTeachersState extends State<ListOfTeachers> {
     final query = _searchController.text;
     if (query.isNotEmpty) {
       _filteredTeachers = teachers.where((Teachers item) {
-        return item.name.toLowerCase().contains(query);
+        return item.name.toLowerCase().contains(query.toLowerCase());
       }).toList();
     }
     else {

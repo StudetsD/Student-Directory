@@ -33,7 +33,7 @@ class _ListOfLessonsState extends State<ListOfLessons> {
     final query = _searchController.text;
     if (query.isNotEmpty) {
       _filteredLessons = widget.items.where((Items item) {
-        return item.name.toLowerCase().contains(query);
+        return item.name.toLowerCase().contains(query.toLowerCase());
       }).toList();
     }
     else {
