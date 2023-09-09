@@ -67,7 +67,8 @@ class _PageOfItemState extends State<PageOfItem> {
               ),
               CardOfParamItem(text: 'Преподаватель: \nФамилия Имя Отчество', icon: "assets/icons/teacher.svg", isButton: false, item: item, color: ColorConstant.pageItemParamColor,),
               CardOfParamItem(text: 'Вид аттестации: ${item.mark}', icon: "assets/icons/type_of_attestation.svg", isButton: false, item: item, color: ColorConstant.pageItemParamColor,),
-              CardOfParamItem(text: 'Длительность: ${FormMessage(item.semestr)}', icon: "assets/icons/calendar.svg", isButton: false, item: item, color: ColorConstant.pageItemParamColor,),
+              CardOfParamItem(text: 'Начинается с ${item.semestr.first}-ого семестра', icon: "assets/icons/calendar.svg", isButton: false, item: item, color: ColorConstant.pageItemParamColor,),
+              CardOfParamItem(text: 'Количество семестров: ${item.semestr.length}', icon: "assets/icons/semester.svg", isButton: false, item: item, color: ColorConstant.pageItemParamColor,),
               CardOfParamItem(text: 'Ссылка на материалы', icon: "assets/icons/download.svg", isButton: true, item: item, color: ColorConstant.chosePageTextColor,),
             ],
           ),
@@ -129,18 +130,5 @@ class _PageOfItemState extends State<PageOfItem> {
       finalTitle = name;
     }
     return finalTitle;
-  }
-
-  String FormMessage(List semestr) {
-    var size = semestr.length;
-    if (size == 1) {
-      return "$size семестр\n(${semestr.first})";
-    }
-    else if (size > 1 && size <= 4) {
-      return "$size семестра\n(c ${semestr.first} по ${semestr.last})";
-    }
-    else {
-      return "$size семестров\n(c ${semestr.first} по ${semestr.last})";
-    }
   }
 }

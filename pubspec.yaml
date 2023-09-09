@@ -46,6 +46,7 @@ flutter:
     - assets/images/Man.svg
     - assets/icons/back.svg
     - assets/icons/back_top.svg
+    - assets/icons/semester.svg
     - assets/icons/download.svg
     - assets/img_for_items/
     - assets/img_for_teachers/
