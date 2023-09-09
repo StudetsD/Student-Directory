@@ -42,6 +42,10 @@ class ColorConstant {
 
   static Color chosePageBorderColor = const Color.fromRGBO(76, 79, 105, 0.1);
 
+  static Color pageItemParamColor = const Color.fromRGBO(76, 79, 105, 0.2);
+
+  static Color pageItemParamButtonColor = const Color.fromRGBO(239, 241, 245, 0.3);
+
   static Color chosePageTextColor = const Color.fromRGBO(239, 241, 245, 0.4);
 
   static Color menuBackgroundColor = const Color.fromRGBO(35, 38, 52, 1);

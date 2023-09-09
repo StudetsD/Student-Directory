@@ -10,11 +10,13 @@ class CardOfParamItem extends StatelessWidget {
     required this.icon,
     required this.isButton,
     required this.item,
+    required this.color
   });
   final String text;
   final String icon;
   final bool isButton;
   final Items item;
+  final Color color;
 
   @override
   Widget build(BuildContext context) {
@@ -23,8 +25,8 @@ class CardOfParamItem extends StatelessWidget {
         height: 75,
         margin: const EdgeInsets.only(left: 15, right: 15, top: 18),
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(20),
-          color: ColorConstant.paramOfItemColor,
+          borderRadius: BorderRadius.circular(5),
+          color: color,
         ),
         child: MaterialButton(
           child: Row(

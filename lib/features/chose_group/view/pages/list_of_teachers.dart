@@ -75,6 +75,18 @@ class _ListOfTeachersState extends State<ListOfTeachers> {
                   ),
                   filled: true,
                   fillColor: ColorConstant.chosePageFon,
+                  enabledBorder: OutlineInputBorder(
+                    borderSide: BorderSide(
+                        color: ColorConstant.choseGroupColorBorderSearch,
+                        width: 1.0
+                    ),
+                  ),
+                  focusedBorder: OutlineInputBorder(
+                    borderSide: BorderSide(
+                        color: ColorConstant.startScreenTextColor,
+                        width: 1.0
+                    ),
+                  ),
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(5),
                   ),
