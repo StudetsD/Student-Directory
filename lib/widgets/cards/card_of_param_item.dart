@@ -21,7 +21,7 @@ class CardOfParamItem extends StatelessWidget {
     return Container(
         width: double.infinity,
         height: 75,
-        margin: const EdgeInsets.only(left: 20, right: 20, top: 18),
+        margin: const EdgeInsets.only(left: 15, right: 15, top: 18),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20),
           color: ColorConstant.paramOfItemColor,
@@ -31,13 +31,13 @@ class CardOfParamItem extends StatelessWidget {
             children: [
               Container(
                 margin: const EdgeInsets.only(right: 10),
-                child: IconButton(
-                    onPressed: () {
+                child: GestureDetector(
+                    onTap: () {
                       if (isButton) {
                         Navigator.pushNamed(context, '/disk', arguments: StringConstants.listOfUrl[item.name]);
                       }
                     },
-                    icon: SvgPicture.asset(
+                    child: SvgPicture.asset(
                       icon,
                       color: ColorConstant.startScreenTextColor,
                     )

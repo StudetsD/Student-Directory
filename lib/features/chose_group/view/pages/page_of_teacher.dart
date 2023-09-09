@@ -99,6 +99,7 @@ class PageOfTeacher extends StatelessWidget {
                                 fontSize: 17,
                                 fontFamily: 'RobotoRegular',
                                 color: ColorConstant.startScreenTextColor,
+                                decorationColor: Colors.white,
                                 decoration: TextDecoration.underline,
                               ),
                             ),

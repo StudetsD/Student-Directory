@@ -43,7 +43,7 @@ class _PageOfItemState extends State<PageOfItem> {
               Container(
                 height: 100,
                 width: double.infinity,
-                margin: const EdgeInsets.only(left: 20, right: 20, bottom: 20),
+                margin: const EdgeInsets.only(left: 15, right: 15, bottom: 20),
                 decoration: BoxDecoration(
                   color: ColorConstant.menuBackgroundColor,
                   borderRadius: BorderRadius.circular(15),
