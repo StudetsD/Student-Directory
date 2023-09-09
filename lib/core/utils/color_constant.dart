@@ -48,6 +48,12 @@ class ColorConstant {
 
   static Color paramOfItemColor = const Color.fromRGBO(198, 208, 245, 0.4);
 
+  static Color choseGroupColorText = const Color.fromRGBO(198, 208, 245, 0.55);
+
+  static Color choseGroupColorButton = const Color.fromRGBO(35, 38, 52, 0.8);
+
+  static Color choseGroupColorBorderSearch = const Color.fromRGBO(180, 190, 254, 1);
+
   static Color fromHex(String hexString) {
     final buffer = StringBuffer();
     if (hexString.length == 6 || hexString.length == 7) buffer.write('ff');

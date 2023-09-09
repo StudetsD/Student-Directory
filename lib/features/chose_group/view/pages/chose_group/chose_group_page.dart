@@ -10,7 +10,116 @@ class ChoseGroupScreen extends StatefulWidget{
 }
 
 class _ChoseGroupScreenState extends State<ChoseGroupScreen> {
+
+  final List<Group> listOfGroups = StringConstants.listOfGroups;
+  var _filteredGroups = <Group>[];
+
+  final _searchController = TextEditingController();
+
+  void _searchLessons(){
+    final query = _searchController.text;
+    if (query.isNotEmpty) {
+      _filteredGroups = listOfGroups.where((Group item) {
+        return item.name.toLowerCase().contains(query.toLowerCase());
+      }).toList();
+    }
+    else {
+      _filteredGroups = listOfGroups;
+    }
+    setState(() {});
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    _filteredGroups = listOfGroups;
+    _searchController.addListener(_searchLessons);
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final int countOfGroup = _filteredGroups.length;
+    return Scaffold(
+      body: SizedBox(
+        height: double.infinity,
+        child: Column(
+          children: [
+            Container(
+              alignment: Alignment.topLeft,
+              margin: const EdgeInsets.only(top: 40, bottom: 10),
+              child: Row(
+                children: [
+                  IconButton(
+                    icon: AppIconStyle.iconTopBack,
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/');
+                    },
+                  ),
+                  Text(
+                    "Выбор группы",
+                    style: AppStyle.textTopStyle,
+                  ),
+                ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(left: 10, right: 10),
+              child: TextField(
+                style: TextStyle(color: ColorConstant.chosePageTextColor),
+                controller: _searchController,
+                decoration: InputDecoration(
+                  suffixIcon: Icon(
+                    Icons.search_rounded,
+                    color: ColorConstant.chosePageTextColor,
+                  ),
+                  filled: true,
+                  fillColor: ColorConstant.chosePageFon,
+                  enabledBorder: OutlineInputBorder(
+                    borderSide: BorderSide(
+                        color: ColorConstant.choseGroupColorBorderSearch,
+                        width: 1.0
+                    ),
+                  ),
+                  focusedBorder: OutlineInputBorder(
+                    borderSide: BorderSide(
+                        color: ColorConstant.startScreenTextColor,
+                        width: 1.0
+                    ),
+                  ),
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(5),
+                  ),
+                  hintText: " Поиск",
+                  hintStyle: AppStyle.txtRobotoRomanCondensedMedium17,
+                ),
+              ),
+            ),
+            Expanded(
+              child: Container(
+                margin: const EdgeInsets.only(left: 16, right: 16, bottom: 50),
+                child: ListView(
+                  keyboardDismissBehavior: ScrollViewKeyboardDismissBehavior.onDrag,
+                  children: <Widget>[
+                    for(var i = 0; i < countOfGroup;i ++) ButtonGroup(group: _filteredGroups[i].name,),
+                  ],
+                ),
+              ),
+            ),
+          ],
+        ),
+      )
+    );
+  }
+}
+
+class ButtonGroup extends StatelessWidget {
+  ButtonGroup({
+    super.key,
+    required this.group,
+  });
+
   static const tempGroup = 'group';
+  String group;
 
   Future _setGroup(String group) async {
     var prefs = await SharedPreferences.getInstance();
@@ -19,74 +128,31 @@ class _ChoseGroupScreenState extends State<ChoseGroupScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Column(
-        children: [
-          Container(
-            alignment: Alignment.topLeft,
-            margin: const EdgeInsets.only(top: 40, bottom: 10),
-            child: Row(
-              children: [
-                IconButton(
-                  icon: AppIconStyle.iconTopBack,
-                  onPressed: () {
-                    Navigator.pushNamed(context, '/');
-                  },
-                ),
-                Text(
-                  "Выбор группы",
-                  style: AppStyle.textTopStyle,
-                ),
-              ],
+    return Container(
+      margin: const EdgeInsets.only(bottom: 5),
+      height: 50,
+      decoration: BoxDecoration(
+        color: ColorConstant.choseGroupColorButton,
+        borderRadius: BorderRadius.circular(5),
+      ),
+      child: MaterialButton(
+        child: Align(
+          alignment: Alignment.centerLeft,
+          child: Text(
+            group,
+            style: TextStyle(
+              color: ColorConstant.choseGroupColorText,
+              fontSize: 17,
+              fontFamily: 'RobotoBlack',
+              fontWeight: FontWeight.w700
             ),
           ),
-          Container(
-            margin: const EdgeInsets.only(left: 16, right: 16),
-            child: DropdownButtonHideUnderline(
-              child: Container(
-                decoration: BoxDecoration(
-                  color: ColorConstant.chosePageFon,
-                  borderRadius: BorderRadius.circular(5),
-                ),
-                child: ButtonTheme(
-                  alignedDropdown: true,
-                  height: 50,
-                  child: DropdownButton<String>(
-                    dropdownColor: ColorConstant.chosePageFon,
-                    menuMaxHeight: 600,
-                    hint: Text(
-                      "Группа",
-                      style: AppStyle.txtRobotoRomanCondensedMedium17,
-                    ),
-                    icon: Icon(
-                      Icons.keyboard_arrow_down,
-                      color: ColorConstant.chosePageTextColor,
-                    ),
-                    iconSize: 30,
-                    isExpanded: true,
-                    items: StringConstants.listOfGroups.map((value) {
-                      return DropdownMenuItem(
-                        value: value.name,
-                        child: Text(
-                          value.name,
-                          style: TextStyle(
-                            color: ColorConstant.startScreenTextColor,
-                            fontFamily: 'RobotoBold',
-                          ),
-                        ),
-                      );
-                    }).toList(),
-                    onChanged: (chose) async {
-                      await _setGroup(chose!);
-                      Navigator.pushNamed(context, '/menu', arguments: chose);
-                    },
-                  ),
-                ),
-              ),
-            ),
-          ),
-        ],
-      )
+        ),
+        onPressed: () async{
+          await _setGroup(group);
+          Navigator.pushNamed(context, '/menu', arguments: group);
+        },
+      ),
     );
   }
 }
