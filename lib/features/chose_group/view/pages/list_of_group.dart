@@ -42,17 +42,30 @@ class ListOfGroup extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: <Widget>[
                           for (var i = 0; i < list!.length; i++)
-                            Container(
-                                alignment: Alignment.centerLeft,
-                                margin: EdgeInsets.only (top: textMarginTop(list[i]), left: textMarginLeft(list[i])),
-                                child: Text(
-                                  list[i],
-                                  style: TextStyle(
-                                    color: ColorConstant.startScreenTextColor,
-                                    fontSize: fontSize(list[i]),
-                                    fontWeight: fontWeight(list[i]),
+                            Column(
+                              children: <Widget>[
+                                Container(
+                                  alignment: Alignment.centerLeft,
+                                  margin: EdgeInsets.only (top: textMarginTop(list[i]), left: textMarginLeft(list[i])),
+                                  child: Text(
+                                    formText(list[i]),
+                                    style: TextStyle(
+                                      color: ColorConstant.startScreenTextColor,
+                                      fontSize: 20,
+                                      fontWeight: fontWeight(list[i]),
+                                      fontFamily: "Roboto${fontFamily(list[i])}"
+                                    ),
+                                  )
+                                ),
+                                if(list[i].contains("Подгруппа"))
+                                  Container(
+                                    margin: const EdgeInsets.only(left: 10, right: 30),
+                                    child: Divider(
+                                      thickness: 1,
+                                      color: ColorConstant.startScreenTextColor,
+                                    ),
                                   ),
-                                )
+                              ],
                             ),
                         ],
                       )
@@ -66,12 +79,31 @@ class ListOfGroup extends StatelessWidget {
     );
   }
 
-  double fontSize (String text) {
+  String formText (String text) {
     if (text.contains("Подгруппа")) {
-      return 24;
+      List<String> components = text.split(" ");
+      return "${components[0]}${formEnding(components[0])} ${components[1]}";
     }
     else {
-      return 18;
+      return text;
+    }
+  }
+
+  String formEnding (String num) {
+    if (num == "3") {
+      return "-я";
+    }
+    else {
+      return "-ая";
+    }
+  }
+
+  String fontFamily (String text) {
+    if (text.contains("Подгруппа")) {
+      return "Medium";
+    }
+    else {
+      return "Regular";
     }
   }
 
@@ -89,7 +121,7 @@ class ListOfGroup extends StatelessWidget {
       return 10;
     }
     else {
-      return 30;
+      return 40;
     }
   }
 
@@ -103,7 +135,7 @@ class ListOfGroup extends StatelessWidget {
       }
     }
     else {
-      return 5;
+      return 0;
     }
   }
 }
