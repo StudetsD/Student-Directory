@@ -76,7 +76,7 @@ class MenuPage extends StatelessWidget {
                     CustomButton(
                       name: "Список группы",
                       group: group,
-                      asset: "assets/images/Man.svg",
+                      asset: "assets/images/img_man.svg",
                       way: '/students',
                     ),
                     CustomButton(
