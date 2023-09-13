@@ -7,4 +7,9 @@ class AppIconStyle {
     "assets/icons/back_top.svg",
     color: ColorConstant.startScreenTextColor,
   );
+
+  static SvgPicture iconTopSchedule = SvgPicture.asset(
+    "assets/images/img_bag.svg",
+    color: ColorConstant.startScreenTextColor,
+  );
 }

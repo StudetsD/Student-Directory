@@ -13,13 +13,12 @@ class _ScheduleWebPageState extends State<ScheduleWebPage> {
 
   @override
   Widget build(BuildContext context) {
-    final group = (ModalRoute.of(context)?.settings.arguments ?? '') as String;
-    String? num = StringConstants.listOfCodeGroups[group];
+    final url = (ModalRoute.of(context)?.settings.arguments ?? '') as String;
 
     return Scaffold(
       body:  WebviewScaffold(
         primary: false,
-        url: "https://eservice.omsu.ru/schedule/#/schedule/group/$num",
+        url: "https://eservice.omsu.ru/schedule/#/schedule/$url",
         appBar: AppBar(
           toolbarHeight: 0,
         ),

@@ -23,6 +23,12 @@ class PageOfTeacher extends StatelessWidget {
                       Navigator.pop(context);
                     },
                   ),
+                  IconButton(
+                    icon: AppIconStyle.iconTopSchedule,
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/schedule', arguments: StringConstants.listOfCodeTeachers[teacher.name]);
+                    },
+                  ),
                   Text(
                     "Преподаватель",
                     textAlign: TextAlign.center,

@@ -88,7 +88,6 @@ class ListOfTeach {
     Teachers(name: "Янишевская Анна Генриховна", img: 'yanishevskaya.jpg', items: ["Алгоритмы анализа изображений"], department: "Кафедра компьютерных технологий и сетей", mail: "anna-yanish@mail.ru"),
     //Teachers(name: "Волошина Валентина Юрьевна", img: 'volodch.jpg', items: ["Археография"], department: "Кафедра Информационной безопасности", mail: ""),//под вопросом
     //Teachers(name: "", img: 'zaharova.png', items: [""], department: "Кафедра фундаментальной и прикладной математики", mail: ""),
-
   ];
 
   static Map<String, Teachers> ListOfTeachers= {

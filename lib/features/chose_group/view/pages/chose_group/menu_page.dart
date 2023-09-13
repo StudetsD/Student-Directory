@@ -57,7 +57,7 @@ class MenuPage extends StatelessWidget {
                     ),
                     CustomButton(
                       name: "Расписание",
-                      group: group,
+                      group: StringConstants.listOfCodeGroups[group].toString(),
                       asset: "assets/images/img_bag.svg",
                       way: '/schedule',
                     ),
