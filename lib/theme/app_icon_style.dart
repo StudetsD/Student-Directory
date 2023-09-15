@@ -12,4 +12,9 @@ class AppIconStyle {
     "assets/images/img_bag.svg",
     color: ColorConstant.startScreenTextColor,
   );
+
+  static SvgPicture iconPageTeacherSchedule = SvgPicture.asset(
+    "assets/icons/teacher_schedule.svg",
+    color: ColorConstant.startScreenTextColor,
+  );
 }

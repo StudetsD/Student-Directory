@@ -76,13 +76,13 @@ class _ChoseGroupScreenState extends State<ChoseGroupScreen> {
                   fillColor: ColorConstant.chosePageFon,
                   enabledBorder: OutlineInputBorder(
                     borderSide: BorderSide(
-                        color: ColorConstant.choseGroupColorBorderSearch,
+                        color: ColorConstant.menuBackgroundColor,
                         width: 1.0
                     ),
                   ),
                   focusedBorder: OutlineInputBorder(
                     borderSide: BorderSide(
-                        color: ColorConstant.startScreenTextColor,
+                        color: ColorConstant.choseGroupColorBorderSearch,
                         width: 1.0
                     ),
                   ),

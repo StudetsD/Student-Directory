@@ -23,12 +23,6 @@ class PageOfTeacher extends StatelessWidget {
                       Navigator.pop(context);
                     },
                   ),
-                  IconButton(
-                    icon: AppIconStyle.iconTopSchedule,
-                    onPressed: () {
-                      Navigator.pushNamed(context, '/schedule', arguments: StringConstants.listOfCodeTeachers[teacher.name]);
-                    },
-                  ),
                   Text(
                     "Преподаватель",
                     textAlign: TextAlign.center,
@@ -45,7 +39,7 @@ class PageOfTeacher extends StatelessWidget {
                     width: double.infinity,
                     margin: const EdgeInsets.only(left: 15, right: 15),
                     decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(15),
+                      borderRadius: BorderRadius.circular(10),
                       color: ColorConstant.menuBackgroundColor,
                     ),
                     child: Row(
@@ -74,6 +68,44 @@ class PageOfTeacher extends StatelessWidget {
                           ),
                         )
                       ],
+                    ),
+                  ),
+                  Container(
+                    height: 65,
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      color: ColorConstant.menuBackgroundColor,
+                    ),
+                    margin: const EdgeInsets.only(top: 5, left: 15, right: 15),
+                    child: MaterialButton(
+                      child: Row(
+                        children: <Widget>[
+                          Container(
+                            margin: const EdgeInsets.only(left: 15, right: 10),
+                            child: GestureDetector(
+                              child: AppIconStyle.iconPageTeacherSchedule,
+                              onTap: (){
+                                Navigator.pushNamed(context, '/schedule', arguments: StringConstants.listOfCodeTeachers[teacher.name]);
+                              },
+                            ),
+                          ),
+                          Container(
+                            margin: const EdgeInsets.only(left: 5),
+                            child: Text(
+                              "Расписание преподавателя",
+                              style: TextStyle(
+                                color: ColorConstant.startScreenTextColor,
+                                fontSize: 15,
+                                fontFamily: "RobotoRegular",
+                              ),
+                            ),
+                          )
+                        ],
+                      ),
+                      onPressed: (){
+                        Navigator.pushNamed(context, '/schedule', arguments: StringConstants.listOfCodeTeachers[teacher.name]);
+                      },
                     ),
                   ),
                   Container(

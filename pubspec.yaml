@@ -43,6 +43,7 @@ flutter:
     - assets/images/img_mail.svg
     - assets/images/img_man.svg
     - assets/images/Double_arrow.svg
+    - assets/icons/teacher_schedule.svg
     - assets/icons/back.svg
     - assets/icons/back_top.svg
     - assets/icons/semester.svg

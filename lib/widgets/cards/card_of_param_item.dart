@@ -23,7 +23,7 @@ class CardOfParamItem extends StatelessWidget {
     return Container(
         width: double.infinity,
         height: 75,
-        margin: const EdgeInsets.only(left: 15, right: 15, top: 18),
+        margin: const EdgeInsets.only(left: 15, right: 15, bottom: 18),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(5),
           color: color,
