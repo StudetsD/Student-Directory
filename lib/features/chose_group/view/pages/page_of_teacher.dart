@@ -208,6 +208,7 @@ class PageOfTeacher extends StatelessWidget {
                 ],
               ),
             ),
+
           ],
         ),
       ),
