@@ -242,5 +242,4 @@ class TextItem extends StatelessWidget {
       ),
     );
   }
-
 }
