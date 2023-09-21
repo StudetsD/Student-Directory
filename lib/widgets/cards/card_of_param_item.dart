@@ -38,7 +38,7 @@ class CardOfParamItem extends StatelessWidget {
                       if (isButton == 'disk') {
                         Navigator.pushNamed(context, '/disk', arguments: StringConstants.listOfUrl[item.name]);
                       }
-                      else if (isButton.isNotEmpty && isButton != 'Преподавателя нет') {
+                      else if (isButton.isNotEmpty && isButton != 'Информации о преподавателе нет') {
                         Navigator.pushNamed(context, '/teacher', arguments: StringConstants.listOfTeachers[isButton]);
                       }
                     },
@@ -64,7 +64,7 @@ class CardOfParamItem extends StatelessWidget {
             if (isButton == 'disk') {
               Navigator.pushNamed(context, '/disk', arguments: StringConstants.listOfUrl[item.name]);
             }
-            else if (isButton.isNotEmpty && isButton != 'Преподавателя нет') {
+            else if (isButton.isNotEmpty && isButton != 'Информации о преподавателе нет') {
               Navigator.pushNamed(context, '/teacher', arguments: StringConstants.listOfTeachers[isButton]);
             }
           },

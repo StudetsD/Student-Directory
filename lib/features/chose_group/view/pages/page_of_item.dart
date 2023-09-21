@@ -68,7 +68,7 @@ class _PageOfItemState extends State<PageOfItem> {
                   onPressed: ()  => _showToast(context, item.name),
                 )
               ),
-              CardOfParamItem(text: 'Преподаватель: \n$nameTeacher', icon: "assets/icons/teacher.svg", isButton: nameTeacher, item: item, color: ColorConstant.chosePageTextColor,),
+              CardOfParamItem(text: 'Преподаватель: \n$nameTeacher', icon: "assets/icons/teacher.svg", isButton: nameTeacher, item: item, color: choseColor(nameTeacher),),
               CardOfParamItem(text: 'Вид аттестации: ${item.mark}', icon: "assets/icons/type_of_attestation.svg", isButton: "no", item: item, color: ColorConstant.pageItemParamColor,),
               CardOfParamItem(text: 'Начинается с ${item.semestr.first}-ого семестра', icon: "assets/icons/calendar.svg", isButton: "no", item: item, color: ColorConstant.pageItemParamColor,),
               CardOfParamItem(text: 'Количество семестров: ${item.semestr.length}', icon: "assets/icons/semester.svg", isButton: "no", item: item, color: ColorConstant.pageItemParamColor,),
@@ -78,6 +78,15 @@ class _PageOfItemState extends State<PageOfItem> {
         ),
       ),
     );
+  }
+
+  Color choseColor (String teacher) {
+    if (teacher == 'Информации о преподавателе нет') {
+      return ColorConstant.pageItemParamColor;
+    }
+    else {
+      return ColorConstant.chosePageTextColor;
+    }
   }
 
   void _showToast(BuildContext context, String fullName) {

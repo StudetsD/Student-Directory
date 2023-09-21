@@ -58,12 +58,34 @@ class PageOfTeacher extends StatelessWidget {
                           ),
                         ),
                         Flexible(
-                          child: Text (
-                            teacher.name,
-                            style: TextStyle(
-                              fontSize: 20,
-                              fontFamily: 'RobotoRegular',
-                              color: ColorConstant.startScreenTextColor,
+                          child: Container(
+                            margin: const EdgeInsets.only(left: 8, top: 28, right: 20),
+                            child: Column(
+                              children: [
+                                Text (
+                                  teacher.name,
+                                  style: TextStyle(
+                                    fontSize: 20,
+                                    fontFamily: 'RobotoRegular',
+                                    color: ColorConstant.startScreenTextColor,
+                                  ),
+                                ),
+                                Divider(
+                                  color: ColorConstant.startScreenTextColor,
+                                  thickness: 1,
+                                ),
+                                Align(
+                                  alignment: Alignment.centerLeft,
+                                  child: Text (
+                                    "Должность: ${teacher.position}",
+                                    style: TextStyle(
+                                      fontSize: 10,
+                                      fontFamily: 'RobotoLight',
+                                      color: ColorConstant.startScreenTextColor,
+                                    ),
+                                  ),
+                                ),
+                              ],
                             ),
                           ),
                         )
@@ -183,7 +205,7 @@ class PageOfTeacher extends StatelessWidget {
                     ),
                   ),
                   Container(
-                    margin: const EdgeInsets.only(top: 30, left: 25, right: 25),
+                    margin: const EdgeInsets.only(top: 30, left: 25, right: 25, bottom: 30),
                     child: Column(
                       children: <Widget>[
                         Align(
