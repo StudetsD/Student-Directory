@@ -14,7 +14,7 @@ class CardOfParamItem extends StatelessWidget {
   });
   final String text;
   final String icon;
-  final bool isButton;
+  final String isButton;
   final Items item;
   final Color color;
 
@@ -35,8 +35,11 @@ class CardOfParamItem extends StatelessWidget {
                 margin: const EdgeInsets.only(right: 10),
                 child: GestureDetector(
                     onTap: () {
-                      if (isButton) {
+                      if (isButton == 'disk') {
                         Navigator.pushNamed(context, '/disk', arguments: StringConstants.listOfUrl[item.name]);
+                      }
+                      else if (isButton.isNotEmpty && isButton != 'Преподавателя нет') {
+                        Navigator.pushNamed(context, '/teacher', arguments: StringConstants.listOfTeachers[isButton]);
                       }
                     },
                     child: SvgPicture.asset(
@@ -58,8 +61,11 @@ class CardOfParamItem extends StatelessWidget {
             ],
           ),
           onPressed: () {
-            if (isButton) {
+            if (isButton == 'disk') {
               Navigator.pushNamed(context, '/disk', arguments: StringConstants.listOfUrl[item.name]);
+            }
+            else if (isButton.isNotEmpty && isButton != 'Преподавателя нет') {
+              Navigator.pushNamed(context, '/teacher', arguments: StringConstants.listOfTeachers[isButton]);
             }
           },
         )

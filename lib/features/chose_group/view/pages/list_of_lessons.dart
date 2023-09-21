@@ -111,7 +111,7 @@ class _ListOfLessonsState extends State<ListOfLessons> {
               child: ListView(
                 keyboardDismissBehavior: ScrollViewKeyboardDismissBehavior.onDrag,
                 children: <Widget>[
-                  for(var i = 0; i < _filteredLessons.length; i++) CardOfItem(item: _filteredLessons[i]),
+                  for(var i = 0; i < _filteredLessons.length; i++) CardOfItem(item: _filteredLessons[i], group: widget.group,),
                 ],
               ),
             )

@@ -201,7 +201,7 @@ class PageOfTeacher extends StatelessWidget {
                           color: ColorConstant.startScreenTextColor,
                           thickness: 1,
                         ),
-                        for (var i = 0; i < teacher.items.length; i++) TextItem(title: teacher.items[i], index: i + 1,),
+                        for (var i = 0; i < teacher.items.length; i++) TextItem(title: teacher.items.keys.toList()[i], index: i + 1,),
                       ],
                     ),
                   ),

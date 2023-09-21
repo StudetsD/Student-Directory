@@ -14,7 +14,10 @@ class PageOfItem extends StatefulWidget {
 class _PageOfItemState extends State<PageOfItem> {
   @override
   Widget build(BuildContext context) {
-    var item = (ModalRoute.of(context)?.settings.arguments ?? "") as Items;
+    var data = (ModalRoute.of(context)?.settings.arguments ?? "") as List;
+    var item = data[0];
+    var group = data[1];
+    final String nameTeacher = _getTeacherName(group, item.name);
     return Scaffold(
       body: SizedBox(
         height: double.infinity,
@@ -65,11 +68,11 @@ class _PageOfItemState extends State<PageOfItem> {
                   onPressed: ()  => _showToast(context, item.name),
                 )
               ),
-              CardOfParamItem(text: 'Преподаватель: \nФамилия Имя Отчество', icon: "assets/icons/teacher.svg", isButton: false, item: item, color: ColorConstant.pageItemParamColor,),
-              CardOfParamItem(text: 'Вид аттестации: ${item.mark}', icon: "assets/icons/type_of_attestation.svg", isButton: false, item: item, color: ColorConstant.pageItemParamColor,),
-              CardOfParamItem(text: 'Начинается с ${item.semestr.first}-ого семестра', icon: "assets/icons/calendar.svg", isButton: false, item: item, color: ColorConstant.pageItemParamColor,),
-              CardOfParamItem(text: 'Количество семестров: ${item.semestr.length}', icon: "assets/icons/semester.svg", isButton: false, item: item, color: ColorConstant.pageItemParamColor,),
-              CardOfParamItem(text: 'Ссылка на материалы', icon: "assets/icons/download.svg", isButton: true, item: item, color: ColorConstant.chosePageTextColor,),
+              CardOfParamItem(text: 'Преподаватель: \n$nameTeacher', icon: "assets/icons/teacher.svg", isButton: nameTeacher, item: item, color: ColorConstant.chosePageTextColor,),
+              CardOfParamItem(text: 'Вид аттестации: ${item.mark}', icon: "assets/icons/type_of_attestation.svg", isButton: "no", item: item, color: ColorConstant.pageItemParamColor,),
+              CardOfParamItem(text: 'Начинается с ${item.semestr.first}-ого семестра', icon: "assets/icons/calendar.svg", isButton: "no", item: item, color: ColorConstant.pageItemParamColor,),
+              CardOfParamItem(text: 'Количество семестров: ${item.semestr.length}', icon: "assets/icons/semester.svg", isButton: "no", item: item, color: ColorConstant.pageItemParamColor,),
+              CardOfParamItem(text: 'Ссылка на материалы', icon: "assets/icons/download.svg", isButton: "disk", item: item, color: ColorConstant.chosePageTextColor,),
             ],
           ),
         ),
@@ -130,5 +133,30 @@ class _PageOfItemState extends State<PageOfItem> {
       finalTitle = name;
     }
     return finalTitle;
+  }
+
+  String _getTeacherName (String group, String itemName) {
+    List<List<String>> rightItem= [];
+    for (var i = 0; i < StringConstants.listOfItemsTeachers.length; i++) {
+      if (StringConstants.listOfItemsTeachers[i][itemName] != null && StringConstants.listOfItemsTeachers[i][itemName]!.isNotEmpty) {
+        List<String> groups = StringConstants.listOfItemsTeachers[i][itemName]!;
+        groups.add("$i");
+        rightItem.add(groups);
+      }
+    }
+    if (rightItem.isEmpty) {
+      return 'Информации о преподавателе нет';
+    }
+    else if (rightItem.length == 1) {
+      return ListOfTeach.listOfTeachers[int.parse(rightItem.first.last)].name;
+    }
+    else {
+      for (var i = 0; i < rightItem.length - 1; i++) {
+        if (rightItem[i].contains(group)) {
+          return ListOfTeach.listOfTeachers[int.parse(rightItem[i].last)].name;
+        }
+      }
+      return ListOfTeach.listOfTeachers[int.parse(rightItem[0].last)].name;
+    }
   }
 }

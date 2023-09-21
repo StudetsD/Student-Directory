@@ -6,8 +6,10 @@ class CardOfItem extends StatelessWidget{
   const CardOfItem ({
     super.key,
     required this.item,
+    required this.group,
 });
   final Items item;
+  final String group;
 
   @override
   Widget build(BuildContext context) {
@@ -47,7 +49,7 @@ class CardOfItem extends StatelessWidget{
           ],
         ),
         onPressed: () {
-          Navigator.pushNamed(context, '/item', arguments: item);
+          Navigator.pushNamed(context, '/item', arguments: [item, group]);
         },
       ),
     );

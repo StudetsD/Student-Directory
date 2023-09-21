@@ -1,110 +1,668 @@
 class ListOfTeach {
   static List<Teachers> listOfTeachers = [
-    Teachers(name: "Абрамова Анастасия Ивановна", img: 'abramova.png', items: ["Специализация по прикладной математике"], department: "Кафедра фундаментальной и прикладной математики", mail: "abramovaai@omsu.ru"),
-    Teachers(name: "Агафонов Александр Леонидович", img: 'agafonov.png', items: ["Web-программирование"], department: "Кафедра компьютерной математики и программного обеспечения", mail: "-"),
-    Teachers(name: "Агалаков Сергей Астафьевич", img: 'agalakov.png', items: ["Анализ статистических данных"], department: "Кафедра компьютерной математики и программного обеспечения", mail: "agalakovsa@omsu.ru"),
-    Teachers(name: "Адельшин Александр Владимирович", img: 'adelshin.png', items: ["Теория игр и исследование операций"], department: "Кафедра фундаментальной и прикладной математики", mail: "adelshinav@omsu.ru"),
-    //Teachers(name: "Ашаев Игорь Викторович", img: 'ashaev.png', items: [""], department: "Кафедра компьютерной математики и программного обеспечения", mail: "ashaeviv@omsu.ru"),//возможно не препод
-    //Teachers(name: "Ашаева Юлия Михайловна", img: 'ashaeva.png', items: [""], department: "Кафедра компьютерной математики и программного обеспечения", mail: "	ashaevaium@omsu.ru"),//возможно не препод
-    Teachers(name: "Бахта Наталья Сергеевна", img: 'bahta.png', items: ["Специализация"], department: "Кафедра компьютерной математики и программного обеспечения", mail: "bakhtans@omsu.ru"),
-    //	Березин Андрей Андреевич
-    Teachers(name: "Бесценный Игорь Павлович", img: 'bestsennyi.jpg', items: ["Математическая логика и теория алгоритмов"], department: "Кафедра Информационной безопасности", mail: "ibests@mail.ru"),
-    Teachers(name: "Богаченко Надежда Федоровна", img: 'bogachenko.jpg', items: ["Дискретная математика"], department: "Кафедра компьютерных технологий и сетей", mail: "nfbogachenko@mail.ru"),
-    Teachers(name: "Болдовская Татьяна Ерофеевна", img: 'bold.jpg', items: ["Алгебра"], department: "Кафедра Информационной безопасности", mail: "teb73@mail.ru"),//Кафедра компьютерных технологий и сетей
-    //Бородихин Василий Николаевич
-    //Бузина Ольга Алексеевна   buzina_56@mail.ru
-    //Бучинский Иван
-    Teachers(name: "Вакилов Андрей Николаевич", img: 'vakilov.jpg', items: ["Электродинамика"], department: "Кафедра Информационной безопасности", mail: "vakilovan@omsu.ru"),
-    Teachers(name: "Вахний Татьяна Владимировна", img: 'vahniy.jpg', items: ["Основы цифровых технологий"], department: "Кафедра компьютерных технологий и сетей", mail: "vahniytv@mail.ru"),
-    Teachers(name: "Вильховский Данил Эдуардович", img: 'vilhovskiy.jpg', items: ["Технологии и методы программирования"], department: "Кафедра Информационной безопасности", mail: "vilkhovskiy@gmail.com"),
-    Teachers(name: "Ворошилов Владимир Владимирович", img: 'voroshilov.png', items: ["Web-программирование"], department: "Кафедра компьютерной математики и программного обеспечения", mail: "voroshilovvv@omsu.ru"),
-    Teachers(name: "Вязанкин Олег Николаевич", img: 'vyazankin.png', items: ["Специализация по программированию"], department: "Кафедра компьютерной математики и программного обеспечения", mail: "viazankinon@omsu.ru"),
-    //Голованов Александр Леонидович    agolovanov@yahoo.com
-    Teachers(name: "Горев Александр Иванович", img: 'gorev.jpg', items: ["Информационная безопасность"], department: "Кафедра Информационной безопасности", mail: "gorev_a@inbox.ru"),
-    Teachers(name: "Горева Евгения Геннадьевна", img: 'goreva.jpg', items: ["Языки программирования"], department: "Кафедра Информационной безопасности", mail: "terleshka@mail.ru"),
-    //Teachers(name: "Горн", img: 'gorn.jpg', items: [""], department: "Кафедра компьютерных технологий и сетей", mail: ""),//надо посмотреть как зовут
-    Teachers(name: "Гусс Святослав Владимирович", img: 'guss.jpg', items: ["Компьютерные сети"], department: "Кафедра компьютерных технологий и сетей", mail: "infoguss@gmail.com"),
-    Teachers(name: "Гринь Анатолий Гаврилович", img: 'grin.jpg', items: ["Теория вероятностей и математическая логика"], department: "Кафедра Информационной безопасности", mail: "griniran@gmail.com"),
-    Teachers(name: "Гришков Александр Николаевич", img: 'grishkov.jpg', items: ["Специализация по прикладной математике"], department: "Кафедра фундаментальной и прикладной математики", mail: "grishkov@ime.usp.br"),
-    Teachers(name: "Дворкин Павел Лазаревич", img: 'dvorkin.png', items: ["Программирование серверных приложений"], department: "Кафедра компьютерной математики и программного обеспечения", mail: ""),
-    Teachers(name: "Дворжецкая Марина Юрьевна", img: 'dvorzheckaya.png', items: ["Информационная безопасность и защита информации"], department: "Кафедра компьютерной математики и программного обеспечения", mail: "dvorjet@omsu.ru"),
-    //Teachers(name: "Дёмин Александр Михайлович", img: 'demin.jpg', items: [""], department: "Кафедра компьютерных технологий и сетей", mail: ""),//вроде у наших не ведёт
-    Teachers(name: "Добровольский Сергей Михайлович", img: 'dobrovolskii.png', items: ["Теория вероятностей"], department: "Кафедра фундаментальной и прикладной математики", mail: "dobrovsm@omsu.ru"),
-    Teachers(name: "Евтягин Анатолий Леонидович", img: 'evtyagin.jpg', items: ["Алгебра и геометрия"], department: "Кафедра компьютерных технологий и сетей", mail: "evtyagin@ofim.oscsbras.ru"),
-    Teachers(name: "Ефимов Семён Викторович", img: 'efimov_SV.jpg', items: ["Вычислительные системы"], department: "Кафедра компьютерных технологий и сетей", mail: ""),
-    //Teachers(name: "Еремеев Антон Валентинович", img: 'eremeev.png', items: [""], department: "Кафедра фундаментальной и прикладной математики", mail: "eremeev@ofim.oscsbras.ru"), возможно не препод
-    Teachers(name: "Жмакина Юлия Сергеевна", img: 'zhmakina.jpg', items: ["Основы цифровых технологий"], department: "Кафедра компьютерных технологий и сетей", mail: "yzhmakina@mail.ru"),
-    //Teachers(name: "Забудский Геннадий Григорьевич", img: 'zabudskii.png', items: [""], department: "Кафедра фундаментальной и прикладной математики", mail: "zabudsky@ofim.oscbras.ru"), возможно не препод
-    //Teachers(name: "", img: 'zadorin.png', items: [""], department: "Кафедра фундаментальной и прикладной математики", mail: ""), возможно не препод
-    Teachers(name: "Захарова Юлия Викторовна", img: 'zaharova.png', items: ["Алгебра и геометрия"], department: "Кафедра фундаментальной и прикладной математики", mail: "julia.kovalenko.ya@yandex.ru"),
-    Teachers(name: "Ильев Виктор Петрович", img: 'ilev.png', items: ["Теория графов и комбинаторные алгоритмы"], department: "Кафедра фундаментальной и прикладной математики", mail: "iljev@mail.ru"),
-    //Teachers(name: "Кабанов Александр Николаевич", img: 'kabanov.jpg', items: [""], department: "Кафедра компьютерных технологий и сетей", mail: "kabanovan@omsu.ru"),//уже не ведёт
-    Teachers(name: "Кайгородцева Наталья Викторовна", img: 'kaygorodtseva.jpg', items: ["Начертательная геометрия и инженерная графика"], department: "Кафедра компьютерных технологий и сетей", mail: ""),
-    Teachers(name: "Карелина Раиса Олеговна", img: 'karelina.png', items: ["Алгебра и геометрия"], department: "Кафедра фундаментальной и прикладной математики", mail: "karelinaro@omsu.ru"),
-    Teachers(name: "Костюшина Елена Анатольевна", img: 'kostyushina.jpg', items: ["Системы управления базами данных"], department: "Кафедра компьютерных технологий и сетей", mail: "kea.omsu@gmail.com"),
-    //Костеннов Тимофей Владиславович   timofey.kostennov@gmail.com
-    Teachers(name: "Красникова Анастасия Валерьевна", img: 'krasnikova.jpg', items: ["Системы управления базами данных"], department: "Кафедра компьютерных технологий и сетей", mail: "krasnikovaanv@gmail.com"),
-    //krasnikovaanv@gmail.com
-    //Teachers(name: "Круглова Ирина Алексеевна", img: 'kruglova.png', items: ["Линейная алгебра"], department: "Кафедра фундаментальной и прикладной математики", mail: "kruglovaia@omsu.ru"), //возможно не с нашего факультета
-    //Teachers(name: "Лавров Дмитрий Николаевич", img: 'lavrov.jpg', items: [""], department: "Кафедра компьютерных технологий и сетей", mail: "dmitry.lavrov72@gmail.com"),//возможно не препод
-    Teachers(name: "Лаптев Александр Анатольевич", img: 'laptev.jpg', items: ["Математический анализ"], department: "Кафедра компьютерных технологий и сетей", mail: "laptevaa@omsu.ru"),
-    Teachers(name: "Леванова Татьяна Валентиновна", img: 'levanova.png', items: ["Методы оптимизации"], department: "Кафедра фундаментальной и прикладной математики", mail: "levanovat@mail.ru"),
-    Teachers(name: "Лейхтер Сергей Владимирович", img: 'leihter.jpg', items: ["Основы программирования"], department: "Кафедра компьютерных технологий и сетей", mail: "leykhter@mail.ru"),
-    Teachers(name: "Лореш Максим Андреевич", img: 'loresh.png', items: ["Введение в программирование"], department: "Кафедра компьютерной математики и программного обеспечения", mail: "-"),
-    Teachers(name: "Магазев Алексей Анатольевич", img: 'magazev.jpg', items: ["Квантовая кибернетика"], department: "Кафедра Информационной безопасности", mail: "magazev@mail.ru"),
-    Teachers(name: "Макаров Сергей Евгеньевич", img: 'makarov.jpg', items: ["Компьютерный практикум"], department: "Кафедра Информационной безопасности", mail: "mse1357@mail.ru"),
-    Teachers(name: "Мельников Евгений Владимирович", img: 'melnikov.png', items: ["Дополнительные главы математического анализа"], department: "Кафедра фундаментальной и прикладной математики", mail: "melnikovev@omsu.ru"),
-    Teachers(name: "Мещеряков Евгений Александрович", img: 'mesheryakov.png', items: ["Комплексный анализ"], department: "Кафедра фундаментальной и прикладной математики", mail: "mechtch1981@gmail.com"),
-    Teachers(name: "Мироненко Антон Николаевич", img: 'mironenko.jpg', items: ["Криптографические методы защиты информации"], department: "Кафедра Информационной безопасности", mail: "mironim84@mail.ru"),
-    Teachers(name: "Наместников Леонид Николаевич", img: 'namestnikov.jpg', items: ["Техническая защита информации"], department: "Кафедра Информационной безопасности", mail: "-"),
-    Teachers(name: "Николаев Владимир Борисович", img: 'nikolaev.png', items: ["Уравнения математической физики"], department: "Кафедра фундаментальной и прикладной математики", mail: "nikolaevvb@omsu.ru"),
-    Teachers(name: "Опарина Татьяна Михайловна", img: 'oparina.jpg', items: ["Коммутация и маршрутизация"], department: "Кафедра компьютерных технологий и сетей", mail: "oparina2007@yandex.ru"),
-    Teachers(name: "Паничкин Алексей Васильевич", img: 'panichkin.jpg', items: ["Методы вычислений"], department: "Кафедра компьютерных технологий и сетей", mail: "panich@ofim.oscsbras.ru"),
-    //Пичуев Константин Дмитриевич    pi4uev98@gmail.com
-    //Teachers(name: "Погромская (возможно не препод)", img: 'pogromskaya.jpg', items: ["Техническая защита информации"], department: "Кафедра Информационной безопасности", mail: ""),
-    Teachers(name: "Пролубников Александр Вячеславович", img: 'prolubnikov.png', items: ["Информационная безопасность"], department: "Кафедра компьютерной математики и программного обеспечения", mail: "a.v.prolubnikov@mail.ru"),
-    //Teachers(name: "Романьков Виталий Анатольевич", img: 'romankov.png', items: [""], department: "Кафедра компьютерной математики и программного обеспечения", mail: "romankovva@omsu.ru"),//возможно не препод
-    Teachers(name: "Романова Анна Анатольевна", img: 'romanova.png', items: ["Математическое моделирование в экономике"], department: "Кафедра фундаментальной и прикладной математики", mail: "romanovaaa@omsu.ru"),
-    Teachers(name: "Рыбалов Александр Николаевич", img: 'ryibalov.png', items: ["Теория кодирования"], department: "Кафедра компьютерной математики и программного обеспечения", mail: "-"),
-    Teachers(name: "Садовничук Сергей Германович", img: 'sadovnichuk.jpg', items: ["Теоретико-числовые методы в криптографии"], department: "Кафедра Информационной безопасности", mail: "sad369@gmail.com"),
-    Teachers(name: "Сервах Владимир Вицентьевич", img: 'servah.png', items: ["Научно-исследовательский семинар по прикладной математике"], department: "Кафедра фундаментальной и прикладной математики", mail: "svv_usa@rambler.ru"),
-    Teachers(name: "Сергиенко Татьяна Александровна", img: 'sergienko.png', items: ["Системное и прикладное программное обеспечение"], department: "Кафедра фундаментальной и прикладной математики", mail: "sergienkota@omsu.ru"),
-    Teachers(name: "Сиганов Илья Дмитриевич", img: 'siganov.jpg', items: ["Алгоритмизация и программирование"], department: "Кафедра компьютерных технологий и сетей", mail: "ilya.siganov@gmail.com"),
-    Teachers(name: "Симанчев Руслан Юрьевич", img: 'simanchev_ru.png', items: ["Математический анализ"], department: "Кафедра компьютерной математики и программного обеспечения", mail: "simanchevriu@omsu.ru"),
-    Teachers(name: "Соловьева Любовь Александровна", img: 'solovjova.jpg', items: ["Операционные системы"], department: "Кафедра Информационной безопасности", mail: "solovievala@omsu.ru"),
-    Teachers(name: "Терентьева Ольга Анатольевна", img: 'terentyeva.jpg', items: ["Научно-исследовательский семинар"], department: "Кафедра фундаментальной и прикладной математики", mail: "anatole4ka@yandex.ru"),
-    Teachers(name: "Тиховская Светлана Валерьевна", img: 'tikhovskaya.png', items: ["Научно-исследовательский семинар"], department: "Кафедра фундаментальной и прикладной математики", mail: "s.tihovskaya@yandex.ru"),
-    Teachers(name: "Толстуха Александр Сергеевич", img: 'tolstuha.png', items: ["Численные методы"], department: "Кафедра фундаментальной и прикладной математики", mail: "a.s.tolstukha@gmail.com"),
-    //Тутов Виталий Анатольевич
-    //Teachers(name: "", img: 'tyumentsev.jpg', items: [""], department: "Кафедра компьютерных технологий и сетей", mail: ""), возможно не препод
-    Teachers(name: "Усов Сергей Владимирович", img: 'usov.jpg', items: ["Теория автоматов"], department: "Кафедра Информационной безопасности", mail: "raintower@mail.ru"),
-    Teachers(name: "Уразова Инна Владимировна", img: 'urazova.png', items: ["Разработка бизнес-приложений"], department: "Кафедра компьютерной математики и программного обеспечения", mail: "urazovaiv@omsu.ru"),
-    Teachers(name: "Ушакова Евгения Валерьевна", img: 'ushakova.png', items: ["Языки и методы программирования"], department: "Кафедра компьютерной математики и программного обеспечения", mail: "	ushakovaev@omsu.ru"),
-    Teachers(name: "Филиппов Алексей Владимирович", img: 'filippov.png', items: ["Языки и методы программирования"], department: "Кафедра компьютерной математики и программного обеспечения", mail: ""),
-    Teachers(name: "Шаламова Нина Леонидовна", img: 'shalamova.png', items: ["Топология"], department: "Кафедра фундаментальной и прикладной математики", mail: "shalamovanl@omsu.ru"),
-    Teachers(name: "Ширшова Татьяна Ахметовна", img: 'shirshova.png', items: ["Математика"], department: "Кафедра компьютерной математики и программного обеспечения", mail: "shirshovata@omsu.ru"),
-    //Шишкин Василий Владимирович   shishkinvv2013@yandex.ru
-    Teachers(name: "Ягофарова Дарья Ивановна", img: 'yagofarova.png', items: ["Специализация"], department: "Кафедра фундаментальной и прикладной математики", mail: "ydarya@mail.ru"),
-    Teachers(name: "Янишевская Анна Генриховна", img: 'yanishevskaya.jpg', items: ["Алгоритмы анализа изображений"], department: "Кафедра компьютерных технологий и сетей", mail: "anna-yanish@mail.ru"),
-    //Teachers(name: "Волошина Валентина Юрьевна", img: 'volodch.jpg', items: ["Археография"], department: "Кафедра Информационной безопасности", mail: ""),//под вопросом
-    //Teachers(name: "", img: 'zaharova.png', items: [""], department: "Кафедра фундаментальной и прикладной математики", mail: ""),
+    Teachers(name: "Абрамова Анастасия Ивановна", img: 'abramova.png', position: 'доцент', items: ListOfItemsOfAbramova, department: "Кафедра фундаментальной и прикладной математики", mail: "abramovaai@omsu.ru"),
+    Teachers(name: "Агалаков Сергей Астафьевич", img: 'agalakov.png', position: 'доцент', items: ListOfItemsOfAgalakov, department: "Кафедра компьютерной математики и программного обеспечения", mail: "agalakovsa@omsu.ru"),
+    Teachers(name: "Агафонов Александр Леонидович", img: 'agafonov.png', position: 'доцент', items: ListOfItemsOfAgafonov, department: "Кафедра компьютерной математики и программного обеспечения", mail: "-"),
+    Teachers(name: "Адельшин Александр Владимирович", img: 'adelshin.png', position: 'доцент', items: ListOfItemsOfAdelshin, department: "Кафедра фундаментальной и прикладной математики", mail: "adelshinav@omsu.ru"),
+    Teachers(name: "Бахта Наталья Сергеевна", img: 'bahta.png', position: 'старший преподаватель', items: ListOfItemsOfBachta, department: "Кафедра компьютерной математики и программного обеспечения", mail: "bakhtans@omsu.ru"),
+    Teachers(name: "Бесценный Игорь Павлович", img: 'bestsennyi.jpg', position: 'доцент', items: ListOfItemsOfBestsenniy, department: "Кафедра Информационной безопасности", mail: "ibests@mail.ru"),
+    Teachers(name: "Богаченко Надежда Федоровна", img: 'bogachenko.jpg', position: 'доцент', items: ListOfItemsOfBogachenko, department: "Кафедра компьютерных технологий и сетей", mail: "nfbogachenko@mail.ru"),
+    Teachers(name: "Болдовская Татьяна Ерофеевна", img: 'bold.jpg', position: 'доцент', items: ListOfItemsOfBoldovskaya, department: "Кафедра компьютерных технологий и сетей", mail: "teb73@mail.ru"),
+    Teachers(name: "Вакилов Андрей Николаевич", img: 'vakilov.jpg', position: 'профессор', items: ListOfItemsOfVakilov, department: "Кафедра Информационной безопасности", mail: "vakilovan@omsu.ru"),
+    Teachers(name: "Вахний Татьяна Владимировна", img: 'vahniy.jpg', position: 'доцент', items: ListOfItemsOfVachniy, department: "Кафедра компьютерных технологий и сетей", mail: "vahniytv@mail.ru"),
+    Teachers(name: "Вильховский Данил Эдуардович", img: 'vilhovskiy.jpg', position: 'старший преподаватель (Атлант)', items: ListOfItemsOfVilhovskiy, department: "Кафедра Информационной безопасности", mail: "vilkhovskiy@gmail.com"),
+    Teachers(name: "Ворошилов Владимир Владимирович", img: 'voroshilov.png', position: 'старший преподаватель', items: ListOfItemsOfVoroshilov, department: "Кафедра компьютерной математики и программного обеспечения", mail: "voroshilovvv@omsu.ru"),
+    Teachers(name: "Вязанкин Олег Николаевич", img: 'vyazankin.png', position: 'доцент', items: ListOfItemsOfVyazankin, department: "Кафедра компьютерной математики и программного обеспечения", mail: "viazankinon@omsu.ru"),
+    Teachers(name: "Горев Александр Иванович", img: 'gorev.jpg', position: 'доцент', items: ListOfItemsOfGorev, department: "Кафедра Информационной безопасности", mail: "gorev_a@inbox.ru"),
+    Teachers(name: "Горева Евгения Геннадьевна", img: 'goreva.jpg', position: 'доцент', items: ListOfItemsOfGoreva, department: "Кафедра Информационной безопасности", mail: "terleshka@mail.ru"),
+    Teachers(name: "Гринь Анатолий Гаврилович", img: 'grin.jpg', position: 'профессор', items: ListOfItemsOfGrin, department: "Кафедра Информационной безопасности", mail: "griniran@gmail.com"),
+    Teachers(name: "Гришков Александр Николаевич", img: 'grishkov.jpg', position: 'профессор', items: ListOfItemsOfGrishkov, department: "Кафедра фундаментальной и прикладной математики", mail: "grishkov@ime.usp.br"),
+    Teachers(name: "Гусс Святослав Владимирович", img: 'guss.jpg', position: 'старший преподаватель	', items: ListOfItemsOfGuss, department: "Кафедра компьютерных технологий и сетей", mail: "infoguss@gmail.com"),
+    Teachers(name: "Дворкин Павел Лазаревич", img: 'dvorkin.png', position: '-', items: ListOfItemsOfDvorkin, department: "Кафедра компьютерной математики и программного обеспечения", mail: ""),
+    Teachers(name: "Добровольский Сергей Михайлович", img: 'dobrovolskii.png', position: 'доцент', items: ListOfItemsOfDobrovolskiy, department: "Кафедра фундаментальной и прикладной математики", mail: "dobrovsm@omsu.ru"),
+    Teachers(name: "Евтягин Анатолий Леонидович", img: 'evtyagin.jpg', position: 'преподаватель', items: ListOfItemsOfEvtyagin, department: "Кафедра компьютерных технологий и сетей", mail: "evtyagin@ofim.oscsbras.ru"),
+    Teachers(name: "Ефимов Семён Викторович", img: 'efimov_SV.jpg', position: '-', items: ListOfItemsOfEfimov, department: "Кафедра компьютерных технологий и сетей", mail: ""),
+    Teachers(name: "Захарова Юлия Викторовна", img: 'zaharova.png', position: 'доцент', items: ListOfItemsOfZaharova, department: "Кафедра фундаментальной и прикладной математики", mail: "julia.kovalenko.ya@yandex.ru"),
+    Teachers(name: "Ильев Виктор Петрович", img: 'ilev.png', position: 'профессор', items: ListOfItemsOfIlev, department: "Кафедра фундаментальной и прикладной математики", mail: "iljev@mail.ru"),
+    Teachers(name: "Кабанов Александр Николаевич", img: 'kabanov.jpg', position: 'доцент', items: ListOfItemsOfKabanov, department: "Кафедра компьютерных технологий и сетей", mail: "kabanovan@omsu.ru"),
+    Teachers(name: "Кайгородцева Наталья Викторовна", img: 'kaygorodtseva.jpg', position: '-', items: ListOfItemsOfKaygorodtseva, department: "Кафедра компьютерных технологий и сетей", mail: ""),
+    Teachers(name: "Карелина Раиса Олеговна", img: 'karelina.png', position: 'доцент', items: ListOfItemsOfKarelina, department: "Кафедра фундаментальной и прикладной математики", mail: "karelinaro@omsu.ru"),
+    Teachers(name: "Костеннов Тимофей Владиславович", img: 'kostennov.jpg', position: 'преподаватель', items: ListOfItemsOfKostennov, department: "Кафедра Информационной безопасности", mail: "timofey.kostennov@gmail.com"),
+    Teachers(name: "Костюшина Елена Анатольевна", img: 'kostyushina.jpg', position: 'доцент', items: ListOfItemsOfKostushina, department: "Кафедра компьютерных технологий и сетей", mail: "kea.omsu@gmail.com"),
+    Teachers(name: "Красникова Анастасия Валерьевна", img: 'krasnikova.jpg', position: 'преподаватель', items: ListOfItemsOfKrasnikova, department: "Кафедра компьютерных технологий и сетей", mail: "krasnikovaanv@gmail.com"),
+    Teachers(name: "Лаптев Александр Анатольевич", img: 'laptev.jpg', position: 'доцент', items: ListOfItemsOfLaptev, department: "Кафедра компьютерных технологий и сетей", mail: "laptevaa@omsu.ru"),
+    Teachers(name: "Леванова Татьяна Валентиновна", img: 'levanova.png', position: 'доцент', items: ListOfItemsOfLevanova, department: "Кафедра фундаментальной и прикладной математики", mail: "levanovat@mail.ru"),
+    Teachers(name: "Лейхтер Сергей Владимирович", img: 'leihter.jpg', position: 'старший преподаватель', items: ListOfItemsOfLeyhter, department: "Кафедра компьютерных технологий и сетей", mail: "leykhter@mail.ru"),
+    Teachers(name: "Лореш Максим Андреевич", img: 'loresh.png', position: 'доцент', items: ListOfItemsOfLoresh, department: "Кафедра компьютерной математики и программного обеспечения", mail: "-"),
+    Teachers(name: "Магазев Алексей Анатольевич", img: 'magazev.jpg', position: 'профессор', items: ListOfItemsOfMagazev, department: "Кафедра Информационной безопасности", mail: "magazev@mail.ru"),
+    Teachers(name: "Макаров Сергей Евгеньевич", img: 'makarov.jpg', position: 'доцент', items: ListOfItemsOfMakarov, department: "Кафедра Информационной безопасности", mail: "mse1357@mail.ru"),
+    Teachers(name: "Мельников Евгений Владимирович", img: 'melnikov.png', position: 'доцент', items: ListOfItemsOfMelnikov, department: "Кафедра фундаментальной и прикладной математики", mail: "melnikovev@omsu.ru"),
+    Teachers(name: "Мещеряков Евгений Александрович", img: 'mesheryakov.png', position: 'доцент', items: ListOfItemsOfMesheryakov, department: "Кафедра фундаментальной и прикладной математики", mail: "mechtch1981@gmail.com"),
+    Teachers(name: "Мироненко Антон Николаевич", img: 'mironenko.jpg', position: 'доцент', items: ListOfItemsOfMironenko, department: "Кафедра Информационной безопасности", mail: "mironim84@mail.ru"),
+    Teachers(name: "Наместников Леонид Николаевич", img: 'namestnikov.jpg', position: 'преподаватель', items: ListOfItemsOfNamestnikov, department: "Кафедра Информационной безопасности", mail: "-"),
+    Teachers(name: "Николаев Владимир Борисович", img: 'nikolaev.png', position: 'доцент', items: ListOfItemsOfNikolaev, department: "Кафедра фундаментальной и прикладной математики", mail: "nikolaevvb@omsu.ru"),
+    Teachers(name: "Опарина Татьяна Михайловна", img: 'oparina.jpg', position: 'старший преподаватель', items: ListOfItemsOfOparina, department: "Кафедра компьютерных технологий и сетей", mail: "oparina2007@yandex.ru"),
+    Teachers(name: "Паничкин Алексей Васильевич", img: 'panichkin.jpg', position: 'профессор', items: ListOfItemsOfPanichkin, department: "Кафедра компьютерных технологий и сетей", mail: "panich@ofim.oscsbras.ru"),
+    Teachers(name: "Пролубников Александр Вячеславович", img: 'prolubnikov.png', position: 'доцент', items: ListOfItemsOfProlubnikov, department: "Кафедра компьютерной математики и программного обеспечения", mail: "a.v.prolubnikov@mail.ru"),
+    Teachers(name: "Романова Анна Анатольевна", img: 'romanova.png', position: 'доцент', items: ListOfItemsOfRomanova, department: "Кафедра фундаментальной и прикладной математики", mail: "romanovaaa@omsu.ru"),
+    Teachers(name: "Рыбалов Александр Николаевич", img: 'ryibalov.png', position: 'доцент', items: ListOfItemsOfRybalov, department: "Кафедра компьютерной математики и программного обеспечения", mail: "-"),
+    Teachers(name: "Садовничук Сергей Германович", img: 'sadovnichuk.jpg', position: 'доцент', items: ListOfItemsOfSadovnichuk, department: "Кафедра Информационной безопасности", mail: "sad369@gmail.com"),
+    Teachers(name: "Сервах Владимир Вицентьевич", img: 'servah.png', position: 'доцент', items: ListOfItemsOfServach, department: "Кафедра фундаментальной и прикладной математики", mail: "svv_usa@rambler.ru"),
+    Teachers(name: "Сергиенко Татьяна Александровна", img: 'sergienko.png', position: 'доцент', items: ListOfItemsOfSergienko, department: "Кафедра фундаментальной и прикладной математики", mail: "sergienkota@omsu.ru"),
+    Teachers(name: "Сиганов Илья Дмитриевич", img: 'siganov.jpg', position: 'старший преподаватель', items: ListOfItemsOfSiganov, department: "Кафедра компьютерных технологий и сетей", mail: "ilya.siganov@gmail.com"),
+    Teachers(name: "Симанчев Руслан Юрьевич", img: 'simanchev_ru.png', position: 'профессор', items: ListOfItemsOfSimanchev, department: "Кафедра компьютерной математики и программного обеспечения", mail: "simanchevriu@omsu.ru"),
+    Teachers(name: "Соловьева Любовь Александровна", img: 'solovjova.jpg', position: 'старший преподаватель', items: ListOfItemsOfSoloveva, department: "Кафедра Информационной безопасности", mail: "solovievala@omsu.ru"),
+    Teachers(name: "Терентьева Ольга Анатольевна", img: 'terentyeva.jpg', position: 'старший преподаватель', items: ListOfItemsOfTerenteva, department: "Кафедра фундаментальной и прикладной математики", mail: "anatole4ka@yandex.ru"),
+    Teachers(name: "Тиховская Светлана Валерьевна", img: 'tikhovskaya.png', position: 'доцент', items: ListOfItemsOfTichovskaya, department: "Кафедра фундаментальной и прикладной математики", mail: "s.tihovskaya@yandex.ru"),
+    Teachers(name: "Толстуха Александр Сергеевич", img: 'tolstuha.png', position: 'доцент', items: ListOfItemsOfTolstuha, department: "Кафедра фундаментальной и прикладной математики", mail: "a.s.tolstukha@gmail.com"),
+    Teachers(name: "Тутов Виталий Анатольевич", img: 'tutov.png', position: 'преподаватель', items: ListOfItemsOfTutov, department: "Кафедра фундаментальной и прикладной математики", mail: "a.s.tolstukha@gmail.com"),
+    Teachers(name: "Усов Сергей Владимирович", img: 'usov.jpg', position: 'доцент', items: ListOfItemsOfUsov, department: "Кафедра Информационной безопасности", mail: "raintower@mail.ru"),
+    Teachers(name: "Уразова Инна Владимировна", img: 'urazova.png', position: 'доцент', items: ListOfItemsOfUrazova, department: "Кафедра компьютерной математики и программного обеспечения", mail: "urazovaiv@omsu.ru"),
+    Teachers(name: "Ушакова Евгения Валерьевна", img: 'ushakova.png', position: 'старший преподаватель', items: ListOfItemsOfUshakova, department: "Кафедра компьютерной математики и программного обеспечения", mail: "ushakovaev@omsu.ru"),
+    Teachers(name: "Шишкин Василий Владимирович", img: 'shishkinvs.jpg', position: 'преподаватель', items: ListOfItemsOfShishkin, department: "Кафедра Информационной безопасности", mail: "shishkinvv2013@yandex.ru"),
+    Teachers(name: "Ягофарова Дарья Ивановна", img: 'yagofarova.png', position: 'доцент', items: ListOfItemsOfYagofarova, department: "Кафедра фундаментальной и прикладной математики", mail: "ydarya@mail.ru"),
+    Teachers(name: "Янишевская Анна Генриховна", img: 'yanishevskaya.jpg', position: 'профессор', items: ListOfItemsOfYanishevskaya, department: "Кафедра компьютерных технологий и сетей", mail: "anna-yanish@mail.ru"),
   ];
 
-  static Map<String, Teachers> ListOfTeachers= {
-    "Бесценный Игорь Павлович": listOfTeachers[0],
+  static Map<String, List<String>> ListOfItemsOfAbramova = {
+    "Математика": ["ХТБ-301-О-01", "ХТБ-301-О-02", "ХТБ-302-О-01"],
+    "Математический анализ": ["ММБ-201-О-04", "ММБ-202-О-04", "ММБ-203-О-04", "ММБ-303-О-04", "ММБ-102-О-01", "ММБ-103-О-02", "ММБ-104-О-02", "ММБ-002-О-01", "ММБ-003-О-01", "ММБ-004-О-02",],
+  };
+
+  static Map<String, List<String>> ListOfItemsOfAgalakov = {
+    "Анализ многомерных статистических данных": ["МММ-301-О-06", "МММ-201-О-01"],
+    "Анализ статистических данных": ["ММБ-002-О-01", "ММБ-003-О-01", "ММБ-004-О-02", "ММБ-102-О-01", "ММБ-103-О-01", "ММБ-104-О-01", "ММБ-201-О-04", "ММБ-202-О-04", "ММБ-203-О-04", "ММБ-301-О-01", "ММБ-302-О-01", "ММБ-303-О-01", "МФС-901-О-01", "МФС-001-О-01", "МФС-101-О-01", "МФС-301-О-01"],
+  };
+
+  static Map<String, List<String>> ListOfItemsOfAgafonov = {
+    "Информационные технологии управления": ["МММ-301-О-06", "МММ-201-О-06"],
+    "Программирование мобильных устройств": ["ММБ-004-О-02"],
+    "Управление ИТ сервисами и контентом информационных ресурсов предприятия": ["ЭИБ-005-О"],
+    "Web-программирование": ["ММБ-004-О-02"],
+  };
+
+  static Map<String, List<String>> ListOfItemsOfAdelshin = {
+    "Теория игр и исследование операций": ["ММБ-002-О-01", "ММБ-003-О-01", "ММБ-004-О-02", "ММБ-102-О-01", "ММБ-103-О-01", "ММБ-104-О-01", "ММБ-201-О-04", "ММБ-202-О-04", "ММБ-203-О-04", "ММБ-301-О-01", "ММБ-302-О-01", "ММБ-303-О-01", "МФС-901-О-01", "МФС-001-О-01", "МФС-101-О-01", "МФС-301-О-01"],
+  };
+
+  static Map<String, List<String>> ListOfItemsOfBachta = {
+    "Введение в программирование": [],
+    "Специализация по программированию": ["ММБ-004-О-02"],
+  };
+
+  static Map<String, List<String>> ListOfItemsOfBestsenniy = {
+    "Алгебра": [],
+    "Высшая алгебра": [],
+    "Дифференциальная геометрия": [],
+    "Интеллектуальные системы": ["МИМ-201-О-01"],
+    "Информатика": ["МПБ-301-О-01", "МИБ-301-О-01"],
+    "Информационные системы": [],
+    "Информационные системы и технологии": [],
+    "Искусственный интеллект": [],
+    "Искусственный интеллект и логическое программирование": [],
+    "Компиляторы и методы трансляции": [],
+    "Компьютерные сети": [],
+    "Математика и информатика": [],
+    "Математическая логика": [],
+    "Математическая логика и теория алгоритмов": ["МББ-101-О-01", "МБС-101-О-01", "МКБ-101-О-01", "МКБ-101-О-01", "МБС-201-О-01", "МБС-202-О-01", "МБС-001-О-01", "МБС-901-О-01", "МБС-801-О-01", "МББ-001-О-01", "МББ-901-О-01"],
+    "Модальные и дескриптивные логики": [],
+    "Основы теории управления": ["МИБ-001-О-01", "МИБ-901-О-01"],
+    "Пакеты прикладных программ": [],
+    "Проектирование интеллектуальных систем": ["МИМ-201-О-01"],
+    "Современные информационные технологии": [],
+    "Современные проблемы информатики и вычислительной техники": [],
+    "Социальное прогнозирование": [],
+    "Теория вычислимости": ["МКБ-101-О-01", "МКБ-001-О-01", "МКБ-901-О-01"],
+    "Теория информации": [],
+    "Теория систем и системный анализ": ["МПБ-201-О-01", "МПБ-101-О-01", "МПБ-001-О-01", "МПБ-901-О-01"],
+    "ЭВМ и периферийные устройства": [],
+  };
+
+  static Map<String, List<String>> ListOfItemsOfBogachenko = {
+    "Ассемблер": [""],
+    "Дискретная математика": ["МПБ-201-О-01", "МИБ-201-О-01", "МПБ-101-О-01", "МИБ-101-О-01", "МПБ-001-О-01", "МИБ-001-О-01", "МПБ-901-О-01", "МИБ-901-О-01"],
+    "Дополнительные главы дискретной математики": [],
+    "Информатика": [],
+    "Квантовые коммуникации": [],
+    "Криптографические протоколы": [],
+    "Модели безопасности компьютерных систем": [],
+    "Программирование": [],
+    "Теория автоматов": [],
+    "Теория графов": [],
+    "Языки программирования": [],
+  };
+
+  static Map<String, List<String>> ListOfItemsOfBoldovskaya = {
+    "Алгебра": [],
+    "Высшая математика": ["ИСБ-301-О-03"],
+    "Математическая логика и теория алгоритмов": [],
+    "Математическая статистика": [],
+    "Математический анализ": [],
+    "Математические модели и методы в социологии": ["ИСБ-001-О-01"],
+    "Моделирование социальных систем": ["ИСМ-201-О-01"],
+    "Теория вероятностей": [],
+    "Теория вероятностей и математическая статистика": [],
+    "Теория категорий и топосы": [],
+    "Топология": ["МКБ-101-О-01", "МКБ-901-О-01"],
+    "Эконометрия": [],
+  };
+
+  static Map<String, List<String>> ListOfItemsOfVakilov = {
+    "Алгоритмы параллельного программирования": ["ФПМ-201-О-01", "ФПБ-003-О-01"],
+    "Основы цифровых технологий": ["ЯИБ-301-О-12"],
+    "Методы параллельного программирования": ["ФПБ-101-О-01"],
+    "Параллельные алгоритмы": ["МБС-901-О-01"],
+    "Физика неупорядоченных систем": ["ФПМ-301-О-01"],
+    "Численные методы в статистической физике": ["ФПБ-003-О-01"],
+    "Электродинамика": ["ФПБ-101-О-01", "ФФБ-101-О-01"],
+  };
+
+  static Map<String, List<String>> ListOfItemsOfVachniy = {
+    "Алгебра": [],
+    "Алгоритмы анализа данных и машинное обучение": ["МИМ-201-О-01"],
+    "Алгоритмы спектрального анализа данных": ["МИМ-201-О-01"],
+    "Информатика": [],
+    "Информатика и математика": [],
+    "Информационные технологии": [],
+    "Математика и информатика": [],
+    "Машинное обучение": [],
+    "Методы и средства защиты компьютерной информации": [],
+    "Метрология, стандартизация и сертификация": [],
+    "Операционные системы": [],
+    "Основы цифровых технологий": [],
+    "Прикладное программное обеспечение в социологии": [],
+    "Программно-аппаратные средства обеспечения информационной безопасности": [],
+    "Современные компьютерные технологии": [],
+    "Схемотехника": [],
+    "Схемотехника ЭВМ": [],
+    "Теория автоматов": [],
+    "Устройство квантового компьютера": [],
+    "Цифровая обработка сигналов": [],
+    "Электроника": [],
+    "Электроника и схемотехника": ["МББ-101-О-01", "МББ-001-О-01", "МББ-901-О-01",],
+    "Электротехника": ["МББ-101-О-01", "МИБ-101-О-01", "МБС-101-О-01", "МББ-001-О-01", "МИБ-001-О-01", "МБС-001-О-01", "МББ-901-О-01", "МИБ-901-О-01", "МБС-901-О-01", "МБС-801-О-01"],
+  };
+
+  static Map<String, List<String>> ListOfItemsOfVilhovskiy = {
+    "Анализ уязвимостей программного обеспечения": ["МББ-001-О-01", "МБС-901-О-01", "МББ-901-О-01", "МБС-801-О-01"],
+    "Технологии и методы программирования": ["МББ-101-О-01", "МБС-101-О-01", "МББ-001-О-01", "МБС-001-О-01", "МББ-901-О-01", "МБС-901-О-01", "МБС-801-О-01"],
+    "Учебная практика: ознакомительная практика": ["МББ-101-О-01", "МБС-101-О-01", "МББ-001-О-01", "МБС-001-О-01", "МББ-901-О-01", "МБС-901-О-01", "МБС-801-О-01"],
+  };
+
+  static Map<String, List<String>> ListOfItemsOfVoroshilov = {
+    "Web-программирование": ["ММБ-004-О-02"],
+  };
+
+  static Map<String, List<String>> ListOfItemsOfVyazankin = {
+    "Базы данных": ["МФС-001-О-01", "ММБ-104-О-02", "ММБ-103-О-02", "ММБ-002-О-01", "ММБ-003-О-01"],
+    "Обработка и анализ больших данных": ["МММ-201-О-06"],
+    "Объектно-ориентированный дизайн": ["ММБ-104-О-02", "ММБ-103-О-02"],
+    "Технологии разработки программного обеспечения": ["ММБ-004-О-02"],
+  };
+
+  static Map<String, List<String>> ListOfItemsOfGorev = {
+    "Алгоритмы кодировки и сжатия": [],
+    "Анализ уязвимостей программного обеспечения": [],
+    "Защита в операционных системах": [],
+    "Защита данных и программных систем": [],
+    "Защита информации": [],
+    "Защита программ и данных": ["МББ-201-О-01", "МББ-101-О-01", "МББ-001-О-01"],
+    "Информатика": [],
+    "Информационная безопасность": ["МББ-101-О-01", "МБС-101-О-01", "МББ-001-О-01", "МБС-001-О-01", "МБС-901-О-01"],
+    "Информационная безопасность и защита информации": [],
+    "Информационно-коммуникационные технологии": [],
+    "История вычислительной техники": [],
+    "Компьютерная экспертиза": ["МББ-201-О-01", "МББ-101-О-01", "МББ-001-О-01"],
+    "Методы моделирования": [],
+    "Обработка Big Data": [],
+    "Организационное и правовое обеспечение информационной безопасности": ["МБС-901-О-01", "МББ-001-О-01"],
+    "Основы информационного права": [],
+    "Основы информационной безопасности": ["МБС-301-О-01", "МБС-302-О-01", "МББ-201-О-01", "МББ-101-О-01", "МББ-001-О-01"],
+    "Основы построения защищенных компьютерных сетей": ["МБС-901-О-01"],
+    "Основы управления информационной безопасностью": ["МББ-201-О-01", "МББ-101-О-01", "МББ-001-О-01"],
+    "Основы цифровых расследований": ["МББ-101-О-01", "МБС-101-О-01", "МББ-001-О-01"],
+    "Программно-аппаратные средства защиты информации": ["МББ-101-О-01", "МББ-001-О-01"],
+    "Сетевой анализ": [],
+    "Социальное прогнозирование": [],
+    "Экономическая безопасность": [],
+  };
+
+  static Map<String, List<String>> ListOfItemsOfGoreva = {
+    "Алгебра": [],
+    "Аналитическая геометрия": ["МИБ-301-О-01", "МПБ-301-О-01","МИБ-201-О-01", "МПБ-201-О-01", "МИБ-101-О-01", "МПБ-101-О-01", "МИБ-001-О-01", "МПБ-001-О-01"],
+    "Геометрия": [],
+    "Диференциальная геометрия": [],
+    "Лямбда-исчисление": ["МКБ-101-О-01", "МКБ-001-О-01"],
+    "Информатика": [],
+    "Математическая логика": [],
+    "Математическая логика и дискретная математика": [],
+    "Математическая логика и теория алгоритмов": [],
+    "Математический анализ": [],
+    "Обработка Big Data": ["МКБ-001-О-01"],
+    "Теория категорий и топосы": [],
+    "Топология": [],
+    "Функциональный анализ": [],
+    "Языки программирования": [],
+  };
+
+  static Map<String, List<String>> ListOfItemsOfGrin = {
+    "Дифференциальные уравнения": [],
+    "Дополнительные главы теории вероятностей": [],
+    "Теория вероятностей и математическая статистика": ["МББ-101-О-01", "МКБ-101-О-01", "МБС-101-О-01", "МББ-001-О-01", "МКБ-001-О-01", "МБС-001-О-01", "МБС-901-О-01", "МБС-801-О-01",],
+    "Теория игр и принятие решений": [],
+  };
+
+  static Map<String, List<String>> ListOfItemsOfGrishkov = {
+    "Специализация": ["МФС-901-О-01", "МФС-001-О-01"],
+    "Специализация по прикладной математике": ["ММБ-002-О-01"],
+  };
+
+  static Map<String, List<String>> ListOfItemsOfGuss = {
+    "Администрирование сетевых операционных систем": ["МПБ-101-О-01", "МИБ-101-О-01", "МПБ-001-О-01", "МИБ-001-О-01"],
+    "Анализ уязвимостей компьютерных сетей": ["МББ-101-О-01"],
+    "Аналитическая геометрия": [],
+    "Вычислительные сети": [],
+    "Вычислительные системы": [],
+    "Геометрия": [],
+    "Защита сетевого периметра": [],
+    "Интерфейсы периферийных устройств": [],
+    "Информационные системы": [],
+    "Коммутация и маршрутизация": [],
+    "Компьютерные сети": ["МББ-101-О-01", "МПБ-101-О-01", "МББ-001-О-01", "МПБ-001-О-01"],
+    "Конструкторско-технологическое обеспечение производства ЭВМ": [],
+    "Методы верификации": [],
+    "Методы программирования": [],
+    "Микропроцессорные системы": [],
+    "Программирование": [],
+    "Программирование мобильных устройств": ["МКБ-101-О-01", "МКБ-001-О-01"],
+    "Программирование на языке высокого уровня": [],
+    "Программирование сетевых приложений": [],
+    "Проектный практикум": [],
+    "Сети и системы передачи информации": ["МБС-001-О-01", "МБС-901-О-01", "МБС-801-О-01"],
+    "Сети и телекоммуникации": [],
+    "Системное программное обеспечение": [],
+    "Современные проблемы информатики и вычислительной техники": [],
+    "Технологии и методы программирования": [],
+    "Технологии программирования": [],
+    "Удаленный доступ и компьютерные сети": [],
+    "ЭВМ и периферийные устройства": [],
+  };
+
+  static Map<String, List<String>> ListOfItemsOfDvorkin = {};
+
+  static Map<String, List<String>> ListOfItemsOfDobrovolskiy = {
+    "Математическая статистика": ["ММБ-002-О-01", "ММБ-003-О-01", "ММБ-004-О-02", "ММБ-102-О-01", "ММБ-103-О-01", "ММБ-104-О-01", "ММБ-201-О-04", "ММБ-202-О-04", "ММБ-203-О-04", "ММБ-301-О-01", "ММБ-302-О-01", "ММБ-303-О-01", "МФС-901-О-01", "МФС-001-О-01", "МФС-101-О-01", "МФС-301-О-01"],
+  };
+
+  static Map<String, List<String>> ListOfItemsOfEvtyagin = {
+    "Алгебра и геометрия": [],//"ММБ-302-О-04", "ММБ-303-О-04",
+  };
+
+  static Map<String, List<String>> ListOfItemsOfEfimov = {
+    "Вычислительные системы": [],
+  };
+
+  static Map<String, List<String>> ListOfItemsOfZaharova = {
+    "Алгебра и геометрия": ["ММБ-301-О-04", "ММБ-302-О-04", "ММБ-303-О-04", "МФС-301-О-02", "ММБ-201-О-04", "ММБ-202-О-04", "ММБ-203-О-04", "МФС-101-О-01",  "ММБ-102-О-01", "ММБ-103-О-02", "ММБ-104-О-02", "МФС-001-О-01",  "ММБ-002-О-01", "ММБ-003-О-01", "ММБ-004-О-02", "МФС-901-О-01", ],
+  };
+
+  static Map<String, List<String>> ListOfItemsOfIlev = {
+    "Некооперативные игры": ["МММ-301-О-06", "МММ-201-О-01"],
+    "Теория графов и комбинаторные алгоритмы": ["ММБ-201-О-04", "ММБ-202-О-04", "ММБ-203-О-04", "ММБ-102-О-01", "ММБ-103-О-02", "ММБ-104-О-02", "ММБ-002-О-01", "ММБ-003-О-01", "ММБ-004-О-02"],
+  };
+
+  static Map<String, List<String>> ListOfItemsOfKabanov = {
+    "Автоматизированные библиотечные информационные системы": [],
+    "Алгебра": ["МИБ-301-О-01", "МБС-301-О-01", "МБС-302-О-01", "МПБ-301-О-01", "МИБ-201-О-01", "МБС-201-О-01", "МБС-202-О-01", "МПБ-201-О-01", "МИБ-101-О-01", "МБС-101-О-01", "МПБ-101-О-01", "МИБ-001-О-01", "МБС-001-О-01", "МПБ-001-О-01", "МБС-901-О-01", "МБС-801-О-01",],
+    "Библиотечная система ИРБИС": [],
+    "Высшая алгебра": [],
+    "Дополнительные главы математического анализа": [],
+    "Кибернетика": [],
+    "Курс пользователя Internet": [],
+    "Интеллектуальные информационные системы": [],
+    "Информатика": ["МББ-101-О-01", "МБС-101-О-01", "МКБ-101-О-01", "МИМ-101-О-01", "МББ-001-О-01", "МБС-001-О-01", "МКБ-001-О-01", "МИМ-001-О-01", "МБС-901-О-01", "МБС-801-О-01",],
+    "Информационная безопасность и защита информации": [],
+    "Информационные технологии": [],
+    "Информационные технологии в рекламе": [],
+    "Информационные технологии управления": [],
+    "Исследование операций и методы оптимизации": [],
+    "Математика и информатика": [],
+    "Математическая логика и теория алгоритмов": [],
+    "Математический анализ": ["МПБ-101-О-01", "МИМ-101-О-01", "МПБ-001-О-01", "МИМ-001-О-01"],
+    "Математическое моделирование": [],
+    "Моделирование": [],
+    "Новые информационные технологии и компьютерная техника": [],
+    "Основы информатики": [],
+    "Основы информационной безопасности": [],
+    "Основы информационной культуры и информатика": [],
+    "Теория вероятностей и математическая статистика": [],
+    "Теория информации": ["МББ-101-О-01", "МБС-101-О-01", "МКБ-101-О-01", "МББ-001-О-01", "МБС-001-О-01", "МКБ-001-О-01",],
+    "Теория функций комплексного переменного": [],
+  };
+
+  static Map<String, List<String>> ListOfItemsOfKaygorodtseva = {
+    "Начертательная геометрия и инженерная графика": [],
+  };
+
+  static Map<String, List<String>> ListOfItemsOfKarelina = {
+    "Дифференциальные уравнения": ["ФББ-201-О-01", "ФРБ-201-О-01", "ФФБ-201-О-01"]
+  };
+
+  static Map<String, List<String>> ListOfItemsOfKostennov = {
+    "Web-программирование": [],
+    "Алгоритмы кодировки и сжатия": [],
+    "Защита программ и данных": [],
+    "Математическое моделирование": [],
+    "Основы построения защищенных компьютерных сетей": [],
+    "Языки программирования": ["МБС-301-О-01", "МБС-302-О-01", "МББ-101-О-01"],
+  };
+
+  static Map<String, List<String>> ListOfItemsOfKostushina = {
+    "Базы данных": [],
+    "Компьютерные технологии в науке и образовании": ["ХТМ-301-О-01", "ХХМ-301-О-01"],
+    "Корпоративные информационные системы": [],
+    "Математика и информатика": [],
+    "Программные средства обработки информации": [],
+    "Системы управления базами данных": ["МКБ-101-О-01", "МБС-101-О-01", "МББ-101-О-01"],
+    "Современные проблемы информатики и вычислительной техники": [],
+    "Управление проектированием информационных систем": [],
+  };
+
+  static Map<String, List<String>> ListOfItemsOfKrasnikova = {
+    "Дискретная математика": [],
+    "Математический анализ": [],
+    "Компьютерные сети": [],
+  };
+
+  static Map<String, List<String>> ListOfItemsOfLaptev = {
+    "Высшая математика": [],
+    "Дополнительные главы математического анализа": [],
+    "Информатика": [],
+    "Кибернетика": ["МБС-101-О-01", "МББ-101-О-01"],
+    "Компьютерные модели социальных процессов": [],
+    "Математический анализ": ["МББ-301-О-01", "МБС-302-О-01", "МБС-201-О-01", "МББ-201-О-01", "МБС-202-О-01", "МБС-101-О-01", "МББ-101-О-01", "МБС-001-О-01", "МББ-001-О-01", "МБС-901-О-01", "МБС-801-О-01"],
+    "Основы теории управления": [],
+    "Социальное моделирование и программирование": [],
+    "Теория функций комплексного переменного": [],
+  };
+
+  static Map<String, List<String>> ListOfItemsOfLevanova = {
+    "Научно-исследовательский семинар": ["ММБ-104-О-02", "ММБ-002-О-01", "ММБ-003-О-01"],
+    "Теория игр и исследование операций": ["ММБ-102-О-01", "МФС-101-О-01"],
+  };
+
+  static Map<String, List<String>> ListOfItemsOfLeyhter = {
+    "Автоматизированные библиотечно-информационные системы": ["ЯББ-201-О-02"],
+    "Ассемблер": ["МББ-101-О-01", "МБС-101-О-01", "МББ-001-О-01", "МБС-001-О-01", "МБС-901-О-01", "МБС-801-О-01",],
+    "Информационные системы и технологии": ["МКБ-001-О-01", "МПБ-101-О-01", "МПБ-001-О-01" ],
+    "Объектно-ориентированный анализ и программирование": [],
+    "Основы программирования": ["МИБ-301-О-02", "МПБ-301-О-01", "МИБ-201-О-01", "МПБ-201-О-01",  "МИБ-101-О-01", "МПБ-101-О-01", "МИБ-001-О-01", "МПБ-001-О-01",],
+    "Программная инженерия": ["МКБ-001-О-01", "МИБ-001-О-01", "МПБ-001-О-01"],
+    "Проектирование информационных систем": [],
+    "Сети и телекоммуникации": [],
+  };
+
+  static Map<String, List<String>> ListOfItemsOfLoresh = {
+    "Введение в программирование": ["ММБ-301-О-04", "ММБ-302-О-04", "ММБ-303-О-04", "МФС-301-О-02", "ММБ-201-О-04", "ММБ-202-О-04", "ММБ-203-О-04", "МФС-101-О-01",  "ММБ-102-О-01", "ММБ-103-О-02", "ММБ-104-О-02", "МФС-001-О-01",  "ММБ-002-О-01", "ММБ-003-О-01", "ММБ-004-О-02", "МФС-901-О-01",],
+  };
+
+  static Map<String, List<String>> ListOfItemsOfMagazev = {
+    "Дифференциальные уравнения": [],
+    "Квантовая кибернетика": [],
+    "Квантовые вычисления": ["МБС-101-О-01", "МББ-101-О-01", "МКБ-001-О-01", "МКБ-101-О-01", "МИБ-101-О-01", "МПБ-101-О-01", "МБС-001-О-01", "МББ-001-О-01", "МБС-901-О-01", "МБС-801-О-01", "МИБ-001-О-01", "МПБ-001-О-01"],
+    "Уравнения математической физики": ["МКБ-001-О-01",],
+    "Уравнения с частными производными": [],
+  };
+
+  static Map<String, List<String>> ListOfItemsOfMakarov = {
+    "Введение в программирование": [],
+    "Дифференциальные уравнения": ["ММБ-201-О-04", "ММБ-202-О-04", "ММБ-203-О-04", "ММБ-102-О-01", "ММБ-103-О-02", "ММБ-104-О-02", "ММБ-002-О-01", "ММБ-003-О-01", "ММБ-004-О-02"],
+    "Компьютерный практикум": ["МФС-901-О-01"],
+    "Методы вычислений": [],
+    "Язык HTML": ["ЭМБ-201-О-12"],
+  };
+
+  static Map<String, List<String>> ListOfItemsOfMelnikov = {
+    "Научно-исследовательский семинар": [],
+    "Математический анализ": [],
+    "Специализация по прикладной математике": [],
+    "Функциональный анализ": ["МФС-101-О-01",  "ММБ-102-О-01", "ММБ-103-О-02", "ММБ-104-О-02", "МФС-001-О-01",  "ММБ-002-О-01", "ММБ-003-О-01", "ММБ-004-О-02", "МФС-901-О-01",],
+  };
+
+  static Map<String, List<String>> ListOfItemsOfMesheryakov = {
+    "Математический анализ": ["ММБ-301-О-04", "ММБ-302-О-04", "ММБ-303-О-04", "МФС-301-О-02", "ММБ-201-О-04", "ММБ-202-О-04", "ММБ-203-О-04", "МФС-101-О-01",  "ММБ-102-О-01", "ММБ-103-О-02", "ММБ-104-О-02", "МФС-001-О-01",  "ММБ-002-О-01", "ММБ-003-О-01", "ММБ-004-О-02", "МФС-901-О-01"],
+  };
+
+  static Map<String, List<String>> ListOfItemsOfMironenko = {
+    "Алгоритмы и структура данных": [],
+    "Анализ безопасности компьютерных систем": [],
+    "Архитектура и программирование вычислительных систем": [],
+    "Ассемблер": [],
+    "Безопасность программного обеспечения с открытым кодом": [],
+    "Вычислительные системы": [],
+    "Вычислительные системы, сети, телекоммуникации": [],
+    "Информационные системы": [],
+    "Корпоративные информационные системы": [],
+    "Криптографические методы защиты информации": [],
+    "Криптографические протоколы": ["МББ-001-О-01", "МБС-001-О-01", "МБС-901-О-01", "МБС-801-О-01"],
+    "Методы верификации": [],
+    "Методы и средства защиты компьютерной информации": ["МББ-101-О-01", "МБС-101-О-01", "МББ-001-О-01", "МБС-001-О-01", "МБС-901-О-01", "МБС-801-О-01"],
+    "Облачные вычисления": ["МПБ-001-О-01", "МКБ-001-О-01", "МИБ-001-О-01"],
+    "Операционные системы": [],
+    "Параллельные алгоритмы": [],
+    "Сети и системы передачи информации": [],
+    "Управление жизненными циклами информационных систем": [],
+    "Управление ИТ-сервисами и контентами": [],
+    "Языки программирования": [],
+  };
+
+  static Map<String, List<String>> ListOfItemsOfNamestnikov = {
+    "Техническая защита информации": [],
+  };
+
+  static Map<String, List<String>> ListOfItemsOfNikolaev = {
+    "Теоретическая механика": ["МФС-101-О-01", "ММБ-102-О-01"],
+    "Уравнения математической физики": ["МФС-101-О-01", "ММБ-102-О-01"],
+  };
+
+  static Map<String, List<String>> ListOfItemsOfOparina = {
+    "Автоматизированные системы в информационной сфере": [],
+    "Администрирование систем управления баз данных": [],
+    "Алгебра": [],
+    "Базы данных": ["МИБ-101-О-01", "МПБ-101-О-01", "МИБ-001-О-01", "МПБ-001-О-01"],
+    "Веб-технологии создания сайтов": [],
+    "Высшая алгебра": [],
+    "Вычислительные сети": [],
+    "Вычислительные системы, сети, телекоммуникации": [],
+    "Защита систем управления базами данных": [],
+    "Информатика": [],
+    "Информационные сети и системы": [],
+    "Информационные системы": [],
+    "Информационные технологии в книжном деле": [],
+    "Коммутация и маршрутизация": [],
+    "Компьютерная верстка": [],
+    "Компьютерная практика": [],
+    "Компьютерные сети": ["МИБ-201-О-01", "МКБ-101-О-01", "МИБ-201-О-01", "МКБ-101-О-01" "МКБ-001-О-01", "МИБ-001-О-01"],
+    "Компьютерные технологии в издательском деле": [],
+    "Компьютерные технологии в науке и образовании": [],
+    "Компьютерные технологии в СМИ, рекламе и связях с общественностью": [],
+    "Математика и информатика": [],
+    "Основы построения защищённых баз данных": [],
+    "Прикладное программное обеспечение в социологии": [],
+    "Программные средства обработки информации": [],
+    "Программы и базы данных": [],
+    "Сети и системы передачи информации": ["МББ-101-О-01", "МИБ-101-О-01", "МПБ-101-О-01", "МББ-001-О-01", "МИБ-001-О-01", "МПБ-001-О-01"],
+    "Сети и телекоммуникации": [],
+    "Системы управления базами данных": [],
+    "СУБД Oracle": [],
+    "Теория вероятностей и математическая статистика": [],
+    "Технологии программирования": [],
+    "Удаленный доступ и компьютерные сети": [],
+    "Электронные издания": [],
+  };
+
+  static Map<String, List<String>> ListOfItemsOfPanichkin = {
+    "Методы вычислений": ["МКБ-101-О-01", "МКБ-001-О-01"],
+  };
+
+  static Map<String, List<String>> ListOfItemsOfProlubnikov = {
+    "Информатика": ["МБС-301-О-01", "МБС-302-О-01"],
+    "Научно-практический семинар": ["ММБ-004-О-02"],
+    "Сети и системы телекоммуникаций": ["ММБ-103-О-02", "ММБ-104-О-02"],
+  };
+
+  static Map<String, List<String>> ListOfItemsOfRomanova = {
+    "Календарное планирование": ["МММ-301-О-06", "МММ-201-О-01"],
+    "Научно-исследовательский семинар": ["МММ-201-О-01"],
+  };
+
+  static Map<String, List<String>> ListOfItemsOfRybalov = {
+    "Теория кодирования": [],
+  };
+
+  static Map<String, List<String>> ListOfItemsOfSadovnichuk = {
+    "Аналитическая геометрия": [],
+    "Дифференциальные уравнения": ["МБС-101-О-01", "МИБ-101-О-01",],
+    "Математическая логика и дискретная математика": [],
+    "Математическое моделирование": ["МИБ-201-О-01", "МПБ-201-О-01", "МИБ-101-О-01", "МПБ-101-О-01", "МИБ-001-О-01", "МПБ-001-О-01",],
+    "Теоретико-числовые методы в криптографии": ["МББ-101-О-01", "МББ-001-О-01", "МБС-101-О-01", "МБС-001-О-01", "МБС-901-О-01", "МБС-801-О-01",],
+    "Теория игр": [],
+    "Теория функций комплексного переменного": ["МИБ-201-О-01", "МПБ-201-О-01", "МББ-101-О-01", "МИБ-101-О-01", "МПБ-101-О-01", "МББ-001-О-01", "МИБ-001-О-01", "МПБ-001-О-01",],
+    "Функциональный анализ": [],
+  };
+
+  static Map<String, List<String>> ListOfItemsOfServach = {
+    "Научно-исследовательский семинар по прикладной математике": [],
+  };
+
+  static Map<String, List<String>> ListOfItemsOfSergienko = {
+    "Системное и прикладное программное обеспечение": ["МФС-101-О-01", "ММБ-102-О-01"],
+  };
+
+  static Map<String, List<String>> ListOfItemsOfSiganov = {
+    "Алгоритмизация и программирование": ["МИБ-201-О-01", "МПБ-201-О-01", "МИБ-101-О-01", "МПБ-101-О-01", "МИБ-001-О-01", "МПБ-001-О-01"],
+    "Машинное обучение": ["МИБ-101-О-01", "МПБ-101-О-01", "МИБ-001-О-01", "МПБ-001-О-01"],
+    "Основы программирования": [],
+    "Программирование": [],
+    "Распознавание образов и обработка изображений": [],
+    "Технологии программирования": [],
+  };
+
+  static Map<String, List<String>> ListOfItemsOfSimanchev = {
+    "Математический анализ": ["МИБ-301-О-01", "МПБ-301-О-01", "МИБ-201-О-01", "МПБ-201-О-01", "МИБ-101-О-01", "МПБ-101-О-01", "МИБ-001-О-01", "МПБ-001-О-01"],
+    "Теория игр": [],
+  };
+
+  static Map<String, List<String>> ListOfItemsOfSoloveva = {
+    "Защита в операционных системах": ["МББ-001-О-01", "МБС-001-О-01", "МББ-101-О-01", "МБС-101-О-01"],
+    "Операционные системы": ["МИБ-001-О-01", "МПБ-001-О-01"],
+  };
+
+  static Map<String, List<String>> ListOfItemsOfTerenteva = {
+    "Web-программирование": [],
+    "Алгоритмизация и программирование": [],
+    "Аппаратные средства вычислительной техники": ["МББ-101-О-01"],
+    "Вычислительные системы": [],
+    "Информационные технологии": [],
+    "Компьютерная графика": [],
+    "Компьютерные сети": [],
+    "Конструкторско-технологическое обеспечение ЭВМ": [],
+    "Основы программирования": [],
+    "Программирование": [],
+    "Программы и базы данных": [],
+    "Проектирование информационных систем": [],
+    "Проектирование программного обеспечения": [],
+    "Проектный практикум": ["МПБ-001-О-01"],
+    "Сети и системы передачи информации": [],
+  };
+
+  static Map<String, List<String>> ListOfItemsOfTichovskaya = {
+    "Количественный анализ данных": ["ИСБ-101-О-01"],
+  };
+
+  static Map<String, List<String>> ListOfItemsOfTolstuha = {
+    "Компьютерная геометрия и геометрическое моделирование": ["МФС-901-О-01"],
+    "Математическое моделирование в естествознании": ["ММБ-103-О-02", "ММБ-104-О-02"],
+    "Методы вычислений": ["ММБ-003-О-01", "ММБ-002-О-01", "МФС-001-О-01"],
+  };
+
+  static Map<String, List<String>> ListOfItemsOfTutov = {
+    "Интернет для социолога: поиск и сбор данных": [],
+    "Информатика": [],
+    "Информационная безопасность и защита информации": ["МПБ-101-О-01", "МИБ-101-О-01", "МПБ-001-О-01", "МИБ-001-О-01"],
+    "Основы цифровых расследований": [],
+    "Программно- аппаратные средства защиты информации": [],
+  };
+
+  static Map<String, List<String>> ListOfItemsOfUsov = {
+    "Алгебра": ["МББ-201-О-01", "МБС-201-О-01", "МБС-202-О-01", "МББ-101-О-01", "МБС-101-О-01", "МБС-001-О-01", "МББ-001-О-01", "МБС-901-О-01", "МБС-801-О-01"],
+    "Вредоносные программные средства": [],
+    "Высшая алгебра": [],
+    "Дискретная математика": [],
+    "Защита информации": [],
+    "Информационная безопасность": [],
+    "Информационная безопасность и защита информации": [],
+    "История криптографии": [],
+    "Компиляторы и методы трансляции": [],
+    "Криптографические методы защиты информации": [],
+    "Криптографические протоколы": [],
+    "Математика": [],
+    "Методы и стандарты оценки защищенности компьютерных систем": [],
+    "Методы оптимизации": [],
+    "Модели безопасности компьютерных систем": [],
+    "Основы информационной безопасности": [],
+    "Основы управления информационной безопасностью": [],
+    "Параллельные алгоритмы": [],
+    "Современные методы оптимизации": [],
+    "Стандартизация, сертификация и управление качеством программного обеспечения": [],
+    "Структуры и алгоритмы компьютерной обработки данных": ["МКБ-101-О-01", "МКБ-001-О-01"],
+    "Схемотехника": [],
+    "Теория автоматов": ["МББ-201-О-01", "МБС-201-О-01", "МБС-202-О-01", "МББ-101-О-01", "МБС-101-О-01", "МБС-001-О-01", "МББ-001-О-01", "МБС-901-О-01", "МБС-801-О-01"],
+    "Теория графов": [],
+    "Управление информационной безопасностью": [],
+  };
+
+  static Map<String, List<String>> ListOfItemsOfUrazova = {
+    "Разработка бизнес-приложений": ["ЭИБ-101-О-01", "ЭИБ-201-О-02"],
+    "Теория вероятностей и математическая статистика": ["ЭМБ-201-О-01", "ЭМБ-201-О-15", "ЭУБ-201-О-02", "ЭИБ-201-О-02", "ЭГБ-201-О-02", "ЭЭБ-201-О-09", "ЭБС-201-О-01", ],
+  };
+
+  static Map<String, List<String>> ListOfItemsOfUshakova = {
+    "Основы цифровых технологий": [],
+    "Языки и методы программирования": ["ММБ-201-О-04", "ММБ-202-О-04"],
+  };
+
+  static Map<String, List<String>> ListOfItemsOfShishkin = {
+    "Языки программирования": ["МББ-201-О-01", "МБС-201-О-01", "МБС-202-О-01", "МББ-101-О-01", "МБС-101-О-01", "МБС-001-О-01", "МББ-001-О-01", "МБС-901-О-01", "МБС-801-О-01"],
+  };
+
+  static Map<String, List<String>> ListOfItemsOfYagofarova = {
+    "Комбинаторная теория и приложения": ["МММ-201-О-01", "МММ-301-О-06"],
+    "Математические модели экономики": ["МММ-201-О-01", "МММ-301-О-06"],
+    "Целочисленное программирование": ["МММ-201-О-01", "МММ-301-О-06"],
+  };
+
+  static Map<String, List<String>> ListOfItemsOfYanishevskaya = {
+    "Алгоритмы анализа изображений": [],
+    "Алгоритмы обработки и анализа изображений": [],
+    "Компьютерная графика": ["МИМ-201-О-01"],
+    "Разработка САПР": [],
   };
 }
+
 
 class Teachers {
   String name;
   String img;
-  List<String> items;
+  String position;
+  Map<String, List<String>> items;
   String department;
   String mail;
 
   Teachers({
     required this.name,
     required this.img,
+    required this.position,
     required this.items,
     required this.department,
     required this.mail,
