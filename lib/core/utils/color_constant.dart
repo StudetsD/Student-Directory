@@ -54,6 +54,8 @@ class ColorConstant {
 
   static Color choseGroupColorText = const Color.fromRGBO(198, 208, 245, 0.55);
 
+  static Color pageOfItemColorButton = const Color.fromRGBO(198, 208, 245, 0.25);
+
   static Color choseGroupColorButton = const Color.fromRGBO(35, 38, 52, 0.8);
 
   static Color choseGroupColorBorderSearch = const Color.fromRGBO(180, 190, 254, 1);

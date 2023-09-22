@@ -82,7 +82,7 @@ class _PageOfItemState extends State<PageOfItem> {
 
   Color choseColor (String teacher) {
     if (teacher == 'Информации о преподавателе нет') {
-      return ColorConstant.pageItemParamColor;
+      return ColorConstant.pageOfItemColorButton;
     }
     else {
       return ColorConstant.chosePageTextColor;
