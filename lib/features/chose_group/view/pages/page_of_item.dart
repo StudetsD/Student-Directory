@@ -72,7 +72,7 @@ class _PageOfItemState extends State<PageOfItem> {
               CardOfParamItem(text: 'Вид аттестации: ${item.mark}', icon: "assets/icons/type_of_attestation.svg", isButton: "no", item: item, color: ColorConstant.pageItemParamColor,),
               CardOfParamItem(text: 'Начинается с ${item.semestr.first}-ого семестра', icon: "assets/icons/calendar.svg", isButton: "no", item: item, color: ColorConstant.pageItemParamColor,),
               CardOfParamItem(text: 'Количество семестров: ${item.semestr.length}', icon: "assets/icons/semester.svg", isButton: "no", item: item, color: ColorConstant.pageItemParamColor,),
-              CardOfParamItem(text: 'Ссылка на материалы', icon: "assets/icons/download.svg", isButton: "disk", item: item, color: ColorConstant.chosePageTextColor,),
+              CardOfParamItem(text: 'Ссылка на материалы', icon: "assets/icons/download.svg", isButton: "disk", item: item, color: ColorConstant.pageOfItemColorButton,),
             ],
           ),
         ),
@@ -82,10 +82,10 @@ class _PageOfItemState extends State<PageOfItem> {
 
   Color choseColor (String teacher) {
     if (teacher == 'Информации о преподавателе нет') {
-      return ColorConstant.pageOfItemColorButton;
+      return ColorConstant.pageItemParamColor;
     }
     else {
-      return ColorConstant.chosePageTextColor;
+      return ColorConstant.pageOfItemColorButton;
     }
   }
 
