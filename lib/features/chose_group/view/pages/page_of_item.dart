@@ -69,9 +69,9 @@ class _PageOfItemState extends State<PageOfItem> {
                 )
               ),
               CardOfParamItem(text: 'Преподаватель: \n$nameTeacher', icon: "assets/icons/teacher.svg", isButton: nameTeacher, item: item, color: choseColor(nameTeacher),),
-              CardOfParamItem(text: 'Вид аттестации: ${item.mark}', icon: "assets/icons/type_of_attestation.svg", isButton: "no", item: item, color: ColorConstant.pageItemParamColor,),
-              CardOfParamItem(text: 'Начинается с ${item.semestr.first}-ого семестра', icon: "assets/icons/calendar.svg", isButton: "no", item: item, color: ColorConstant.pageItemParamColor,),
-              CardOfParamItem(text: 'Количество семестров: ${item.semestr.length}', icon: "assets/icons/semester.svg", isButton: "no", item: item, color: ColorConstant.pageItemParamColor,),
+              CardOfParamItem(text: 'Вид аттестации: ${item.mark}', icon: "assets/icons/type_of_attestation.svg", isButton: "", item: item, color: ColorConstant.pageItemParamColor,),
+              CardOfParamItem(text: 'Начинается с ${item.semestr.first}-ого семестра', icon: "assets/icons/calendar.svg", isButton: "", item: item, color: ColorConstant.pageItemParamColor,),
+              CardOfParamItem(text: 'Количество семестров: ${item.semestr.length}', icon: "assets/icons/semester.svg", isButton: "", item: item, color: ColorConstant.pageItemParamColor,),
               CardOfParamItem(text: 'Ссылка на материалы', icon: "assets/icons/download.svg", isButton: "disk", item: item, color: ColorConstant.pageOfItemColorButton,),
             ],
           ),
