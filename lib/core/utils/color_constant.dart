@@ -30,7 +30,7 @@ class ColorConstant {
 
   static Color secondGradInMenu = fromHex('AEECF0');
 
-  static Color startScreenFon = const Color.fromRGBO(48, 52, 67, 1);
+  static Color startScreenFon = const Color.fromRGBO(48, 52, 70, 1);
 
   static Color startScreenButtonFon = const Color.fromRGBO(76, 79, 105, 0.4);
 

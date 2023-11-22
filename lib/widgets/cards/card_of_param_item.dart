@@ -1,73 +1,45 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import '../../core/app_export.dart';
-
+import '../../core/utils/color_constant.dart';
 
 class CardOfParamItem extends StatelessWidget {
   const CardOfParamItem({
     super.key,
     required this.text,
-    required this.icon,
-    required this.isButton,
-    required this.item,
-    required this.color
+    required this.icon
   });
   final String text;
   final String icon;
-  final String isButton;
-  final Items item;
-  final Color color;
 
   @override
   Widget build(BuildContext context) {
     return Container(
         width: double.infinity,
         height: 75,
-        margin: const EdgeInsets.only(left: 15, right: 15, bottom: 18),
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(5),
-          color: color,
+          borderRadius: BorderRadius.circular(10),
+          color: ColorConstant.startScreenFon,
         ),
-        child: MaterialButton(
-          child: Row(
-            children: [
-              Container(
-                margin: const EdgeInsets.only(right: 10),
-                child: GestureDetector(
-                    onTap: () {
-                      if (isButton == 'disk') {
-                        Navigator.pushNamed(context, '/disk', arguments: StringConstants.listOfUrl[item.name]);
-                      }
-                      else if (isButton.isNotEmpty && isButton != 'Информации о преподавателе нет') {
-                        Navigator.pushNamed(context, '/teacher', arguments: StringConstants.listOfTeachers[isButton]);
-                      }
-                    },
-                    child: SvgPicture.asset(
-                      icon,
-                      color: ColorConstant.startScreenTextColor,
-                    )
+        child: Row(
+          children: [
+            Container(
+              margin: const EdgeInsets.only(right: 10),
+              child: SvgPicture.asset(
+                icon,
+                color: ColorConstant.startScreenTextColor,
+              )
+            ),
+            Flexible(
+              child: Text(
+                text,
+                style: TextStyle(
+                  fontFamily: 'RobotoRegular',
+                  fontSize: 16,
+                  color: ColorConstant.startScreenTextColor,
                 ),
               ),
-              Flexible(
-                child: Text(
-                  text,
-                  style: TextStyle(
-                    fontFamily: 'RobotoBold',
-                    fontSize: 18,
-                    color: ColorConstant.startScreenTextColor,
-                  ),
-                ),
-              )
-            ],
-          ),
-          onPressed: () {
-            if (isButton == 'disk') {
-              Navigator.pushNamed(context, '/disk', arguments: StringConstants.listOfUrl[item.name]);
-            }
-            else if (isButton.isNotEmpty && isButton != 'Информации о преподавателе нет') {
-              Navigator.pushNamed(context, '/teacher', arguments: StringConstants.listOfTeachers[isButton]);
-            }
-          },
+            )
+          ],
         )
     );
   }

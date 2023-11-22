@@ -1,6 +1,7 @@
 import 'package:applicate/core/app_export.dart';
 import 'package:flutter/material.dart';
 
+import '../../../../widgets/cards/button_of_param_item.dart';
 import '../../../../widgets/cards/card_of_param_item.dart';
 
 
@@ -18,63 +19,88 @@ class _PageOfItemState extends State<PageOfItem> {
     var item = data[0];
     var group = data[1];
     final String nameTeacher = _getTeacherName(group, item.name);
+    final redName = ReductionName(item.name);
+    final isTeacherDefined = nameTeacher != 'Информации о преподавателе нет' ? true : false;
+    final List buttonTextParam = isTeacherDefined ? [16.0 ,"RobotoRegular"] : [15.0, "RobotoBold"];
     return Scaffold(
       body: SizedBox(
         height: double.infinity,
-        child: SingleChildScrollView(
-          child: Column(
-            children: [
-              Container(
-                alignment: Alignment.topLeft,
-                margin: const EdgeInsets.only(top: 40, bottom: 15),
-                child: Row(
-                  children: [
-                    IconButton(
-                      icon:AppIconStyle.iconTopBack,
-                      onPressed: () {
-                        Navigator.pop(context);
-                      },
-                    ),
-                    Text(
-                      "Предмет",
-                      textAlign: TextAlign.center,
-                      style: AppStyle.textTopStyle,
-                    ),
-                  ],
-                ),
+        child: Column(
+          children: [
+            Container(
+              alignment: Alignment.topLeft,
+              margin: const EdgeInsets.only(top: 40, bottom: 15),
+              child: Row(
+                children: [
+                  IconButton(
+                    icon:AppIconStyle.iconTopBack,
+                    onPressed: () {
+                      Navigator.pop(context);
+                    },
+                  ),
+                  Text(
+                    "Предмет",
+                    textAlign: TextAlign.center,
+                    style: AppStyle.textTopStyle,
+                  ),
+                ],
               ),
-              Container(
-                height: 100,
-                width: double.infinity,
-                margin: const EdgeInsets.only(left: 15, right: 15, bottom: 30),
-                decoration: BoxDecoration(
-                  color: ColorConstant.menuBackgroundColor,
-                  borderRadius: BorderRadius.circular(15),
-                ),
-                child: MaterialButton(
-                  child: Container(
+            ),
+            SingleChildScrollView(
+              padding: const EdgeInsets.only(left: 20, right: 20),
+              child: Column(
+                children: [
+                  Container(
+                    height: 100,
+                    width: double.infinity,
+                    margin: const EdgeInsets.only(bottom: 10),
+                    decoration: BoxDecoration(
+                      color: ColorConstant.menuBackgroundColor,
+                      borderRadius: BorderRadius.circular(15),
+                    ),
+                    child: MaterialButton(
+                      child: Container(
+                        alignment: Alignment.centerLeft,
+                        margin: const EdgeInsets.only(left: 10),
+                        child: Text(
+                          redName,
+                          style: TextStyle(
+                            fontSize: 30,
+                            color: ColorConstant.startScreenTextColor,
+                            fontFamily: 'RobotoBold',
+                            fontWeight: FontWeight.w700,
+                          ),
+                        ),
+                      ),
+                      onPressed: ()  => _showToast(context, item.name),
+                    )
+                  ),
+                  if (isTeacherDefined) ButtonOfParamItem(height: 75, iconHeight: 35, text: 'Преподаватель: \n$nameTeacher', icon: "assets/icons/teacher.svg", isButton: nameTeacher, item: item, color: ColorConstant.pageOfItemColorButton, textSize: buttonTextParam[0], fontFamily: buttonTextParam[1],),
+                  ButtonOfParamItem(height: 40, iconHeight: 27, text: 'Ссылка на материалы', icon: "assets/icons/download.svg", isButton: "disk", item: item, color: choseColor(nameTeacher), textSize: buttonTextParam[0], fontFamily: buttonTextParam[1],),
+                  Container(
+                    margin: const EdgeInsets.only(top: 10),
                     alignment: Alignment.centerLeft,
-                    margin: const EdgeInsets.only(left: 10),
-                    child: Text(
-                      ReductionName(item.name),
+                    child: Text (
+                      "Информация по предмету",
                       style: TextStyle(
-                        fontSize: 30,
-                        color: ColorConstant.startScreenTextColor,
+                        fontSize: 20,
                         fontFamily: 'RobotoBold',
-                        fontWeight: FontWeight.w700,
+                        color: ColorConstant.startScreenTextColor,
                       ),
                     ),
                   ),
-                  onPressed: ()  => _showToast(context, item.name),
-                )
+                  Divider(
+                    color: ColorConstant.startScreenTextColor,
+                    thickness: 1,
+                  ),
+                  if (!isTeacherDefined) CardOfParamItem(text: nameTeacher, icon: "assets/icons/teacher.svg",),
+                  CardOfParamItem(text: 'Вид аттестации: ${item.mark}', icon: "assets/icons/type_of_attestation.svg",),
+                  CardOfParamItem(text: 'Начинается с ${item.semestr.first}-ого семестра', icon: "assets/icons/calendar.svg",),
+                  CardOfParamItem(text: 'Количество семестров: ${item.semestr.length}', icon: "assets/icons/semester.svg",),
+                ],
               ),
-              CardOfParamItem(text: 'Преподаватель: \n$nameTeacher', icon: "assets/icons/teacher.svg", isButton: nameTeacher, item: item, color: choseColor(nameTeacher),),
-              CardOfParamItem(text: 'Вид аттестации: ${item.mark}', icon: "assets/icons/type_of_attestation.svg", isButton: "", item: item, color: ColorConstant.pageItemParamColor,),
-              CardOfParamItem(text: 'Начинается с ${item.semestr.first}-ого семестра', icon: "assets/icons/calendar.svg", isButton: "", item: item, color: ColorConstant.pageItemParamColor,),
-              CardOfParamItem(text: 'Количество семестров: ${item.semestr.length}', icon: "assets/icons/semester.svg", isButton: "", item: item, color: ColorConstant.pageItemParamColor,),
-              CardOfParamItem(text: 'Ссылка на материалы', icon: "assets/icons/download.svg", isButton: "disk", item: item, color: ColorConstant.pageOfItemColorButton,),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );
@@ -82,7 +108,7 @@ class _PageOfItemState extends State<PageOfItem> {
 
   Color choseColor (String teacher) {
     if (teacher == 'Информации о преподавателе нет') {
-      return ColorConstant.pageItemParamColor;
+      return ColorConstant.menuBackgroundColor;
     }
     else {
       return ColorConstant.pageOfItemColorButton;
