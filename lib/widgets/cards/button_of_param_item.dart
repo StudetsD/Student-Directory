@@ -10,7 +10,7 @@ class ButtonOfParamItem extends StatelessWidget {
     required this.iconHeight,
     required this.text,
     required this.icon,
-    required this.isButton,
+    required this.typeOfButton,
     required this.item,
     required this.color,
     required this.textSize,
@@ -20,7 +20,7 @@ class ButtonOfParamItem extends StatelessWidget {
   final double iconHeight;
   final String text;
   final String icon;
-  final String isButton;
+  final String typeOfButton;
   final Items item;
   final Color color;
   final double textSize;
@@ -45,11 +45,11 @@ class ButtonOfParamItem extends StatelessWidget {
                 margin: EdgeInsets.only(right: rightMarginIcon, left: leftMarginIcon),
                 child: GestureDetector(
                     onTap: () {
-                      if (isButton == 'disk') {
+                      if (typeOfButton == 'disk') {
                         Navigator.pushNamed(context, '/disk', arguments: StringConstants.listOfUrl[item.name]);
                       }
-                      else if (isButton.isNotEmpty && isButton != 'Информации о преподавателе нет') {
-                        Navigator.pushNamed(context, '/teacher', arguments: StringConstants.listOfTeachers[isButton]);
+                      else if (typeOfButton.isNotEmpty && typeOfButton != 'Информации о преподавателе нет') {
+                        Navigator.pushNamed(context, '/teacher', arguments: StringConstants.listOfTeachers[typeOfButton]);
                       }
                     },
                     child: SvgPicture.asset(
@@ -72,11 +72,11 @@ class ButtonOfParamItem extends StatelessWidget {
             ],
           ),
           onPressed: () {
-            if (isButton == 'disk') {
+            if (typeOfButton == 'disk') {
               Navigator.pushNamed(context, '/disk', arguments: StringConstants.listOfUrl[item.name]);
             }
-            else if (isButton.isNotEmpty && isButton != 'Информации о преподавателе нет') {
-              Navigator.pushNamed(context, '/teacher', arguments: StringConstants.listOfTeachers[isButton]);
+            else if (typeOfButton.isNotEmpty && typeOfButton != 'Информации о преподавателе нет') {
+              Navigator.pushNamed(context, '/teacher', arguments: StringConstants.listOfTeachers[typeOfButton]);
             }
           },
         )

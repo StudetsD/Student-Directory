@@ -75,8 +75,29 @@ class _PageOfItemState extends State<PageOfItem> {
                       onPressed: ()  => _showToast(context, item.name),
                     )
                   ),
-                  if (isTeacherDefined) ButtonOfParamItem(height: 75, iconHeight: 35, text: 'Преподаватель: \n$nameTeacher', icon: "assets/icons/teacher.svg", isButton: nameTeacher, item: item, color: ColorConstant.pageOfItemColorButton, textSize: buttonTextParam[0], fontFamily: buttonTextParam[1],),
-                  ButtonOfParamItem(height: 40, iconHeight: 27, text: 'Ссылка на материалы', icon: "assets/icons/download.svg", isButton: "disk", item: item, color: choseColor(nameTeacher), textSize: buttonTextParam[0], fontFamily: buttonTextParam[1],),
+                  if (isTeacherDefined)
+                    ButtonOfParamItem(
+                      height: 75,
+                      iconHeight: 35,
+                      text: 'Преподаватель: \n$nameTeacher',
+                      icon: "assets/icons/teacher.svg",
+                      typeOfButton: nameTeacher,
+                      item: item,
+                      color: ColorConstant.menuBackgroundColor,
+                      textSize: buttonTextParam[0],
+                      fontFamily: buttonTextParam[1],
+                    ),
+                  ButtonOfParamItem(
+                    height: 40,
+                    iconHeight: 27,
+                    text: 'Ссылка на материалы',
+                    icon: "assets/icons/download.svg",
+                    typeOfButton: "disk",
+                    item: item,
+                    color: ColorConstant.menuBackgroundColor,
+                    textSize: buttonTextParam[0],
+                    fontFamily: buttonTextParam[1],
+                  ),
                   Container(
                     margin: const EdgeInsets.only(top: 10),
                     alignment: Alignment.centerLeft,
